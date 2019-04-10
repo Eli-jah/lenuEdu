@@ -7,8 +7,8 @@ define('DB_TYPE', 'mysqli');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
-define('DB_NAME', 'lenu');
-define('DB_PREFIX', 'lenu_');
+define('DB_NAME', 'shm');
+define('DB_PREFIX', 'shm_');
 
 # 全局URL路径
 // 主域名 保留最后的 /
