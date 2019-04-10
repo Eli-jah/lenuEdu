@@ -3,72 +3,75 @@
 
 class Welcome extends MY_Controller
 {
-
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
+
+        $this->load->helpers('uisite_helper');
+
+        $this->seo_id = 1;
+        $this->banner_id = 2;
     }
 
+    // 首页
     public function index()
     {
+        $data = array();
+
         // seo
         $data['header'] = header_seoinfo(0, 0);
 
-        $data['banner'] = $this->duo_img(tag_single(15, "photo"));
+        // local name
+        $data['local_name'] = '首页';
 
-//        $data['product'] = $this->db->order_by('sort_id', 'desc')->limit(4)->get_where('product', array('cid' => 34, 'audit' => 1, 'flag' => 1))->result_array();
-//
-//        $data['product_11'] = $this->db->order_by('sort_id', 'desc')->limit(4)->get_where('product', array('cid' => 34, 'ctype' => 11, 'audit' => 1))->result_array();
-//        $data['product_12'] = $this->db->order_by('sort_id', 'desc')->limit(4)->get_where('product', array('cid' => 34, 'ctype' => 12, 'audit' => 1))->result_array();
-//        $data['product_13'] = $this->db->order_by('sort_id', 'desc')->limit(4)->get_where('product', array('cid' => 34, 'ctype' => 13, 'audit' => 1))->result_array();
-//
-//        $data['equipment'] = $this->db->order_by('sort_id', 'desc')->limit(6)->get_where('infos', array('cid' => 44, 'audit' => 1, 'flag' => 1))->result_array();
-//
-        $data['links'] = $this->db->order_by('sort_id', 'desc')->get_where('links', array('cid' => 95, 'audit' => 1))->result_array();
-//
-        $data['news'] = $this->db->order_by('sort_id', 'desc')->limit(3)->get_where('article', array('cid' => 31, 'audit' => 1, 'flag' => 1))->result_array();
+        // banners
+        $data['banners'] = $this->db->order_by('sort_id', 'desc')->get_where('banners', array('audit' => 1, 'cid' => $this->banner_id))->result_array();
+        foreach ($data['banners'] as $key => $banner) {
+            list($data['banners'][$key]['title'], $data['banners'][$key]['sub_title']) = explode('|', $banner['title']);
+            $data['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+        }
 
+        // company introduction
+        $data['company']['title'] = $this->db->get_where('page', array('cid' => 5))->row_array();
+        $data['company']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(6, 7, 8, 9))->get('page')->result_array();
+        foreach ($data['company']['banners'] as $key => $banner) {
+            $data['company']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+        }
 
-//        $data['type_all'] = $this->db->order_by('sort_id', 'desc')->get_where('dealer', array('cid' => 55, 'audit' => 1))->result_array();
+        // hot courses
+        $data['courses']['title'] = $this->db->get_where('page', array('cid' => 11))->row_array();
+        $data['courses']['content'] = tag_single(12, 'content');
+        $data['courses']['etl'] = $this->db->get_where('page', array('cid' => 13))->row_array();
+        $data['courses']['etl']['photo'] = tag_photo($data['courses']['etl']['photo'], 'url');
 
-//        $data['product_flag'] = $this->db->order_by('sort_id', 'desc')->limit(4)->get_where('product', array('cid' => 34, 'audit' => 1, 'flag' => 1))->result_array();
+        // partners
+        $data['partners']['title'] = $this->db->get_where('page', array('cid' => 15))->row_array();
+        $data['partners']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(16, 17, 18, 19))->get('page')->result_array();
+        foreach ($data['partners']['banners'] as $key => $banner) {
+            $data['partners']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+        }
 
-//        $data['news'] = $this->db->select('article.*,coltypes.title as c_title')->order_by('article.sort_id', 'desc')->limit(3)->join('coltypes', 'coltypes.id = article.ctype')->get_where('article', array('article.cid' => 31, 'article.audit' => 1, 'article.flag' => 1))->result_array();
+        // news
+        $data['news']['title'] = $this->db->get_where('page', array('cid' => 21))->row_array();
+        $data['news']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
+        foreach ($data['news']['banners'] as $key => $banner) {
+            $data['news']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+        }
 
+        // achievements
+        $data['achievements']['title'] = $this->db->get_where('page', array('cid' => 21))->row_array();
+        $data['achievements']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
+        foreach ($data['achievements']['banners'] as $key => $banner) {
+            $data['achievements']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+        }
 
-//        var_dump($data['banner']);
-//        exit();
+        // footer
+        $data['footer']['navigation'] = tag_single(29, 'content');
+        $data['footer']['icp'] = tag_single(30, 'content');
+        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
+        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
+        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
 
         $this->load->view('welcome', $data);
-
     }
-
-    function duo_img($photo)
-    {
-        if (empty($photo))
-        {
-            $img = '';
-        }
-        else
-        {
-            $img = array();
-            if (strstr($photo, ','))
-            {
-                $img_id = explode(",", $photo);
-                foreach ($img_id as $k => $v)
-                {
-                    $img_one = tag_photo($v);
-                    $img[] = $img_one;
-                }
-            }
-            else
-            {
-                $img_one = tag_photo($photo);
-                $img['0'] = $img_one;
-            }
-        }
-        return $img;
-    }
-
-
 }
