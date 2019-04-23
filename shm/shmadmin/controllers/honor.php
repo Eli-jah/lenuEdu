@@ -1,32 +1,32 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class honor extends Modules_Controller
 {
     protected $rules = array(
-      "rule" => array(
-         array(
-            "field" => "title",
-            "label" => "标题",
-            "rules" => "trim"
+        "rule" => array(
+            array(
+                "field" => "title",
+                "label" => "标题",
+                "rules" => "trim"
             ),
-         array(
-            "field" => "photo",
-            "label" => "图片",
-            "rules" => "trim"
+            array(
+                "field" => "photo",
+                "label" => "图片",
+                "rules" => "trim"
             ),
-         array(
-            "field" => "timeline",
-            "label" => '时间',
-            "rules" => "trim|strtotime"
+            array(
+                "field" => "timeline",
+                "label" => '时间',
+                "rules" => "trim|strtotime"
             )
-         )
-      );
+        )
+    );
 
     public function copypro()
     {
         $ids = $this->input->post('ids');
 
-        $rs=$this->model->get_one($ids);
+        $rs = $this->model->get_one($ids);
 
         unset($rs['id']);
         unset($rs['sort_id']);
@@ -36,7 +36,7 @@ class honor extends Modules_Controller
         if ($id) {
             $vdata['msg'] = '复制成功，请刷新查看';
             $vdata['status'] = 1;
-        }else{
+        } else {
             $vdata['msg'] = '复制失败，请刷新后重试';
             $vdata['status'] = 0;
         }

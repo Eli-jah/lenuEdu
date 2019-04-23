@@ -1,6 +1,7 @@
 <?php
 
-class MhtFileMaker{
+class MhtFileMaker
+{
     var $config = array();
     var $headers = array();
     var $headers_exists = array();
@@ -9,25 +10,30 @@ class MhtFileMaker{
     var $dir_base;
     var $page_first;
 
-    function MhtFile($config = array()){
+    function MhtFile($config = array())
+    {
 
     }
 
-    function SetHeader($header){
+    function SetHeader($header)
+    {
         $this->headers[] = $header;
         $key = strtolower(substr($header, 0, strpos($header, ':')));
         $this->headers_exists[$key] = TRUE;
     }
 
-    function SetFrom($from){
+    function SetFrom($from)
+    {
         $this->SetHeader("From: $from");
     }
 
-    function SetSubject($subject){
+    function SetSubject($subject)
+    {
         $this->SetHeader("Subject: $subject");
     }
 
-    function SetDate($date = NULL, $istimestamp = FALSE){
+    function SetDate($date = NULL, $istimestamp = FALSE)
+    {
         if ($date == NULL) {
             $date = time();
         }
@@ -37,7 +43,8 @@ class MhtFileMaker{
         $this->SetHeader("Date: $date");
     }
 
-    function SetBoundary($boundary = NULL){
+    function SetBoundary($boundary = NULL)
+    {
         if ($boundary == NULL) {
             $this->boundary = '--' . strtoupper(md5(mt_rand())) . '_MULTIPART_MIXED';
         } else {
@@ -45,15 +52,18 @@ class MhtFileMaker{
         }
     }
 
-    function SetBaseDir($dir){
+    function SetBaseDir($dir)
+    {
         $this->dir_base = str_replace("\\", "/", realpath($dir));
     }
 
-    function SetFirstPage($filename){
+    function SetFirstPage($filename)
+    {
         $this->page_first = str_replace("\\", "/", realpath("{$this->dir_base}/$filename"));
     }
 
-    function AutoAddFiles(){
+    function AutoAddFiles()
+    {
         if (!isset($this->page_first)) {
             exit ('Not set the first page.');
         }
@@ -63,10 +73,11 @@ class MhtFileMaker{
         $this->AddDir($this->dir_base);
     }
 
-    function AddDir($dir){
+    function AddDir($dir)
+    {
         $handle_dir = opendir($dir);
         while ($filename = readdir($handle_dir)) {
-            if (($filename!='.') && ($filename!='..') && ("$dir/$filename"!=$this->page_first)) {
+            if (($filename != '.') && ($filename != '..') && ("$dir/$filename" != $this->page_first)) {
                 if (is_dir("$dir/$filename")) {
                     $this->AddDir("$dir/$filename");
                 } elseif (is_file("$dir/$filename")) {
@@ -79,7 +90,8 @@ class MhtFileMaker{
         closedir($handle_dir);
     }
 
-    function AddFile($filename, $filepath = NULL, $encoding = NULL){
+    function AddFile($filename, $filepath = NULL, $encoding = NULL)
+    {
         if ($filepath == NULL) {
             $filepath = $filename;
         }
@@ -88,18 +100,20 @@ class MhtFileMaker{
         $this->AddContents($filepath, $mimetype, $filecont, $encoding);
     }
 
-    function AddContents($filepath, $mimetype, $filecont, $encoding = NULL){
+    function AddContents($filepath, $mimetype, $filecont, $encoding = NULL)
+    {
         if ($encoding == NULL) {
             $filecont = chunk_split(base64_encode($filecont), 76);
             $encoding = 'base64';
         }
         $this->files[] = array('filepath' => $filepath,
-                               'mimetype' => $mimetype,
-                               'filecont' => $filecont,
-                               'encoding' => $encoding);
+            'mimetype' => $mimetype,
+            'filecont' => $filecont,
+            'encoding' => $encoding);
     }
 
-    function CheckHeaders(){
+    function CheckHeaders()
+    {
         if (!array_key_exists('date', $this->headers_exists)) {
             $this->SetDate(NULL, TRUE);
         }
@@ -108,7 +122,8 @@ class MhtFileMaker{
         }
     }
 
-    function CheckFiles(){
+    function CheckFiles()
+    {
         if (count($this->files) == 0) {
             return FALSE;
         } else {
@@ -116,7 +131,8 @@ class MhtFileMaker{
         }
     }
 
-    function GetFile(){
+    function GetFile()
+    {
         $this->CheckHeaders();
         if (!$this->CheckFiles()) {
             exit ('No file was added.');
@@ -144,30 +160,57 @@ class MhtFileMaker{
         return $contents;
     }
 
-    function MakeFile($filename){
+    function MakeFile($filename)
+    {
         $contents = $this->GetFile();
         $fp = fopen($filename, 'w');
         fwrite($fp, $contents);
         fclose($fp);
     }
 
-    function GetMimeType($filename){
+    function GetMimeType($filename)
+    {
         $pathinfo = pathinfo($filename);
         switch ($pathinfo['extension']) {
-            case 'htm': $mimetype = 'text/html'; break;
-            case 'html': $mimetype = 'text/html'; break;
-            case 'txt': $mimetype = 'text/plain'; break;
-            case 'cgi': $mimetype = 'text/plain'; break;
-            case 'php': $mimetype = 'text/plain'; break;
-            case 'css': $mimetype = 'text/css'; break;
-            case 'jpg': $mimetype = 'image/jpeg'; break;
-            case 'jpeg': $mimetype = 'image/jpeg'; break;
-            case 'jpe': $mimetype = 'image/jpeg'; break;
-            case 'gif': $mimetype = 'image/gif'; break;
-            case 'png': $mimetype = 'image/png'; break;
-            default: $mimetype = 'application/octet-stream'; break;
+            case 'htm':
+                $mimetype = 'text/html';
+                break;
+            case 'html':
+                $mimetype = 'text/html';
+                break;
+            case 'txt':
+                $mimetype = 'text/plain';
+                break;
+            case 'cgi':
+                $mimetype = 'text/plain';
+                break;
+            case 'php':
+                $mimetype = 'text/plain';
+                break;
+            case 'css':
+                $mimetype = 'text/css';
+                break;
+            case 'jpg':
+                $mimetype = 'image/jpeg';
+                break;
+            case 'jpeg':
+                $mimetype = 'image/jpeg';
+                break;
+            case 'jpe':
+                $mimetype = 'image/jpeg';
+                break;
+            case 'gif':
+                $mimetype = 'image/gif';
+                break;
+            case 'png':
+                $mimetype = 'image/png';
+                break;
+            default:
+                $mimetype = 'application/octet-stream';
+                break;
         }
         return $mimetype;
     }
 }
+
 ?>

@@ -21,7 +21,7 @@ class About extends MY_Controller
     }
 
     // 公司简介
-    public function us()
+    public function company()
     {
         $data = array();
 
@@ -53,7 +53,7 @@ class About extends MY_Controller
     }
 
     // 企业文化
-    public function company()
+    public function culture()
     {
         $data = array();
 

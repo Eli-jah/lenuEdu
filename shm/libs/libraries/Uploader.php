@@ -352,5 +352,4 @@ class Uploader
             "size" => $this->fileSize
         );
     }
-
 }
