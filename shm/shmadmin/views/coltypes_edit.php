@@ -44,6 +44,13 @@
         </div>
 
         <div class="control-group">
+            <label class="control-label" for="content">名称（英文）</label>
+            <div class="controls">
+                <input type="text" id="content" name="content" value="<?php echo set_value('content', $it['content']) ?>" placeholder="类型名称（英文）">
+            </div>
+        </div>
+
+        <div class="control-group">
             <label for="img" class="control-label">封面：</label>
             <div class="controls">
                 <div class="btn-group">
