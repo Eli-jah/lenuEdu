@@ -129,7 +129,7 @@
                 },
                 identify: {
                     required: true
-                }
+                },
             },
             messages: {
                 uname: {

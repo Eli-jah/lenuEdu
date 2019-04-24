@@ -30,7 +30,7 @@ class Coltypes extends CRUD_Controller
                 'label' => '封面',
                 'rules' => 'trim'
             ),
-        )
+        ),
     );
 
     public function __construct()
@@ -81,14 +81,11 @@ class Coltypes extends CRUD_Controller
                 $this->view = "msg.php";
                 $this->_display($vdata, "msg.php");
             }
-
         } // end is ajax
-
     }
 
     public function index($page = 1)
     {
-
         $where = $this->_index_where();
 
         $where['cid'] = $this->cid;
@@ -104,7 +101,6 @@ class Coltypes extends CRUD_Controller
         } else {
             $this->_display($vdata);
         }
-
     }
 
     protected function _index_orders()
@@ -149,6 +145,7 @@ class Coltypes extends CRUD_Controller
         }
         return $form;
     }
+
     // TODO: 追加分类的时候自动在对应的模型数据表在添加分类字段 type-name int4
     // create_data
 
@@ -158,14 +155,13 @@ class Coltypes extends CRUD_Controller
      * cid int 栏目ID
      * fid int 父级别ID
      * name 预留 字段名称
-     * @return [type]         [description]
+     * @return [type] [description]
      */
     public function gettypes_ajax($cid = false, $fid = 0, $name = 'ctype')
     {
-
         $vdata = array(
-            'status' => 0
-        , 'msg' => ""
+            'status' => 0,
+            'msg' => "",
         );
 
         if ($cid === false or !is_numeric($cid) or !is_numeric($fid) or $name or is_name($name)) {
@@ -174,7 +170,6 @@ class Coltypes extends CRUD_Controller
         }
 
         // 获取数据
-
         // $data = $this->model->get_all(array('cid'=>$cid,'fid'=>$fid,'name'=>$name));
         $data = $this->model->get_ctypes($cid, $fid, $name);
 
@@ -189,7 +184,6 @@ class Coltypes extends CRUD_Controller
         // if ($this->input->is_ajax_request()) {
         $this->output->set_content_type('application/json')->set_output(json_encode($vdata));
         // }
-
     }
 
     // 通过ajax　获取全部路径
@@ -231,8 +225,6 @@ class Coltypes extends CRUD_Controller
             return FALSE;
         }
     }
-
-
 }
 
 // 用于替换 site_urlc 为其添加 ?c=

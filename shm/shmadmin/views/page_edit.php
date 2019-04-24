@@ -11,8 +11,7 @@
     <input class="hide" type="text" id="p-title" name="title" value="<?php echo set_value('title', $seo['title']) ?>">
     <input class="hide" type="text" id="p-title_seo" name="title_seo" value="<?php echo set_value('title_seo', $seo['title_seo']) ?>">
     <input class="hide" type="text" id="p-tags" name="tags" value="<?php echo set_value('tags', $seo['tags']) ?>">
-    <textarea class="hide" id='p-intro' name="intro" rows='8'
-              class='span4'><?php echo set_value('intro', $seo['intro']) ?></textarea>
+    <textarea class="hide" id='p-intro' name="intro" rows='8' class='span4'><?php echo set_value('intro', $seo['intro']) ?></textarea>
 
     <div class="boxed-inner seamless">
 
@@ -20,8 +19,7 @@
             <div class="control-group">
                 <label for="title" class="control-label">文字</label>
                 <div class="controls">
-                    <input type="text" name="text" id="text" class='span5'
-                           value="<?php echo set_value('text', $it['text']); ?>">
+                    <input type="text" name="text" id="text" class='span5' value="<?php echo set_value('text', $it['text']); ?>">
                 </div>
             </div>
         <?php endif; ?>
@@ -42,8 +40,7 @@
                 </label>
             </div>
             <div class="control-group uefull">
-                <textarea id="content_m"
-                          name="content_m"> <?php echo set_value('content_m', $it['content_m']); ?></textarea>
+                <textarea id="content_m" name="content_m"> <?php echo set_value('content_m', $it['content_m']); ?></textarea>
             </div>
         <?php endif; ?>
 
@@ -87,7 +84,7 @@
 <script type="text/javascript">
     require(['jquery', 'adminer/js/ui', 'adminer/js/media'], function ($, ui, media) {
         ui.editor_create('content');
-        var page_photos = <?php echo json_encode(list_upload($it['photo'])) ?>;
+        var page_photos = <?php echo json_encode(list_upload($it['photo'])); ?>;
         media.init();
         media.show(page_photos, 'photo');
         media.sort('photo');
