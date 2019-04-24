@@ -6,6 +6,7 @@ class Article extends Modules_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Upload_model', 'mupload');
 
         $this->rules = array(
             "rule" => array(
@@ -13,26 +14,25 @@ class Article extends Modules_Controller
                     "field" => "title",
                     "label" => lang('title'),
                     "rules" => "trim|required|min_length[1]"
-                )
-            , array(
+                ),
+                array(
                     "field" => "timeline",
                     "label" => lang('time'),
                     "rules" => "trim|strtotime"
-                )
-            , array(
+                ),
+                array(
                     "field" => "content",
                     "label" => '内容',
                     "rules" => "trim"
                     // link_create tag 生成
-                )
-            , array(
+                ),
+                array(
                     "field" => "photo",
                     "label" => lang('photo'),
                     "rules" => "trim"
-                )
-            )
+                ),
+            ),
         );
-
     }
 
     public function copypro()
@@ -56,7 +56,6 @@ class Article extends Modules_Controller
         $this->output->set_content_type('application/json')->set_output(json_encode($vdata));
     }
 
-
     // 删除条目时删除文件
     protected function _rm_file($ids)
     {
@@ -74,6 +73,4 @@ class Article extends Modules_Controller
         // adminer funs helpers
         unlink_upload($fids);
     }
-
-
 }

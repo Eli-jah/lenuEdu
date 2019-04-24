@@ -18,8 +18,7 @@
         <div class="control-group">
             <label for="title" class="control-label">标题:</label>
             <div class="controls">
-                <input type="text" name="title" id="title" class='span7'
-                       value="<?php echo set_value('title', $it['title']); ?>">
+                <input type="text" name="title" id="title" class='span7' value="<?php echo set_value('title', $it['title']); ?>">
                 <a href="#seo-modal" role="button" class="btn btn-info" data-toggle="modal">SEO</a>
                 <span class="help-inline"></span>
             </div>
@@ -37,8 +36,7 @@
                 <div class="control-group">
                     <label for="title_seo" class="control-label"><?php echo lang('title_seo') ?></label>
                     <div class="controls">
-                        <input type="text" id="title_seo" name="title_seo"
-                               value="<?php echo set_value('title_seo', $it['title_seo']) ?>" x-webkit-speech>
+                        <input type="text" id="title_seo" name="title_seo" value="<?php echo set_value('title_seo', $it['title_seo']) ?>" x-webkit-speech>
                         <span class="help-inline"></span>
                     </div>
                 </div>
@@ -46,8 +44,7 @@
                 <div class="control-group">
                     <label class="control-label" for="tag"><?php echo lang('tag') ?></label>
                     <div class="controls">
-                        <input type="text" id="tags" name="tags" value="<?php echo set_value('tags', $it['tags']) ?>"
-                               placeholder="tag1,tag2">
+                        <input type="text" id="tags" name="tags" value="<?php echo set_value('tags', $it['tags']) ?>" placeholder="tag1,tag2">
                         <span class="help-inline">使用英文标点`,`隔开</span>
                     </div>
                 </div>
@@ -55,8 +52,7 @@
                 <div class="control-group">
                     <label for="intro" class="control-label"><?php echo lang('intro') ?></label>
                     <div class="controls">
-                        <textarea name="intro" rows='8'
-                                  class='span4'><?php echo set_value('intro', $it['intro']) ?></textarea>
+                        <textarea name="intro" rows='8' class='span4'><?php echo set_value('intro', $it['intro']) ?></textarea>
                         <span class="help-inline"></span>
                     </div>
                 </div>
@@ -71,9 +67,7 @@
             <label for="title" class="control-label">时间:</label>
             <div class="controls">
                 <div class="input-append date timepicker">
-                    <input type="text"
-                           value="<?php echo date("Y/m/d H:i:s", set_value('timeline', $it['timeline'])); ?>"
-                           id="timeline" name="timeline">
+                    <input type="text" value="<?php echo date("Y/m/d H:i:s", set_value('timeline', $it['timeline'])); ?>" id="timeline" name="timeline">
                     <span class="add-on"><i class="icon-th"></i></span>
                 </div>
             </div>
@@ -93,7 +87,7 @@
         <?php } ?>
 
         <div class="control-group uefull">
-            <textarea id="content" name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
+            <textarea id="content" name="content"><?php echo set_value('content', $it['content']); ?></textarea>
         </div>
 
         <!-- 图片上传 -->
@@ -138,7 +132,8 @@
         $('.timepicker').datetimepicker({'language': 'zh-CN', 'format': 'yyyy/mm/dd hh:ii:ss', 'todayHighlight': true});
         ui.editor_create('content');
         media.init();
-        var articles_photos = <?php echo json_encode(one_upload($it['photo'])) ?>;
+        // var articles_photos = <?php // echo json_encode(one_upload($it['photo'])); ?>;
+        var articles_photos = <?php echo json_encode(list_upload($it['photo'])); ?>;
         media.show(articles_photos, "photo");
     });
 </script>

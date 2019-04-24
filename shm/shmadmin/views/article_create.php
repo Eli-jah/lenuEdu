@@ -140,7 +140,8 @@
 
         // media 上传
         media.init();
-        var articles_photos = <?php echo json_encode(one_upload(set_value("photo"))) ?>;
+        // var articles_photos = <?php // echo json_encode(one_upload(set_value("photo"))) ?>;
+        var articles_photos = <?php echo json_encode(list_upload(set_value("photo"))) ?>;
         media.show(articles_photos, "photo");
     });
 </script>
