@@ -1,6 +1,7 @@
 <div class="btn-group">
-    <a href="<?php echo site_urlc('article/index') ?>" class='btn'> <i
-            class="fa fa-arrow-left"></i> <?php echo lang('back_list') ?></a>
+    <a href="<?php echo site_urlc('article/index') ?>" class='btn'>
+        <i class="fa fa-arrow-left"></i> <?php echo lang('back_list') ?>
+    </a>
 </div>
 
 <?php include_once 'inc_form_errors.php'; ?>
@@ -14,35 +15,37 @@
     <?php echo form_open(current_urlc(), array("class" => "form-horizontal", "id" => "frm-create")); ?>
 
     <div class="boxed-inner seamless">
+
         <div class="control-group">
             <label class="control-label" for="title"> <?php echo lang('title') ?> </label>
             <div class="controls">
                 <input type="text" id="title" name="title" class='span7' value="<?php echo set_value("title") ?>">
-                <a href="#seo-modal" role="button" class="btn btn-info"
-                   data-toggle="modal"><?php echo lang('seo') ?></a>
+                <a href="#seo-modal" role="button" class="btn btn-info" data-toggle="modal">
+                    <?php echo lang('seo') ?>
+                </a>
             </div>
         </div>
 
         <div class="control-group">
-            <label for="title" class="control-label">时间:</label>
+            <label for="timeline" class="control-label">时间:</label>
             <div class="controls">
                 <div class="input-append date timepicker">
-                    <input type="text" value="<?php echo date("Y-m-d H:i:s", set_value('timeline', now())); ?>"
-                           id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">
+                    <input type="text" value="<?php echo date("Y-m-d H:i:s", set_value('timeline', now())); ?>" id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">
                     <span class="add-on"><i class="icon-th"></i></span>
                 </div>
             </div>
         </div>
 
-
         <!-- ctype -->
         <?php if ($ctype = list_coltypes($this->cid)) { ?>
             <div class="control-group">
-                <label class="control-label" for="status"> 所属分类:</label>
+                <label class="control-label" for="type_id"> 所属分类:</label>
                 <div class="controls">
-                    <?php $ctypeid = isset($_GET['ctype']) ? $_GET['ctype'] : 0; ?>
+                    <?php // $ctypeid = isset($_GET['ctype']) ? $_GET['ctype'] : 0; ?>
+                    <?php $ctypeid = isset($_GET['type_id']) ? $_GET['type_id'] : 0; ?>
                     <?php
-                    echo ui_btn_select('ctype', set_value("ctype", $ctypeid), $ctype);
+                    // echo ui_btn_select('ctype', set_value("ctype", $ctypeid), $ctype);
+                    echo ui_btn_select('type_id', set_value("type_id", $ctypeid), $ctype);
                     ?>
                     <span class="help-inline"></span>
                 </div>
@@ -61,8 +64,7 @@
                 <div class="control-group">
                     <label for="title_seo" class="control-label"><?php echo lang('title_seo') ?></label>
                     <div class="controls">
-                        <input type="text" id="title_seo" name="title_seo" value="<?php echo set_value("title_seo") ?>"
-                               x-webkit-speech>
+                        <input type="text" id="title_seo" name="title_seo" value="<?php echo set_value("title_seo") ?>" x-webkit-speech>
                         <span class="help-inline"></span>
                     </div>
                 </div>
@@ -78,7 +80,7 @@
                 <div class="control-group">
                     <label for="intro" class="control-label"><?php echo lang('intro') ?></label>
                     <div class="controls">
-                        <textarea name="intro" rows='8' class='span4'> <?php echo set_value('intro') ?> </textarea>
+                        <textarea name="intro" id="intro" rows='8' class='span4'><?php echo set_value('intro') ?></textarea>
                         <span class="help-inline"></span>
                     </div>
                 </div>
@@ -140,8 +142,8 @@
 
         // media 上传
         media.init();
-        // var articles_photos = <?php // echo json_encode(one_upload(set_value("photo"))) ?>;
-        var articles_photos = <?php echo json_encode(list_upload(set_value("photo"))) ?>;
+        // var articles_photos = <?php // echo json_encode(one_upload(set_value("photo"))); ?>;
+        var articles_photos = <?php echo json_encode(list_upload(set_value("photo"))); ?>;
         media.show(articles_photos, "photo");
     });
 </script>

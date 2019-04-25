@@ -1,15 +1,15 @@
 <div class="btn-group">
     <a href="<?php echo site_urlc('article/index'); ?>" class="btn">
-        <i class="fa fa-arrow-left"></i>
-        <?php echo lang('back_list') ?>
+        <i class="fa fa-arrow-left"></i> <?php echo lang('back_list') ?>
     </a>
 </div>
 
 <?php include_once 'inc_form_errors.php'; ?>
 
 <div class="boxed">
-    <h3><i class="fa fa-pencil">
-        </i> 编辑消息 <span class="badge badge-success pull-right"><?php echo $title; ?></span>
+    <h3>
+        <i class="fa fa-pencil"></i> 编辑消息
+        <span class="badge badge-success pull-right"><?php echo $title; ?></span>
     </h3>
     <?php echo form_open(current_urlc(), array('class' => 'form-horizontal', 'id' => 'frm-edit')); ?>
 
@@ -52,7 +52,7 @@
                 <div class="control-group">
                     <label for="intro" class="control-label"><?php echo lang('intro') ?></label>
                     <div class="controls">
-                        <textarea name="intro" rows='8' class='span4'><?php echo set_value('intro', $it['intro']) ?></textarea>
+                        <textarea name="intro" id="intro" rows='8' class='span4'><?php echo set_value('intro', $it['intro']) ?></textarea>
                         <span class="help-inline"></span>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="control-group">
-            <label for="title" class="control-label">时间:</label>
+            <label for="timeline" class="control-label">时间:</label>
             <div class="controls">
                 <div class="input-append date timepicker">
                     <input type="text" value="<?php echo date("Y/m/d H:i:s", set_value('timeline', $it['timeline'])); ?>" id="timeline" name="timeline">
@@ -74,12 +74,13 @@
         </div>
 
         <!-- ctype -->
-        <?php if ($ctype = list_coltypes($this->cid)) { ?>
+        <?php if ($ctypes = list_coltypes($this->cid)) { ?>
             <div class="control-group">
-                <label class="control-label" for="status"> 所属分类:</label>
+                <label class="control-label" for="type_id"> 所属分类:</label>
                 <div class="controls">
                     <?php
-                    echo ui_btn_select('ctype', set_value("ctype", $it['ctype']), $ctype);
+                    // echo ui_btn_select('ctype', set_value("ctype", $it['ctype']), $ctype);
+                    echo ui_btn_select('type_id', set_value("type_id", $it['type_id']), $ctypes);
                     ?>
                     <span class="help-inline"></span>
                 </div>
@@ -131,6 +132,7 @@
     require(['jquery', 'adminer/js/ui', 'adminer/js/media', 'bootstrap-datetimepicker.zh'], function ($, ui, media) {
         $('.timepicker').datetimepicker({'language': 'zh-CN', 'format': 'yyyy/mm/dd hh:ii:ss', 'todayHighlight': true});
         ui.editor_create('content');
+
         media.init();
         // var articles_photos = <?php // echo json_encode(one_upload($it['photo'])); ?>;
         var articles_photos = <?php echo json_encode(list_upload($it['photo'])); ?>;
