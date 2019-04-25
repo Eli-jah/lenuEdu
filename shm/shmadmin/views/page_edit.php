@@ -15,9 +15,27 @@
 
     <div class="boxed-inner seamless">
 
+        <?php // if (in_array($cid, array(1))): ?>
+            <div class="control-group">
+                <label for="title" class="control-label">标题</label>
+                <div class="controls">
+                    <input type="text" name="title" id="title" class='span5' value="<?php echo set_value('title', $it['title']); ?>">
+                </div>
+            </div>
+        <?php // endif; ?>
+
+        <?php // if (in_array($cid, array(1))): ?>
+            <div class="control-group">
+                <label for="title_en" class="control-label">标题（英文）</label>
+                <div class="controls">
+                    <input type="text" name="title_en" id="title_en" class='span5' value="<?php echo set_value('title_en', $it['title_en']); ?>">
+                </div>
+            </div>
+        <?php // endif; ?>
+
         <?php if (in_array($cid, array(1))): ?>
             <div class="control-group">
-                <label for="title" class="control-label">文字</label>
+                <label for="text" class="control-label">文字</label>
                 <div class="controls">
                     <input type="text" name="text" id="text" class='span5' value="<?php echo set_value('text', $it['text']); ?>">
                 </div>
@@ -26,7 +44,7 @@
 
         <?php if (in_array($cid, array(16))): ?>
             <div class="control-group">
-                <label for="title" class="control-label">PC版内容</label>
+                <label for="content" class="control-label">PC版内容</label>
             </div>
             <div class="control-group uefull">
                 <textarea id="content" name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
@@ -35,12 +53,10 @@
 
         <?php if (in_array($cid, array(1))): ?>
             <div class="control-group">
-                <label for="title" class="control-label">
-                    手机版内容:
-                </label>
+                <label for="content_mobile" class="control-label">手机版内容:</label>
             </div>
             <div class="control-group uefull">
-                <textarea id="content_m" name="content_m"> <?php echo set_value('content_m', $it['content_m']); ?></textarea>
+                <textarea id="content_mobile" name="content_mobile"> <?php echo set_value('content_mobile', $it['content_mobile']); ?></textarea>
             </div>
         <?php endif; ?>
 

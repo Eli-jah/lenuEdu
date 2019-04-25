@@ -44,9 +44,9 @@
         </div>
 
         <div class="control-group">
-            <label class="control-label" for="content">名称（英文）</label>
+            <label class="control-label" for="title_en">名称（英文）</label>
             <div class="controls">
-                <input type="text" id="content" name="content" value="<?php echo set_value('content', $it['content']) ?>" placeholder="类型名称（英文）">
+                <input type="text" id="title_en" name="title_en" value="<?php echo set_value('title_en', $it['title_en']) ?>" placeholder="类型名称（英文）">
             </div>
         </div>
 
@@ -87,7 +87,7 @@
 
 <script type="text/javascript">
     require(['adminer/js/media'], function (media) {
-        var coltypes_photos = <?php echo json_encode(one_upload(set_value('photo', $it['photo']))) ?>;
+        var coltypes_photos = <?php echo json_encode(one_upload(set_value('photo', $it['photo']))); ?>;
         media.init();
         media.show(coltypes_photos, "photo");
     });
