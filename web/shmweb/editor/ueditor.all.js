@@ -750,7 +750,7 @@
          * ```
          */
         unhtml: function (str, reg) {
-            return str ? str.replace(reg || /[&<">'·](?:(amp|lt|quot|gt|#39|bull|nbsp|#\d+);)?/g, function (a, b) {
+            return str ? str.replace(reg || /[&<">'\•](?:(amp|lt|quot|gt|#39|bull|nbsp|#\d+);)?/g, function (a, b) {
                 if (b) {
                     return a;
                 } else {
@@ -760,7 +760,7 @@
                         '"': '&quot;',
                         '>': '&gt;',
                         "'": '&#39;',
-                        '·': '&bull;',
+                        '•': '&bull;',
                     }[a];
                 }
             }) : '';
@@ -790,7 +790,7 @@
                     '&quot;': '"',
                     '&gt;': '>',
                     '&#39;': "'",
-                    '&bull;': '·',
+                    '&bull;': '•',
                     '&nbsp;': ' ',
                 }[m]
             }) : '';
