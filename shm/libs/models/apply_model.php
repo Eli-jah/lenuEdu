@@ -1,5 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
 class apply_model extends MY_Model
 {
-	protected $table = 'recruit_apply';
+    protected $table = 'recruit_apply';
 }

@@ -1,6 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// TODO：
 // 获取单页信息
 if (!function_exists('tag_single')) {
     function tag_photo($id, $column = 'url')

@@ -1,7 +1,8 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class account_model extends MY_Model {
-    protected $table = 'account'; 
+class account_model extends MY_Model
+{
+    protected $table = 'account';
 
     // 检测帐号是否存在
     public function find_name($uname)
@@ -9,12 +10,12 @@ class account_model extends MY_Model {
         $query = $this->db
             ->select('id')
             ->from($this->table)
-            ->where('uname',$uname)
+            ->where('uname', $uname)
             ->get();
         if ($this->db->affected_rows()) {
-            $id = $query->row_array();  
+            $id = $query->row_array();
             return $id['id'];
-        }else{
+        } else {
             return false;
         }
     }
@@ -25,12 +26,12 @@ class account_model extends MY_Model {
         $query = $this->db
             ->select('id')
             ->from($this->table)
-            ->where('email',$email)
+            ->where('email', $email)
             ->get();
         if ($this->db->affected_rows()) {
-            $id = $query->row_array();  
+            $id = $query->row_array();
             return $id['id'];
-        }else{
+        } else {
             return false;
         }
     }
@@ -40,12 +41,12 @@ class account_model extends MY_Model {
         $query = $this->db
             ->select('id')
             ->from($this->table)
-            ->where('phone',$phone)
+            ->where('phone', $phone)
             ->get();
         if ($this->db->affected_rows()) {
-            $id = $query->row_array();  
+            $id = $query->row_array();
             return $id['id'];
-        }else{
+        } else {
             return false;
         }
     }
@@ -55,20 +56,21 @@ class account_model extends MY_Model {
         $query = $this->db
             ->select('id')
             ->from($this->table)
-            ->where('chinaid',$chinaid)
+            ->where('chinaid', $chinaid)
             ->get();
         if ($this->db->affected_rows()) {
-            $id = $query->row_array();  
+            $id = $query->row_array();
             return $id['id'];
-        }else{
+        } else {
             return false;
         }
     }
 
     // 注册
-    public function create($data){
+    public function create($data)
+    {
         $data['reg_time'] = time();
-        $this->db->insert($this->table, $data); 
+        $this->db->insert($this->table, $data);
         if ($this->db->affected_rows()) {
             return $this->db->insert_id();
         }
@@ -81,26 +83,27 @@ class account_model extends MY_Model {
         $query = $this->db
             ->select('id,uname,nickname,pwd,login_time,login_ip,phone,email,email_check,phone_check,chinaid_check,qdd')
             ->from($this->table)
-            ->where('id',$id)
+            ->where('id', $id)
             ->get();
         return $query->row_array();
     }
 
-    public function get($id,$field="uname,email,nickname"){
+    public function get($id, $field = "uname,email,nickname")
+    {
         $query = $this->db
             ->select($field)
             ->from($this->table)
-            ->where('id',$id)
+            ->where('id', $id)
             ->get();
         return $query->row_array();
     }
 
     // 设定
-    public function set($id,$arr)
+    public function set($id, $arr)
     {
         $this->db->set($arr)
-            -> where(array('id'=>$id))
-            -> update($this->table);
+            ->where(array('id' => $id))
+            ->update($this->table);
         return $this->db->affected_rows();
     }
 
@@ -109,30 +112,30 @@ class account_model extends MY_Model {
     {
         // 获取上次信息
         $info = $this->get_login($id);
-        $this->db->set('login_time_prev',$info['login_time']);
-        $this->db->set('login_ip_prev',$info['login_ip']);
-        $this->db->set('login_ip',get_ip());
-        $this->db->set('login_time',time());
-        $this->db->set('pwd_errors',0);
-        $this->db->where('id',$id);
+        $this->db->set('login_time_prev', $info['login_time']);
+        $this->db->set('login_ip_prev', $info['login_ip']);
+        $this->db->set('login_ip', get_ip());
+        $this->db->set('login_time', time());
+        $this->db->set('pwd_errors', 0);
+        $this->db->where('id', $id);
         $this->db->update($this->table);
         return $this->db->affected_rows();
     }
 
     // 设置登录密码
-    public function set_pwd($aid,$pwd)
+    public function set_pwd($aid, $pwd)
     {
-        $this->db->set('pwd',$pwd);
-        $this->db->where('id',$aid);
+        $this->db->set('pwd', $pwd);
+        $this->db->where('id', $aid);
         $this->db->update($this->table);
         return $this->db->affected_rows();
     }
 
     // 设置支付密码
-    public function set_pwd_pay($aid,$pwd)
+    public function set_pwd_pay($aid, $pwd)
     {
-        $this->db->set('pwd_pay',$pwd);
-        $this->db->where('id',$aid);
+        $this->db->set('pwd_pay', $pwd);
+        $this->db->where('id', $aid);
         $this->db->update($this->table);
         return $this->db->affected_rows();
     }
@@ -141,11 +144,10 @@ class account_model extends MY_Model {
     public function getinfo($aid)
     {
         return $this->db
-        ->select('*')
-        ->where(array('id'=>$aid))
-        ->from($this->table)
-        ->get()
-        ->row_array();
+            ->select('*')
+            ->where(array('id' => $aid))
+            ->from($this->table)
+            ->get()
+            ->row_array();
     }
-    
 }

@@ -33,7 +33,6 @@ if (!function_exists('ui_btn_switch')) {
     }
 }
 
-
 /**
  * btn checkedbox 生成器
  * @param  string field 字段
@@ -109,7 +108,6 @@ if (!function_exists('ui_btn_select')) {
         return $tmp;
     }
 }
-
 
 if (!function_exists('ui_btn_coltypes')) {
     /**
@@ -253,7 +251,6 @@ function ui_tree($list = false, $fn_o = false, $padding = array())
     }
 
     return $tree;
-
 }
 
 function ui_tree_col($list = false, $padding = array())
@@ -336,7 +333,6 @@ function ui_tree_col($list = false, $padding = array())
     }
 
     return $tree;
-
 }
 
 // 类型列表
@@ -412,7 +408,6 @@ function ui_tree_coltypes($list = false, $padding = array())
     }
 
     return $tree;
-
 }
 
 //地图
@@ -671,9 +666,7 @@ function getImage($url, $save_dir = '', $filename = '', $type = 0)
     fclose($fp2);
     unset($img, $url);
     return array('file_name' => $filename, 'save_path' => $save_dir . $filename, 'error' => 0);
-
 }
-
 
 // TODO：舍弃 查看 data_helper one_upload/list_upload
 // 获取图片

@@ -3,7 +3,6 @@
 // 分类数据获取
 class Coltypes_model extends MY_Model
 {
-
     protected $table = 'coltypes';
 
     // 获取ids，分类下所有的子分类的ids,用于查询分类以及子分类下内容
