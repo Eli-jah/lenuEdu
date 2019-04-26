@@ -6990,6 +6990,7 @@
                 me.options.lang = checkCurLang(UE.I18N);
                 UE.plugin.load(me);
                 langReadied(me);
+
             } else {
                 utils.loadFile(document, {
                     src: me.options.langPath + me.options.lang + "/" + me.options.lang + ".js",
@@ -7076,6 +7077,7 @@
              * ```
              */
             destroy: function () {
+
                 var me = this;
                 me.fireEvent('destroy');
                 var container = me.container.parentNode;
@@ -10216,8 +10218,7 @@
     UE.plugins['defaultfilter'] = function () {
         var me = this;
         me.setOpt({
-            // 'allowDivTransToP': true,
-            'allowDivTransToP': false,
+            'allowDivTransToP': true,
             'disabledTableInTable': true
         });
         //默认的过滤处理
@@ -22881,9 +22882,8 @@
                     case 'b':
                         node.tagName = 'strong';
                         break;
-                    /*case 'i':
+                    case 'i':
                         node.tagName = 'em';
-                        break;*/
                 }
             });
         });
