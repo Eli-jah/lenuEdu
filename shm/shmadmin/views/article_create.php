@@ -91,7 +91,6 @@
             </div>
         </div>
 
-
         <div class="control-group uefull">
             <textarea id="content" name="content"><?php echo set_value("content") ?></textarea>
         </div>
@@ -137,6 +136,7 @@
     require(['jquery', 'adminer/js/ui', 'adminer/js/media', 'bootstrap-datetimepicker.zh'], function ($, ui, media) {
         // timepick
         $('.timepicker').datetimepicker({'language': 'zh-CN', 'format': 'yyyy/mm/dd hh:ii:ss', 'todayHighlight': true});
+
         // ueditor处理
         ui.editor_create('content');
 

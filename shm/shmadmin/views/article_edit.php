@@ -131,6 +131,8 @@
 <script type="text/javascript">
     require(['jquery', 'adminer/js/ui', 'adminer/js/media', 'bootstrap-datetimepicker.zh'], function ($, ui, media) {
         $('.timepicker').datetimepicker({'language': 'zh-CN', 'format': 'yyyy/mm/dd hh:ii:ss', 'todayHighlight': true});
+
+        // ueditor处理
         ui.editor_create('content');
 
         media.init();
