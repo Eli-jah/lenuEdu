@@ -1,0 +1,177 @@
+//公用组件或者页面部分通用样式
+.clickbtn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 2px dashed $theme-color;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    @include transition(all,.5s)
+    color: $theme-color;
+    &:hover {
+        background-color: $theme-color;
+        color: $white !important;
+    }
+}
+//内页头部banner
+.headerPartition {
+    width: 100%;
+    height: 359px;
+    display: flex;
+    flex-direction: column;
+    position: relative;   
+    background: url(../images/container_banner1.jpg) center no-repeat;
+    background-size: cover;
+    .opacity_box {
+        background-color: $black;
+        opacity: .6;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .Partition-title {
+        width: 63%;
+        height: 90px;
+        margin: auto;
+        position: relative;
+        h1 {
+            width: 100%;
+            display: block;
+            color: $white;
+            font-size: 60px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            &.title-zh {
+                z-index: 5;
+                opacity: .8;
+            }
+            &.title-en {
+                color: $theme-color;
+                position: absolute;
+                top: 25px;
+                opacity: .6;
+            }
+        }
+    }
+    .Partition-nav {
+        width: 63%;
+        height: 50px;
+        position: relative;
+        display: flex;
+        background-color: $theme-color;
+        margin: auto;
+        margin-bottom: 0;
+        color: $white;
+        justify-content: space-between;
+        .nav-breadcrumb {
+            margin: auto;
+            margin-left: 25px;
+            display: flex;
+            position: relative;
+            justify-content: flex-start;
+            li {
+                margin: 0 auto;
+                margin-right: 30px;
+                color: $white;
+                font-size: 18px;
+                position: relative;
+                &:before {
+                    font-family: 'iconfont';
+                    font-size: 18px;
+                    content: '\e72f';
+                    position: absolute;
+                    opacity: 0.4;
+                    color: $white;
+                    right: -20px;
+                }
+                &:after {
+                    font-family: 'iconfont';
+                    font-size: 18px;
+                    content: '\e72f';
+                    position: absolute;
+                    color: $white;
+                    right: -25px;
+                }
+                &.active {
+                    &:before,
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+        .Partition-nav-tabs {
+            margin: auto;
+            margin-right: 0;
+            display: flex;
+            height: 100%;
+            li {
+                padding: 0 20px;
+                line-height: 50px;
+                color: $white;
+                font-size: 18px;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    opacity: .6;
+                }
+                &:hover,
+                &.active {
+                    background-color: #7cb8e0;
+                    a {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1400px){
+    .headerPartition {
+        .Partition-nav {
+            width: 85%;
+        }
+    }
+}   
+@media screen and (max-width:480px){
+    .headerPartition {
+        height: 200px !important;
+        .Partition-title {
+            height: auto;
+            margin-bottom: 0;
+            h1 {
+                font-size: 20px;
+            }
+        }
+        .Partition-nav {
+            width: 100%;
+            height: 40px;
+            .nav-breadcrumb {
+                li {
+                    font-size: 16px;
+                }
+            }
+            .Partition-nav-tabs {
+                display: none;
+            }
+        }
+    }
+}
+//内页分部标题
+.pagePart_title {
+    text-align: center;
+    h1 {
+        color: $theme-color;
+        opacity: .8;
+    }
+    p {
+        font-size: 18px;
+        color: $black;
+        opacity: .4;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,144 @@
+.Curricular {
+    .headerPartition {
+        background: url(../images/Curricular_banner.png) center no-repeat;
+        .Partition-nav {
+            .Curricular_tabs {
+                li {
+                    padding: 0;
+                    .Curricular_small_tabs {
+                        position: relative;
+                        color: $white;
+                        width: 220px;
+                        padding: 0 20px;
+                        &:after {
+                            font-family: 'iconfont';
+                            font-size: 26px;
+                            position: absolute;
+                            right: 5%;
+                            content: '\e602';
+                            color: #fff;
+                        }
+                    }
+                    ul {
+                        background-color: $theme-color;
+                        height: 203px;
+                        overflow-y: auto;
+                        display: none;
+                        li {
+                            font-size: 14px;
+                            padding: 0 20px;
+                            border-bottom: 1px solid #dcdcdc;
+                            &:last-of-type {
+                                border: none;
+                            }
+                        }
+                    }   
+                }
+            }
+        }
+    }
+    .TextContent {
+        min-height: 1200px;
+        background-color: #f4f5f8;
+        .wrapper {
+            min-height: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            .wrapper_title {
+                width: 100%;
+                text-align: center;
+                margin: 70px auto;
+                h3 {
+                    text-align: center;
+                    font-size: 30px;
+                    color: $theme-color;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            .wrapper_content {
+                margin-bottom: 65px;
+                .wrapper_item {
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: 30px;
+                    h4 {
+                        color: $theme-color;
+                        margin-bottom: 30px;
+                        font-weight: bold;
+                    }
+                    .type_content {
+                        width: 100%;
+                        .type_title {
+                            h5 {
+                             font-size: 14px;   
+                            }
+                            p {
+                                text-indent: 25px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .wrapper_swiper {
+                position: relative;
+                margin-bottom: 80px;
+                .CourseRotation {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            width: 520px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    outline: none;
+                    opacity: .1;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1400px){ 
+    }   
+    @media screen and (max-width:480px){
+        .TextContent {
+            .wrapper {
+                .wrapper_title {
+                    margin: 20px auto;
+                    padding: 0 25px;
+                    h3 {
+                        font-size: 24px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                .wrapper_content {
+                    padding: 0 25px;
+                }
+                .wrapper_swiper {
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 80px;
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

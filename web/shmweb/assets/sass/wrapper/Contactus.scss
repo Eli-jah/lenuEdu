@@ -1,0 +1,678 @@
+.contactus {
+    .headerPartition {
+        height: 495px;
+        background: url(../images/contactus_banner1.jpg) center no-repeat;
+        .opacity_box {
+            opacity: .7;
+        }
+    }
+    .TextContent {
+        width: 100%;
+        background-color: $white;
+        .Contactus_part1 {
+            .pagePart_title {
+                margin-top: 90px;
+                margin-bottom: 70px;
+            }
+            .branch_office {
+                width: 50%;
+                margin: auto;
+                margin-bottom: 15px;
+                li {
+                    margin: auto;
+                    margin-bottom: 70px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .branch_office_img {
+                        margin: auto;
+                        margin-left: 0;
+                        width: 45%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .branch_office_info {
+                        margin: auto;
+                        h4 {
+                            font-size: 20px;
+                            color: $theme-color;
+                            font-weight: bold;
+                            margin-bottom: 25px;
+                        }
+                        p {
+                            font-size: 18px;
+                        }
+                        .office_info_tel {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            span {
+                                font-size: 18px;
+                                margin: auto 0;
+                                margin-top: 0;
+                                display: inline-block;
+                                height: 100%;
+                            }
+                            p {
+                                margin: auto 0;
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 0;
+                                span {
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .Contactus_part2 {
+            width: 100%;
+            min-height: 965px;
+            position: relative;
+            background: url(../images/contactus_img3.png) center no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .opacity_box {
+                background-color: $black;
+                opacity: .8;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            .localandinfo {
+                position: relative;
+                width: 63%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                .localandinfo_left {
+                    width: 60%;
+                    margin: auto;
+                    color: $white;
+                    .left_title {
+                        font-size: 24px;
+                        color: $white;
+                        margin-bottom: 30px;
+                    }
+                    #allmap {
+                        width: 95%;
+                        height: 400px;
+                    }
+                    .busline {
+                        margin-top: 25px;
+                        p {
+                            font-size: 18px;
+                            color: $white;
+                            opacity: .7;   
+                        }
+                    }
+                }
+                .localandinfo_right {
+                    margin: auto;
+                    color: $white;
+                    p {
+                        color: $white;
+                        &.localandinfo_right_title {
+                            font-size: 24px;
+                            margin-bottom: 30px;
+                        }
+                        &.right_smalltitle {
+                            font-size: 14px;
+                            margin-bottom: 25px;
+                            opacity: .4;
+                            font-weight: bold;
+                        }
+                    }
+                    form {
+                        ul {
+                            li {
+                                position: relative;
+                                margin-bottom: 30px;
+                                color: $white;
+                                opacity: .8;
+                                font-size: 18px;
+                                span {
+                                    position: absolute;
+                                    bottom: 10px;
+                                    &.message_title {
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                }
+                                input {
+                                    width: 370px;
+                                    background-color: transparent;
+                                    border: none;
+                                    border-bottom: 4px solid #717071;
+                                    color: $white;
+                                    @include transition(all,.5s);
+                                    padding-left: 80px;
+                                    caret-color: $theme-color;
+                                    &:focus {
+                                        border-color: $theme-color;
+                                    }
+                                }
+                                textarea {
+                                    width: 100%;
+                                    height: 100px;
+                                    background-color: transparent;
+                                    border: 4px solid #717071;
+                                    color: $white;
+                                    @include transition(all,.5s);
+                                    caret-color: $theme-color;
+                                    &:focus {
+                                        border-color: $theme-color;
+                                    }
+                                }
+                                @supports (-webkit-mask: none) and (not (cater-color: $theme-color)) {
+                                    input { color: $white; }
+                                    input::first-line { color: $theme-color; }
+                                }
+                                &.submit_li {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    opacity: 1;
+                                    button {
+                                        margin: auto;
+                                        margin-left: 0;
+                                        width: 140px;
+                                        height: 40px;
+                                        text-align: center;
+                                        line-height: 40px;
+                                        color: $white;
+                                        background-color: $theme-color;
+                                    }
+                                    span {
+                                        display: block;
+                                        margin: auto;
+                                        margin-right: 0;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        opacity: .4;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .for_share {
+                        color: $white;
+                        font-size: 18px;
+                        display: flex;
+                        span {
+                            margin: auto 0;
+                        }
+                        .bdsharebuttonbox {
+                            a {
+                                display: inline-block;
+                                width: 28px;
+                                height: 28px;
+                                text-align: center;
+                                line-height: 28px;
+                                background-position: center;
+                                &:hover {
+                                    background-color: #84bfe6;
+                                    border-radius: 3px;
+                                }
+                                &.bds_weixin {
+                                    background-image: url(../images/icon/weixin_icon_home.png);
+                                }
+                                &.bds_sqq {
+                                    background-image: url(../images/icon/qq_icon_home.png);
+                                }
+                                &.bds_tsina {
+                                    background-image: url(../images/icon/sina_icon_home.png);
+                                }
+                                &.bds_qzone {
+                                    background-image: url(../images/icon/qzone_icon_home.png);
+                                }
+                            }
+                        }
+                        
+                        
+//                      a {
+//                          display: inline-block;
+//                          width: 50px;
+//                          height: 50px;
+//                          margin: 0 5px;
+//                          text-align: center;
+//                          line-height: 50px;
+//                          &:first-of-type {
+//                              background-color: #3d3a3d;
+//                              border-radius: 3px;
+//                              margin-left: 30px;
+//                          }
+//                      }
+                    }
+                }
+            }
+        }
+        .Contactus_entrance {
+            .pagePart_title {
+                margin: 70px auto;
+            }
+            .entrance_textcontent {
+                width: 63%;
+                margin: auto;
+                margin-bottom: 70px;
+                background: url(../images/entrance_img.png) center no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                .Apply_title {
+                    width: 85%;
+                    margin: auto;
+                    margin-top: 60px;
+                    margin-bottom: 50px;
+                    font-size: 20px;
+                }
+                form {
+                    width: 85%;
+                    margin: auto;
+                    margin-top: 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    .form_item {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 25px;
+                        margin-right: 30px;
+                        span {
+                            display: inline-block;
+                            min-width: 75px;
+                            margin: auto;
+                            font-size: 16px;
+                            text-align: right;
+                        }
+                        label {
+                            display: inline-block;
+                            min-width: 35px;
+                            text-align: center;
+                            margin: auto;
+                            font-size: 16px;
+                            font-weight: normal;
+                        }
+                        input[type="radio"] {
+                            width: 15px;
+                            height: 15px;
+                            margin: auto;
+                        }
+                        input[type="text"] {
+                            width: 235px;
+                            height: 35px;
+                            border: 2px solid #d8dce0;
+                            background-color: transparent;
+                            padding: 0 5px;
+                        }
+                        .forinpwidth {
+                            width: 235px;
+                            height: 35px;
+                            display: flex;
+                            flex-direction: row;
+                            input {
+                                margin: auto 0;
+                            }
+                            label {
+                                margin: auto 0;
+                            }
+                        }
+                        &.Remarks {
+                            width: 100%;
+                            span {
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            textarea {
+                                width: 85%;
+                                height: 150px;
+                                border: 2px solid #d8dce0;
+                                background-color: transparent;
+                                padding: 5px;
+                            }   
+                        }
+                    }
+                    .apply_subtn {
+                        width: 200px;
+                        height: 50px;
+                        text-align: center;
+                        color: $white;
+                        background-color: $theme-color;
+                        margin: auto;
+                        margin-bottom: 70px;
+                        margin-top: 30px;
+                        font-size: 16px;
+                        &:hover {
+                            opacity: .8;
+                        }
+                    }
+                }
+            }
+        }
+        //企业招聘
+        .Contactus_recruitment {
+            .pagePart_title {
+                margin-top: 60px;
+                margin-bottom: 50px;
+            }
+            .recruitment_content {
+                .recruitment_title {
+                    margin: auto;
+                    margin-bottom: 60px;
+                    width: 65%;
+                    padding: 15px 35px;
+                    border: 2px dashed $theme-color;
+                    ul {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        li {
+                            font-size: 20px;
+                            margin: 5px 0;
+                            margin-right: 30px;
+                            &.active,
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+                .recruitment_table {
+                    width: 65%;
+                    margin: auto;
+                    margin-bottom: 30px;
+                    .recruitment_ultab {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 15px 25px;
+                            &.recruitment_ultab_title {
+                                flex-direction: row;
+                                div {
+                                    width: 200px;
+                                    margin: auto;
+                                    text-align: center;
+                                    &:last-of-type {
+                                        width: 30px;
+                                    }
+                                }
+                            }
+                            .recruitment_ultab_link {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                cursor: pointer;
+                                div {
+                                    width: 200px;
+                                    text-align: center;
+                                    margin: auto;
+                                    &:last-of-type {
+                                        width: 30px;
+                                    }
+                                    &.Jobtitle {
+                                        color: $theme-color;
+                                    }
+                                    &.Jobtreatment {
+                                        span {
+                                            display: inline-block;
+                                            position: relative;
+                                            @include transition(all,.5s);   
+                                        }
+                                    }
+                                }
+                            }
+                            .recruitment_ultab_cont {
+                                display: none;
+                                width: 100%;
+                                padding: 15px 0;
+                                padding-left: 140px;
+                                margin-top: 10px;
+                                font-size: 12px;
+                                background-color: #F4F9FD;
+                            }
+                            &.cur {
+                                .recruitment_ultab_link {
+                                    div {
+                                        &.Jobtreatment {
+                                            span {
+                                                transform: rotateZ(180deg);
+                                                color: $theme-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                background-color: #F4F9FD;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and ( min-width: 1200px) and (max-width:1500px){
+    .contactus {
+        .TextContent {
+            .Contactus_part1 {
+                .branch_office {
+                    width: 70%;
+                }
+            }
+            .Contactus_part2 {
+                .localandinfo {
+                    width: 90%;
+                }
+            }
+            .Contactus_recruitment {
+                .recruitment_content {
+                    .recruitment_title {
+                        padding: 10px 25px;
+                        ul {
+                            li {
+                                font-size: 16px;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                    .recruitment_table {
+                        table {
+                            tr {
+                                font-size: 14px;
+                                th {
+                                    text-align: center;
+                                }
+                                td {
+                                    text-align: center;
+                                    ul {
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .contactus {
+        .TextContent {
+            .Contactus_part1 {
+                .pagePart_title {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .branch_office {
+                    width: 85%;
+                    li {
+                        flex-direction: column;
+                        .branch_office_img {
+                            width: 100%;
+                        }
+                        .branch_office_info {
+                            h4 {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .Contactus_part2 {
+                .localandinfo {
+                    width: 85%;
+                    flex-direction: column;
+                    .localandinfo_left {
+                        width: 100%;
+                        .left_title {
+                            width: 100%;
+                            text-align: center;
+                            margin-top: 30px;
+                            font-size: 20px;
+                        }
+                        #allmap {
+                            width: 100%;
+                            height: 280px;
+                        }
+                        .busline {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .localandinfo_right {
+                        width: 100%;
+                        p {
+                            &.right_smalltitle {
+                                font-size: 12px;
+                            }
+                        }
+                        form {
+                            margin-bottom: 20px;
+                            ul {
+                                li {
+                                    input {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .for_share {
+                            font-size: 14px;
+                            margin-bottom: 30px;
+                            a {
+                                width: 45px;
+                                height: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+            .Contactus_entrance {
+                .pagePart_title {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .entrance_textcontent {
+                    width: 85%;
+                    margin-bottom: 35px;
+                    .Apply_title {
+                        width: 90%;
+                        font-size: 14px;
+                        margin: 35px auto;
+                    }
+                    form {
+                        width: 90%;
+                        .form_item {
+                            width: 100%;
+                            margin-right: 0;
+                            span {
+                                min-width: 45px;
+                                font-size: 14px;
+                            }
+                            textarea {
+                                height: 100px;
+                            }
+                        }
+                        .apply_subtn {
+                            width: 120px;
+                            height: 40px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .Contactus_recruitment {
+                .pagePart_title {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .recruitment_content {
+                    .recruitment_title {
+                        width: 90%;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        ul {
+                            li {
+                                font-size: 14px;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                    .recruitment_table {
+                        width: 90%;
+                        .recruitment_ultab {
+                            width: 100%;
+                            li {
+                                padding: 15px 5px;
+                                &.recruitment_ultab_title {
+                                    font-size: 12px;
+                                }
+                                .recruitment_ultab_link {
+                                    font-size: 12px;
+                                    div {
+                                        text-align: center;
+                                    }
+                                }
+                                .recruitment_ultab_cont {
+                                    padding-left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
