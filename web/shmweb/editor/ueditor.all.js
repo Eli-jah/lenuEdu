@@ -750,7 +750,7 @@
          * ```
          */
         unhtml: function (str, reg) {
-            return str ? str.replace(reg || /[&<">'\•](?:(amp|lt|quot|gt|#39|bull|nbsp|#\d+);)?/g, function (a, b) {
+            return str ? str.replace(reg || /[&<">'\•\©](?:(amp|lt|quot|gt|#39|bull|#169|nbsp|#\d+);)?/g, function (a, b) {
                 if (b) {
                     return a;
                 } else {
@@ -761,6 +761,7 @@
                         '>': '&gt;',
                         "'": '&#39;',
                         '•': '&bull;',
+                        '©': '&#169;',
                     }[a];
                 }
             }) : '';
@@ -783,7 +784,7 @@
          * ```
          */
         html: function (str) {
-            return str ? str.replace(/&((g|l|quo)t|amp|#39|bull|nbsp);/g, function (m) {
+            return str ? str.replace(/&((g|l|quo)t|amp|#39|bull|#169|nbsp);/g, function (m) {
                 return {
                     '&lt;': '<',
                     '&amp;': '&',
@@ -791,6 +792,7 @@
                     '&gt;': '>',
                     '&#39;': "'",
                     '&bull;': '•',
+                    '&#169;': '©',
                     '&nbsp;': ' ',
                 }[m]
             }) : '';
