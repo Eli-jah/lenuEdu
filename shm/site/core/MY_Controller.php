@@ -260,10 +260,10 @@ class MY_Controller extends CI_Controller
     protected function getTypesByColumnId($cid = false)
     {
         $types = array();
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $types;
         }
-        $types = $this->db->get_where('coltypes', array('cid' => $cid), 1)->order_by('sort_id', 'asc')->select('id, title, title_en')->row_array();
+        $types = $this->db->get_where('coltypes', array('cid' => $cid), 1)->order_by('sort_id', 'asc')->row_array();
         return $types;
     }
 
@@ -271,13 +271,13 @@ class MY_Controller extends CI_Controller
     protected function getArticlesByColumnId($cid = false, $type_id = false)
     {
         $where = array();
-        if ((!$cid || !is_integer($cid)) && (!$type_id || !is_integer($type_id))) {
+        if (!$cid && !$type_id) {
             return $where;
         }
-        if ($cid && is_integer($cid)) {
+        if ($cid) {
             $where['cid'] = $cid;
         }
-        if ($type_id && is_integer($type_id)) {
+        if ($type_id) {
             $where['type_id'] = $type_id;
         }
         $articles = $this->db->get_where('article', $where)->order_by('sort_id', 'asc')->row_array();
@@ -288,11 +288,11 @@ class MY_Controller extends CI_Controller
     protected function getPhotosByArticleId($id = false)
     {
         $photos = array();
-        if(!$id || !is_integer($id)){
+        if (!$id) {
             return $photos;
         }
-        $article = $this->db->get_where('article', array('id', $id), 1)->select('photo')->row();
-        if(!empty($article)){
+        $article = $this->db->get_where('article', array('id', $id), 1)->row();
+        if (!empty($article)) {
             $photo = $article->photo;
             $photos = $this->getPhotosByUploadIds($photo);
         }
@@ -303,10 +303,10 @@ class MY_Controller extends CI_Controller
     protected function getTitleByColumnId($cid = false)
     {
         $title = '';
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $title;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('title')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page)) {
             $title = $page->title;
         }
@@ -317,10 +317,10 @@ class MY_Controller extends CI_Controller
     protected function getTitlesByColumnId($cid = false)
     {
         $titles = array();
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $titles;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('title, title_en')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page)) {
             $titles['title'] = $page->title;
             $titles['title_en'] = $page->title_en;
@@ -332,10 +332,10 @@ class MY_Controller extends CI_Controller
     protected function getTextByColumnId($cid = false)
     {
         $text = '';
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $text;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('text')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page)) {
             $text = $page->text;
         }
@@ -346,10 +346,10 @@ class MY_Controller extends CI_Controller
     protected function getContentByColumnId($cid = false)
     {
         $content = '';
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $content;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('content')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page)) {
             $content = $page->content;
         }
@@ -360,10 +360,10 @@ class MY_Controller extends CI_Controller
     protected function getThumbByColumnId($cid = false)
     {
         $thumb = '';
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $thumb;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('thumb')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page)) {
             $thumb = $page->thumb;
         }
@@ -374,10 +374,10 @@ class MY_Controller extends CI_Controller
     protected function getPhotoByColumnId($cid = false)
     {
         $photo_url = '';
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $photo_url;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('photo')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page) && $page->photo) {
             $photo = $page->photo;
             $comma_position = strpos($photo, ',');
@@ -395,10 +395,10 @@ class MY_Controller extends CI_Controller
     protected function getPhotosByColumnId($cid = false)
     {
         $photos = array();
-        if (!$cid || !is_integer($cid)) {
+        if (!$cid) {
             return $photos;
         }
-        $page = $this->db->get_where('page', array('cid' => $cid), 1)->select('photo')->row();
+        $page = $this->db->get_where('page', array('cid' => $cid), 1)->row();
         if (!empty($page) && $page->photo) {
             $photo = $page->photo;
             $photos = $this->getPhotosByUploadIds($photo);
@@ -410,12 +410,12 @@ class MY_Controller extends CI_Controller
     protected function getPhotoByUploadId($id = false)
     {
         $photo_url = '';
-        if (!$id || !is_integer($id)) {
+        if (!$id) {
             return $photo_url;
         }
-        $upload = $this->db->get_where('upload', array('id' => $id), 1)->select('url')->row();
+        $upload = $this->db->get_where('upload', array('id' => $id), 1)->row();
         if (!empty($upload)) {
-            $photo_url = $upload->url;
+            $photo_url = UPLOAD_URL . $upload->url;
         }
         return $photo_url;
     }
@@ -428,7 +428,10 @@ class MY_Controller extends CI_Controller
             return $photos;
         }
         $photo_ids = explode($ids, ',');
-        $photos = $this->db->get('upload')->where_in('id', $photo_ids)->select('url')->row_array();
+        $photos = $this->db->get('upload')->where_in('id', $photo_ids)->row_array();
+        foreach ($photos as $key => $photo) {
+            $photos[$key]['photo_url'] = UPLOAD_URL . $photo['url'];
+        }
         return $photos;
     }
 }

@@ -1,5 +1,8 @@
-<?php if (!defined('BASEPATH'))
+<?php
+
+if (!defined('BASEPATH')){
     exit('No direct script access allowed');
+}
 
 class Welcome extends MY_Controller
 {
@@ -25,52 +28,49 @@ class Welcome extends MY_Controller
         $data['local_name'] = '首页';
 
         // banners
-        $data['banners'] = $this->db->order_by('sort_id', 'desc')->get_where('banners', array('audit' => 1, 'cid' => $this->banner_id))->result_array();
+        $data['banners'] = $this->db->order_by('sort_id', 'asc')->get_where('banners', array('audit' => 1, 'cid' => $this->banner_id))->result_array();
         foreach ($data['banners'] as $key => $banner) {
-            list($data['banners'][$key]['title'], $data['banners'][$key]['sub_title']) = explode('|', $banner['title']);
-            $data['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
+            $data['banners'][$key]['photo_url'] = $this->getPhotoByUploadId($banner['photo']);
         }
 
         // company introduction
-        $data['company']['title'] = $this->db->get_where('page', array('cid' => 5))->row_array();
-        $data['company']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(6, 7, 8, 9))->get('page')->result_array();
-        foreach ($data['company']['banners'] as $key => $banner) {
-            $data['company']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
-        }
+        $data['company']['titles'] = $this->getTitlesByColumnId(4);
+        $data['company']['intro'] = $this->getContentByColumnId(5);
+        $data['company']['bg_image'] = $this->getPhotoByColumnId(6);
 
         // hot courses
-        $data['courses']['title'] = $this->db->get_where('page', array('cid' => 11))->row_array();
-        $data['courses']['content'] = tag_single(12, 'content');
-        $data['courses']['etl'] = $this->db->get_where('page', array('cid' => 13))->row_array();
-        $data['courses']['etl']['photo'] = tag_photo($data['courses']['etl']['photo'], 'url');
+        $data['courses']['titles'] = $this->getTitlesByColumnId(8);
+        $data['courses']['intro'] = $this->getContentByColumnId(9);
+        $data['courses']['display_image'] = $this->getPhotoByColumnId(10);
 
         // partners
-        $data['partners']['title'] = $this->db->get_where('page', array('cid' => 15))->row_array();
-        $data['partners']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(16, 17, 18, 19))->get('page')->result_array();
-        foreach ($data['partners']['banners'] as $key => $banner) {
-            $data['partners']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
-        }
+        $data['partners']['titles'] = $this->getTitlesByColumnId(12);
+        $data['partners']['intro'] = $this->getContentByColumnId(13);
+        $data['partners']['bg_image'] = $this->getPhotoByColumnId(14);
 
         // news
-        $data['news']['title'] = $this->db->get_where('page', array('cid' => 21))->row_array();
-        $data['news']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
-        foreach ($data['news']['banners'] as $key => $banner) {
-            $data['news']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
-        }
+        $data['news']['titles'] = $this->getTitlesByColumnId(16);
+        $data['news']['bg_image'] = $this->getPhotoByColumnId(17);
 
-        // achievements
-        $data['achievements']['title'] = $this->db->get_where('page', array('cid' => 21))->row_array();
-        $data['achievements']['banners'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
-        foreach ($data['achievements']['banners'] as $key => $banner) {
-            $data['achievements']['banners'][$key]['photo'] = tag_photo($banner['photo'], 'url');
-        }
+        // achievement
+        $data['achievement']['titles'] = $this->getTitlesByColumnId(19);
+        $data['achievement']['intro'] = $this->getContentByColumnId(20);
+        $data['achievement']['bg_image'] = $this->getPhotoByColumnId(21);
 
-        // footer
-        $data['footer']['navigation'] = tag_single(29, 'content');
-        $data['footer']['icp'] = tag_single(30, 'content');
-        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
-        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
-        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
+        // header info
+        $data['header_info']['address'] = $this->getTextByColumnId(23);
+        $data['header_info']['telephone'] = $this->getTextByColumnId(24);
+        $data['header_info']['phone'] = $this->getTextByColumnId(25);
+        $data['header_info']['qq'] = $this->getTextByColumnId(26);
+        $data['header_info']['qr_code'] = $this->getPhotoByColumnId(27);
+
+        // footer info
+        $data['footer_info']['address'] = $this->getTextByColumnId(23);
+        $data['footer_info']['telephone'] = $this->getTextByColumnId(24);
+        $data['footer_info']['phone'] = $this->getTextByColumnId(25);
+        $data['footer_info']['qq'] = $this->getTextByColumnId(26);
+        $data['footer_info']['qr_code'] = $this->getPhotoByColumnId(27);
+        $data['footer_info']['icp'] = $this->getContentByColumnId(28);
 
         $this->load->view('welcome', $data);
     }

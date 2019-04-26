@@ -92,24 +92,24 @@
             <ul>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/address_icon.png"/>
-                    <span>山东省青岛市市北区四流南路80号纺织谷  </span>
+                    <span><?php echo $header_info['address']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/qq_icon.png"/>
-                    <span>471913346</span>
+                    <span><?php echo $header_info['qq']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/tel_icon.png"/>
-                    <span>18560678853</span>
+                    <span><?php echo $header_info['phone']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/phone_icon.png"/>
-                    <span>0532-58971971</span>
+                    <span><?php echo $header_info['telephone']; ?></span>
                 </li>
             </ul>
             <div class="ercode_btn_box">
                 <a href="javascript:void(0);">
-                    <img src="/web/shmweb/assets/images/icon/ercode_icon.png"/>
+                    <img src="<?php echo $header_info['qr_code']; ?>"/>
                 </a>
             </div>
         </div>

@@ -40,10 +40,10 @@
                     </ul>
                 </div>
                 <div class="footer_up_local">
-                    <p><span>地址 ：</span><span>山东省青岛市市北区四流南路80号纺织谷</span></p>
-                    <p><span>电话 ：</span><span>0532-58971971</span></p>
-                    <p><span>手机 ：</span><span>18560678853</span></p>
-                    <p><span>Q Q ：</span><span>471913346</span></p>
+                    <p><span>地址 ：</span><span><?php echo $footer_info['address']; ?></span></p>
+                    <p><span>电话 ：</span><span><?php echo $footer_info['telephone']; ?></span></p>
+                    <p><span>手机 ：</span><span><?php echo $footer_info['phone']; ?></span></p>
+                    <p><span>Q Q ：</span><span><?php echo $footer_info['qq']; ?></span></p>
                     <div class="bdsharebuttonbox">
                         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
                         <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给QQ好友"></a>
@@ -59,12 +59,7 @@
                 </div>
             </div>
             <div class="home_footer_down">
-                <p>
-                    <span>Copyright &#169; 2019</span>
-                    <span>青岛莱牛教育</span>
-                    <span>版权所有</span>
-                    <span>鲁ICP备1601060</span>
-                </p>
+                <?php echo $footer_info['icp']; ?>
             </div>
         </div>
     </div>
