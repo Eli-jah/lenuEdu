@@ -1,5 +1,5 @@
--- START TIME: 2018-09-13 14:16:11
--- DATABASE NAME: ci_web
+-- START TIME: 2019-04-26 14:34:49
+-- DATABASE NAME: shm
 
 
 -- Table structure for shm_acount 
@@ -60,25 +60,13 @@ CREATE TABLE `shm_adminmodels` (
   `photo` varchar(200) DEFAULT NULL COMMENT '图片',
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='模块列表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='模块列表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_adminmodels`
 LOCK TABLES `shm_adminmodels` WRITE;
 /*!40000 ALTER TABLE `shm_adminmodels` DISABLE KEYS */;
-INSERT INTO `shm_adminmodels` (`id`,`cid`,`ccid`,`mid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`link`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`photo`,`thumb`) VALUES
-('17','0','0','2','6','1','0','0','1','模块1',NULL,NULL,NULL,NULL,NULL,'1492415573','13','2017/04/17/thumbnail/14924159147287ins5x.jpg'),
-('16','0','0','1','5','1','0','0','5','模块5',NULL,NULL,NULL,NULL,NULL,'1489377405','6','2017/03/13/thumbnail/14893892559326x71d4.jpg'),
-('15','0','0','1','4','1','0','0','4','模块4',NULL,NULL,NULL,NULL,NULL,'1489377393','5','2017/03/13/thumbnail/14893892411976clryg.jpg'),
-('14','0','0','1','3','1','0','0','3','模块3',NULL,NULL,NULL,NULL,NULL,'1489377383','4','2017/03/13/thumbnail/14893892305067qloi4.jpg'),
-('12','0','0','1','1','1','0','0','1','模块1',NULL,NULL,NULL,NULL,NULL,'1489116282','2','2017/03/13/thumbnail/14893892035051vvu0w.jpg'),
-('13','0','0','1','2','1','0','0','2','模块2',NULL,NULL,NULL,NULL,NULL,'1489116466','3','2017/03/13/thumbnail/14893892187479s1vqp.jpg'),
-('18','0','0','2','7','1','0','0','2','模块2',NULL,NULL,NULL,NULL,NULL,'1492415589','14','2017/04/17/thumbnail/14924159235296dxq84.jpg'),
-('19','0','0','2','8','1','0','0','3','模块3',NULL,NULL,NULL,NULL,NULL,'1492415601','15','2017/04/17/thumbnail/14924159336625fonvz.jpg'),
-('20','0','0','2','9','1','0','0','4','模块4',NULL,NULL,NULL,NULL,NULL,'1492415611','16','2017/04/17/thumbnail/14924159404476vzltt.jpg'),
-('21','0','0','1','10','1','0','0','6','模版6',NULL,NULL,NULL,NULL,NULL,'1492568126','17','2017/04/19/thumbnail/149256812539143bm7h.jpg'),
-('22','0','0','1','11','1','0','0','7','模版7',NULL,NULL,NULL,NULL,NULL,'1492568139','18','2017/04/19/thumbnail/14925681384586shijf.jpg');
 /*!40000 ALTER TABLE `shm_adminmodels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,7 +98,7 @@ CREATE TABLE `shm_advert` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `attachment` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='广告';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='广告';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -150,47 +138,13 @@ CREATE TABLE `shm_article` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `attachment` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='信息表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_article`
 LOCK TABLES `shm_article` WRITE;
 /*!40000 ALTER TABLE `shm_article` DISABLE KEYS */;
-INSERT INTO `shm_article` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`expiretime`,`status`,`author`,`source`,`click`,`recommend`,`photo`,`thumb`,`attachment`) VALUES
-('1','8','0','1','1','0','2',NULL,'测试1','','  ','','<p style="margin-top: 26px; margin-bottom: 26px; padding: 0px; color: rgb(51, 51, 51); font-family: sinmsun; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;12月17日，由国家科技部现代服务产业联盟主办，功虎社区联合主办，中英HiTECH创新创业协会、杭州市移动互联网技术学会、杭州市计算机学会、浙江大学创新创业中心联合承办，尚禾维曼网络全程战略支持的第三届中国(杭州)移动互联网大会在浙江杭州举行。中国工程院院士、联想集团首任总工程师倪光南教授出席会议并致辞。国内移动互联网领域大咖、资深投资人、知名企业家、创业者及相关协会代表等千余人参加会议。</p><p style="margin-top: 26px; margin-bottom: 26px; padding: 0px; color: rgb(51, 51, 51); font-family: sinmsun; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">　　近年来，作为战略支持方的尚禾维曼网络在移动互联网营销及开发领域的突出优势获得市场及客户的广泛认可，在移动大数据领域也拥有自主知识产权的平台级产品，在移动营销领域的综合能力方面在国内居于领先位置。</p><div class="img_wrapper" style="margin: 0px 0px 10px; padding: 0px; font-size: 12px; position: relative; text-align: center; color: rgb(51, 51, 51); font-family: sinmsun; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><img src="http://localhost/shmweb/web/upload/148775661822781.jpg" alt="278103075.jpg" style="border: 1px solid black; vertical-align: top; display: inline; margin: 0px auto; z-index: 1; position: relative;" width="500" height="332"/><span class="img_descr" style="display: block; margin: 5px auto; z-index: 1;"></span></div><div class="img_wrapper" style="margin: 0px 0px 10px; padding: 0px; font-size: 12px; position: relative; text-align: center; color: rgb(51, 51, 51); font-family: sinmsun; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><img src="http://localhost/shmweb/web/upload/14877566186278.jpg" alt="994788439.jpg" style="border: 1px solid black; vertical-align: top; display: inline; margin: 0px auto; z-index: 1; position: relative;" width="500" height="332"/><span class="img_descr" style="display: block; margin: 5px auto; z-index: 1;"></span></div><div class="img_wrapper" style="margin: 0px 0px 10px; padding: 0px; font-size: 12px; position: relative; text-align: center; color: rgb(51, 51, 51); font-family: sinmsun; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><img src="http://localhost/shmweb/web/upload/14877566185180.jpg" alt="webwxgetmsgimg.jpg" style="border: 1px solid black; vertical-align: top; display: inline; margin: 0px auto; z-index: 1; position: relative;" width="500" height="333"/></div><p><br/></p>','1487142495',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('2','8','0','2','1','0','2',NULL,'测试2','','  ','','<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: none; color: rgb(68, 68, 68); text-indent: 2em;">近日，西湖区人民政府副区长陈玮，在区政府办公室罗主任、文新街道郎主任和张科长的陪同下，莅临青岛尚禾维曼网络科技股份有限公司考察指导工作。</p><p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: none; color: rgb(68, 68, 68); text-align: center;"><img src="http://localhost/shmweb/web/upload/148775705412514.png" title="1480308314381844.png" alt="图片1.png" style="margin: 0px; padding: 0px; vertical-align: baseline; border: none; max-width: 100%;"/></p><p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: none; color: rgb(68, 68, 68); text-indent: 2em;">&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: none; color: rgb(68, 68, 68); text-align: center;"><img src="http://localhost/shmweb/web/upload/148775705711176.png" title="1480308327994856.png" alt="图片2.png" style="margin: 0px; padding: 0px; vertical-align: baseline; border: none; max-width: 100%;"/></p><p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: none; color: rgb(68, 68, 68); text-indent: 2em;">&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; vertical-align: baseline; border: medium none; color: rgb(68, 68, 68); text-indent: 2em;">尚禾维曼网络董事长叶栋栋、董秘兼总经理祝珍来，董事胡小飞在司陪同接待，对来访的西湖区政府领导关于尚禾维曼网络的成长历程及相关业务情况进行了汇报，陈玮副区长对尚禾维曼网络取得的成绩给予了充分肯定，并鼓励公司要走出去，多互动多交流，以进一步发展壮大，区政府和有关部门、街道将一如既往地做好服务工作，帮助公司排忧解难，让公司把更多精力放到做大、做强、做精上。</p>','1487757041',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('3','8','0','3','1','0','2',NULL,'测试3','','  ','','<p><span style="white-space: normal;">&nbsp; &nbsp; &nbsp; &nbsp;测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span>测试3<span style="white-space: normal;">测试3</span><span style="white-space: normal;">测试3</span></p>','1487817805',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('4','8','0','4','1','0','2',NULL,'测试4','','  ','','<p style="text-align: center;"><img src="http://localhost/shmweb/web/upload/148792296124561.png" title="14847963917932761Kdb.png" alt="201612191127322628.png" style="-webkit-font-smoothing: antialiased; border: 0px; vertical-align: middle; max-width: 100%;"/></p><p></p>','1487922891',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('5','8','0','5','1','0','2',NULL,'测试5','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5测试5</p>','1489975974',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('6','8','0','6','1','0','2',NULL,'测试6','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6测试6</p>','1490667472',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('7','8','0','7','1','0','2',NULL,'测试7','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7测试7</p>','1490667473',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('8','8','0','8','1','0','2',NULL,'测试8','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8测试8</p>','1490667474',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('9','8','0','9','1','0','2',NULL,'测试9','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9测试9</p>','1490667474',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('10','8','0','10','1','0','1',NULL,'测试10','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10测试10</p>','1490667475',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('11','8','0','11','1','0','1',NULL,'测试11','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11测试11</p>','1490667476',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('12','8','0','12','1','0','1',NULL,'测试12','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12测试12</p>','1490667476',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('13','8','0','13','1','0','1',NULL,'测试13','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13测试13</p>','1490667477',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('14','8','0','14','1','0','1',NULL,'测试14','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14测试14</p>','1490667477',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('15','8','0','15','1','1','1',NULL,'测试15','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15测试15</p>','1490667478',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('16','8','0','16','1','1','1',NULL,'测试16','','  ','','<p>&nbsp; &nbsp; &nbsp; &nbsp; 测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16测试16</p>','1490667479',NULL,'0',NULL,NULL,'0','0','20','2017/05/26/thumbnail/14957788622974degra.jpg',NULL),
-('17','8','0','17','1','1','1',NULL,'测试177','','  ','','<p>&nbsp; &nbsp; &nbsp; 测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17测试17</p>','1490667479',NULL,'0',NULL,NULL,'0','0','','',NULL),
-('49','31','0','28','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540523',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('48','31','0','27','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540523',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('47','31','0','26','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540522',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('46','31','0','25','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540515',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('45','31','0','24','1','0','10',NULL,'媒体新闻测试BBB','','  ','','<p>媒体新闻测试BBB媒体新闻测试BBB</p><p>媒体新闻测试BBB</p>','1524540514',NULL,'0',NULL,NULL,'0','0','29','2018/04/24/thumbnail/15245404804734nfqf2.jpg',NULL),
-('44','31','0','23','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540514',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('43','31','0','22','1','0','10',NULL,'媒体新闻测试BBB','','  ','','<p>媒体新闻测试BBB媒体新闻测试BBB</p><p>媒体新闻测试BBB</p>','1524540513',NULL,'0',NULL,NULL,'0','0','29','2018/04/24/thumbnail/15245404804734nfqf2.jpg',NULL),
-('42','31','0','21','1','1','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540502',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('41','31','0','20','1','0','10',NULL,'媒体新闻测试BBB','','  ','','<p>媒体新闻测试BBB媒体新闻测试BBB</p><p>媒体新闻测试BBB</p>','1524540502',NULL,'0',NULL,NULL,'0','0','29','2018/04/24/thumbnail/15245404804734nfqf2.jpg',NULL),
-('38','31','0','19','1','1','10',NULL,'媒体新闻测试BBB','','  ','','<p>媒体新闻测试BBB媒体新闻测试BBB</p><p>媒体新闻测试BBB</p>','1524540452',NULL,'0',NULL,NULL,'0','0','29','2018/04/24/thumbnail/15245404804734nfqf2.jpg',NULL),
-('37','31','0','18','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540430',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('50','31','0','29','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540523',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('51','31','0','30','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540523',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('52','31','0','31','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540523',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('53','31','0','32','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540524',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL),
-('54','31','0','33','1','0','9',NULL,'行业新闻测试AAA','','  ','','<p>行业新闻测试AAA行业新闻测试AAA</p><p>行业新闻测试AAA行业新闻测试AAA</p><p><br/></p><p>行业新闻测试AAA行业新闻测试AAA行业新闻测试AAA</p>','1524540525',NULL,'0',NULL,NULL,'0','0','28','2018/04/24/thumbnail/152454044866366z8c8.jpg',NULL);
 /*!40000 ALTER TABLE `shm_article` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -244,15 +198,13 @@ CREATE TABLE `shm_banners` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `attachment` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='导航';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='导航';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_banners`
 LOCK TABLES `shm_banners` WRITE;
 /*!40000 ALTER TABLE `shm_banners` DISABLE KEYS */;
-INSERT INTO `shm_banners` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`link`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`expiretime`,`status`,`click`,`photo`,`thumb`,`attachment`) VALUES
-('1','3','0','1','1','0','0',NULL,'1','1','','  ','',NULL,'1495182635',NULL,'0','0','11','',NULL);
 /*!40000 ALTER TABLE `shm_banners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -727,28 +679,29 @@ CREATE TABLE `shm_coltypes` (
   `cid` int(4) NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `name` varchar(30) NOT NULL DEFAULT 'ctype' COMMENT '表单名称，分类标志，单个栏目多个类型时',
   `title` varchar(30) DEFAULT NULL COMMENT '标题类型',
+  `title_en` varchar(200) DEFAULT NULL COMMENT '标题类型(英文)',
   `identify` varchar(30) DEFAULT NULL COMMENT '标记',
   `photo` varchar(30) DEFAULT NULL COMMENT '图片',
   `thumb` varchar(200) DEFAULT NULL COMMENT '缩略图',
   `show` int(1) NOT NULL DEFAULT '1' COMMENT '显示',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_coltypes`
 LOCK TABLES `shm_coltypes` WRITE;
 /*!40000 ALTER TABLE `shm_coltypes` DISABLE KEYS */;
-INSERT INTO `shm_coltypes` (`id`,`sort_id`,`fid`,`depth`,`cid`,`name`,`title`,`identify`,`photo`,`thumb`,`show`) VALUES
-('1','5','0','0','8','ctype','新闻分类一','','','','1'),
-('2','2','0','0','8','ctype','新闻分类二','','','','1'),
-('3','3','0','0','9','ctype','产品分类1','','','','1'),
-('4','4','0','0','9','ctype','产品分类2','','','','1'),
-('5','1','0','0','8','ctype','新闻分类三','','','','1'),
-('9','6','0','0','31','ctype','行业新闻',NULL,'','','1'),
-('10','7','0','0','31','ctype','媒体聚焦',NULL,'','','1'),
-('11','8','0','0','34','ctype','基础化工产品系列',NULL,'','','1'),
-('12','9','0','0','34','ctype','精细化学品系列',NULL,'','','1');
+INSERT INTO `shm_coltypes` (`id`,`sort_id`,`fid`,`depth`,`cid`,`name`,`title`,`title_en`,`identify`,`photo`,`thumb`,`show`) VALUES
+('1','1','0','0','63','ctype','院校合作','',NULL,'','','1'),
+('2','2','0','0','63','ctype','企业合作','',NULL,'','','1'),
+('3','3','0','0','68','ctype','最新资讯','Latest News',NULL,'','','1'),
+('4','4','0','0','68','ctype','行业资讯','Industry Information',NULL,'','','1'),
+('5','5','0','0','68','ctype','招生动态','Enrollment Information',NULL,'','','1'),
+('6','6','0','0','84','ctype','技术类','',NULL,'','','1'),
+('7','7','0','0','84','ctype','销售类','',NULL,'','','1'),
+('8','8','0','0','84','ctype','市场类','',NULL,'','','1'),
+('9','9','0','0','84','ctype','行政类','',NULL,'','','1');
 /*!40000 ALTER TABLE `shm_coltypes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -774,7 +727,7 @@ CREATE TABLE `shm_columns` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0删除 1正常',
   `show` int(1) NOT NULL DEFAULT '1' COMMENT '0隐藏 1正常',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COMMENT='栏目';
+) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COMMENT='栏目';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -782,22 +735,90 @@ CREATE TABLE `shm_columns` (
 LOCK TABLES `shm_columns` WRITE;
 /*!40000 ALTER TABLE `shm_columns` DISABLE KEYS */;
 INSERT INTO `shm_columns` (`id`,`sort_id`,`parent_id`,`depth`,`identify`,`path`,`title`,`title_seo`,`tags`,`intro`,`mid`,`temp_index`,`temp_show`,`status`,`show`) VALUES
-('26','28','0','0','news','/news','集团动态','','','','17','','','1','1'),
-('32','31','0','0','product','/product','产品与服务','','','','17','','','1','1'),
-('14','14','0','0','index','/index','网站首页','','','','17','','','1','1'),
-('15','15','14','1','index_banner','index/index_banner','banner图','','','','8','','','1','1'),
-('16','17','14','1','index_01','index/index_01','栏目一','','','','8','','','1','1'),
-('17','18','14','1','index_02','index/index_02','栏目二','','','','8','','','1','1'),
-('19','19','0','0','about','/about','集团概况','','','','17','','','1','1'),
-('20','22','19','1','about_01','about/about_01','集团简介','','','','8','','','1','1'),
-('21','23','19','1','about_02','about/about_02','集团大事记','','','','8','','','1','1'),
-('22','24','19','1','about_03','about/about_03','企业荣誉','','','','14','','','1','1'),
-('25','26','19','1','about_04','about/about_04','企业文化','','','','8','','','1','1'),
-('27','20','19','1','about_banner','about/about_banner','banner图','','','','8','','','1','1'),
-('28','29','26','1','news_banner','news/news_banner','banner图','','','','8','','','1','1'),
-('31','30','26','1','news_list','news/news_list','集团动态','','','','3','','','1','1'),
-('33','32','32','1','product_banner','product/product_banner','banner图','','','','8','','','1','1'),
-('34','34','32','1','product_list','product/product_list','产品与服务','','','','9','','','1','1');
+('1','1','0','0','index','/index','网站首页','','','','17','','','1','1'),
+('2','2','1','1','banners','/index/banners','Banners','','','','3','','','1','1'),
+('3','3','1','1','company','/index/company','首页-公司简介','','','','17','','','1','1'),
+('4','4','3','2','title','/index/company/title','标题','','','','8','','','1','1'),
+('5','5','3','2','intro','/index/company/intro','简介','','','','8','','','1','1'),
+('6','6','3','2','bg-image','/index/company/bg-image','背景图片','','','','8','','','1','1'),
+('7','7','1','1','courses','/index/courses','首页-热门课程','','','','17','','','1','1'),
+('8','8','7','2','title','/index/courses/title','标题','','','','8','','','1','1'),
+('9','9','7','2','intro','/index/courses/intro','简介','','','','8','','','1','1'),
+('10','10','7','2','display-image','/index/courses/display-image','展示图片','','','','8','','','1','1'),
+('11','11','1','1','partners','/index/partners','首页-合作伙伴','','','','17','','','1','1'),
+('12','12','11','2','title','/index/partners/title','标题','','','','8','','','1','1'),
+('13','13','11','2','intro','/index/partners/intro','简介','','','','8','','','1','1'),
+('14','14','11','2','bg-image','/index/partners/bg-image','背景图片','','','','8','','','1','1'),
+('15','15','1','1','news','/index/news','首页-最新资讯','','','','17','','','1','1'),
+('16','16','15','2','title','/index/news/title','标题','','','','8','','','1','1'),
+('17','17','15','2','bg-image','/index/news/bg-image','背景图片','','','','8','','','1','1'),
+('18','18','1','1','achievement','/index/achievement','首页-公司成就','','','','17','','','1','1'),
+('19','19','18','2','title','/index/achievement/title','标题','','','','8','','','1','1'),
+('20','20','18','2','intro','/index/achievement/intro','简介','','','','8','','','1','1'),
+('21','21','18','2','bg-image','/index/achievement/bg-image','背景图片','','','','8','','','1','1'),
+('22','22','1','1','header-info','/index/header-info','首页-Header基础信息','','','','17','','','1','1'),
+('23','23','22','2','address','/index/header-info/address','地址','','','','8','','','1','1'),
+('24','24','22','2','telephone','/index/header-info/telephone','电话','','','','8','','','1','1'),
+('25','25','22','2','phone','/index/header-info/phone','手机','','','','8','','','1','1'),
+('26','26','22','2','qq','/index/header-info/qq','QQ','','','','8','','','1','1'),
+('27','27','22','2','qr-code','/index/header-info/qr-code','QR-Code','','','','8','','','1','1'),
+('28','28','1','1','footer-info','/index/footer-info','首页-Footer基础信息','','','','17','','','1','1'),
+('29','29','28','2','address','/index/footer-info/address','地址','','','','8','','','1','1'),
+('30','30','28','2','telephone','/index/footer-info/telephone','电话','','','','8','','','1','1'),
+('31','31','28','2','phone','/index/footer-info/phone','手机','','','','8','','','1','1'),
+('32','32','28','2','qq','/index/footer-info/qq','QQ','','','','8','','','1','1'),
+('33','33','28','2','qr-code','/index/footer-info/qr-code','QR-Code','','','','8','','','1','1'),
+('34','34','28','2','icp','/index/footer-info/icp','备案信息','','','','8','','','1','1'),
+('35','35','0','0','about-us','/about-us','关于我们','','','','17','','','1','1'),
+('36','36','35','1','banner','/about-us/banner','Banner','','','','8','','','1','1'),
+('37','37','35','1','title','/about-us/title','标题','','','','8','','','1','1'),
+('38','38','35','1','bg-image','/about-us/bg-image','背景图片','','','','8','','','1','1'),
+('39','39','35','1','company','/about-us/company','公司简介','','','','17','','','1','1'),
+('40','40','39','2','title','/about-us/company/title','标题','','','','8','','','1','1'),
+('41','41','39','2','intro','/about-us/company/intro','简介','','','','8','','','1','1'),
+('42','42','39','2','image-1','/about-us/company/image-1','配图-1','','','','8','','','1','1'),
+('43','43','39','2','image-2','/about-us/company/image-2','配图-2','','','','8','','','1','1'),
+('44','44','35','1','culture','/about-us/culture','企业文化','','','','17','','','1','1'),
+('45','45','44','2','title','/about-us/culture/title','标题','','','','8','','','1','1'),
+('46','46','44','2','chronicle','/about-us/culture/chronicle','大事纪','','','','3','','','1','1'),
+('47','47','44','2','honour','/about-us/culture/honour','荣誉资质','','','','3','','','1','1'),
+('48','48','35','1','environment','/about-us/environment','教学环境','','','','17','','','1','1'),
+('49','49','48','2','title','/about-us/environment/title','标题','','','','8','','','1','1'),
+('50','50','48','2','classroom','/about-us/environment/classroom','办公环境','','','','17','','','1','1'),
+('51','51','50','3','title','/about-us/environment/classroom/title','标题','','','','8','','','1','1'),
+('52','52','50','3','images','/about-us/environment/classroom/images','多图','','','','8','','','1','1'),
+('53','53','48','2','dormitory','/about-us/environment/dormitory','住宿环境','','','','17','','','1','1'),
+('54','54','53','3','title','/about-us/environment/dormitory/title','标题','','','','8','','','1','1'),
+('55','55','53','3','images','/about-us/environment/dormitory/images','多图','','','','8','','','1','1'),
+('56','56','0','0','courses','/courses','课程分类','','','','17','','','1','1'),
+('57','57','56','1','banner','/courses/banner','Banner','','','','8','','','1','1'),
+('58','58','56','1','title','/courses/title','标题','','','','8','','','1','1'),
+('59','59','56','1','subject','/courses/subject','科目','','','','3','','','1','1'),
+('60','60','0','0','partners','/partners','合作伙伴','','','','17','','','1','1'),
+('61','61','60','1','banner','/partners/banner','Banner','','','','8','','','1','1'),
+('62','62','60','1','title','/partners/title','标题','','','','8','','','1','1'),
+('63','63','60','1','categories','/partners/categories','分类','','','','3','','','1','1'),
+('64','64','0','0','news','/news','新闻资讯','','','','17','','','1','1'),
+('65','65','64','1','banner','/news/banner','Banner','','','','8','','','1','1'),
+('66','66','64','1','title','/news/title','标题','','','','8','','','1','1'),
+('67','67','64','1','bg-image','/news/bg-image','背景图片','','','','8','','','1','1'),
+('68','68','64','1','categories','/news/categories','分类','','','','3','','','1','1'),
+('69','69','0','0','contact-us','/contact-us','联系我们','','','','17','','','1','1'),
+('70','70','69','1','banner','/contact-us/banner','Banner','','','','8','','','1','1'),
+('71','71','69','1','title','/contact-us/title','标题','','','','8','','','1','1'),
+('72','72','69','1','content','/contact-us/content','内容','','','','8','','','1','1'),
+('73','73','69','1','feedback','/contact-us/feedback','在线留言','','','','17','','','1','1'),
+('74','74','73','2','title','/contact-us/feedback/title','标题','','','','8','','','1','1'),
+('75','75','73','2','route','/contact-us/feedback/route','路线','','','','8','','','1','1'),
+('76','76','73','2','note','/contact-us/feedback/note','提示信息','','','','8','','','1','1'),
+('77','77','73','2','bg-image','/contact-us/feedback/bg-image','背景图片','','','','8','','','1','1'),
+('78','78','69','1','application','/contact-us/application','申请入学','','','','17','','','1','1'),
+('79','79','78','2','title','/contact-us/application/title','标题','','','','8','','','1','1'),
+('80','80','78','2','note','/contact-us/application/note','提示信息','','','','8','','','1','1'),
+('81','81','78','2','bg-image','/contact-us/application/bg-image','背景图片','','','','8','','','1','1'),
+('82','82','69','1','recruitment','/contact-us/recruitment','企业招聘','','','','17','','','1','1'),
+('83','83','82','2','title','/contact-us/recruitment/title','标题','','','','8','','','1','1'),
+('84','84','82','2','categories','/contact-us/recruitment/categories','分类','','','','10','','','1','1');
 /*!40000 ALTER TABLE `shm_columns` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -823,13 +844,13 @@ CREATE TABLE `shm_configs` (
 LOCK TABLES `shm_configs` WRITE;
 /*!40000 ALTER TABLE `shm_configs` DISABLE KEYS */;
 INSERT INTO `shm_configs` (`id`,`sort_id`,`category`,`key`,`value`,`label`,`intor`) VALUES
-('1','1','adminer','title_suffix','CI框架(中文后台)','标题后缀','后端标题栏显示内容的后缀.'),
+('1','1','adminer','title_suffix','尚禾维曼(中文后台)','标题后缀','后端标题栏显示内容的后缀.'),
 ('2','9','site','copyright','','CopyRight',''),
 ('3','8','site','email','','联系邮箱',''),
-('4','4','site','title_suffix','CI框架','公司名称|品牌名称','前台站点标题的后缀优化'),
-('5','5','site','title_seo','CI框架','首页标题[Title]','网站优化标题'),
-('6','6','site','tags','CI框架','关键词[Keywords]','网站关键词设定，使用`,`来间隔标签.'),
-('7','7','site','intro','CI框架','站点描述[Description]','网站描述'),
+('4','4','site','title_suffix','尚禾维曼','公司名称|品牌名称','前台站点标题的后缀优化'),
+('5','5','site','title_seo','尚禾维曼','首页标题[Title]','网站优化标题'),
+('6','6','site','tags','尚禾维曼','关键词[Keywords]','网站关键词设定，使用`,`来间隔标签.'),
+('7','7','site','intro','尚禾维曼','站点描述[Description]','网站描述'),
 ('8','10','site','icp','','ICP编号',''),
 ('9','9','adminer_x','remember_hours','72','记住登录','记住登录的时间，默认单位为小时。'),
 ('15','10','adminer','nopurview','login,welcome,manager,ajax','权限过滤',''),
@@ -890,15 +911,13 @@ CREATE TABLE `shm_dealer` (
   `mobile` varchar(200) DEFAULT NULL,
   `telphone` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='门店';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='门店';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_dealer`
 LOCK TABLES `shm_dealer` WRITE;
 /*!40000 ALTER TABLE `shm_dealer` DISABLE KEYS */;
-INSERT INTO `shm_dealer` (`id`,`cid`,`ccid`,`type_id`,`sort_id`,`audit`,`flag`,`show`,`status`,`title_seo`,`intro`,`tags`,`content`,`username`,`password`,`provinceid`,`cityid`,`title`,`address`,`lal`,`timeline`,`photo`,`thumb`,`mobile`,`telphone`) VALUES
-('1','6','0',NULL,'1','1','0','1','0','','','',NULL,'测试信息',NULL,'330000','330100','测试信息','测试信息','120.136922,30.277973','1450616562',NULL,NULL,'测试信息','测试信息');
 /*!40000 ALTER TABLE `shm_dealer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -929,16 +948,13 @@ CREATE TABLE `shm_download` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `files` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='资料下载';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='资料下载';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_download`
 LOCK TABLES `shm_download` WRITE;
 /*!40000 ALTER TABLE `shm_download` DISABLE KEYS */;
-INSERT INTO `shm_download` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`link`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`status`,`click`,`photo`,`thumb`,`files`) VALUES
-('1','5','0','2','1','0','0',NULL,'测试','','','  ','',NULL,'1450615352','0','0','','','7'),
-('2','5','0','1','1','0','0',NULL,'测试','','','  ','',NULL,'1450615368','0','0','','','7');
 /*!40000 ALTER TABLE `shm_download` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -996,8 +1012,10 @@ CREATE TABLE `shm_gallery` (
   `thumb` text COMMENT '对应压缩图',
   `timeline` int(11) NOT NULL COMMENT '时间线',
   `content` text,
+  `txt_1` varchar(200) DEFAULT NULL COMMENT 'address',
+  `txt_2` varchar(200) DEFAULT NULL COMMENT 'telephone',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='画廊';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='画廊';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -1035,30 +1053,13 @@ CREATE TABLE `shm_honor` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `attachment` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='荣誉';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='荣誉';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_honor`
 LOCK TABLES `shm_honor` WRITE;
 /*!40000 ALTER TABLE `shm_honor` DISABLE KEYS */;
-INSERT INTO `shm_honor` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`link`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`expiretime`,`status`,`click`,`photo`,`thumb`,`attachment`) VALUES
-('2','4','0','1','1','0','0',NULL,'1','1','','  ','',NULL,'1450615346',NULL,'0','0','','',NULL),
-('3','22','0','2','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539805',NULL,'0','0','','',NULL),
-('4','23','0','3','0','0','0',NULL,'','','','  ','',NULL,'1524539843',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('5','23','0','4','0','0','0',NULL,'','','','  ','',NULL,'1524539867',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('6','23','0','5','0','0','0',NULL,'','','','  ','',NULL,'1524539868',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('7','23','0','6','0','0','0',NULL,'','','','  ','',NULL,'1524539868',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('8','23','0','7','0','0','0',NULL,'','','','  ','',NULL,'1524539868',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('9','23','0','8','0','0','0',NULL,'','','','  ','',NULL,'1524539869',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('10','23','0','9','0','0','0',NULL,'','','','  ','',NULL,'1524539869',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('11','23','0','10','0','0','0',NULL,'','','','  ','',NULL,'1524539869',NULL,'0','0','25','2018/04/24/thumbnail/152453985067240z24k.jpg',NULL),
-('12','22','0','11','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539876',NULL,'0','0','','',NULL),
-('13','22','0','12','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539876',NULL,'0','0','','',NULL),
-('14','22','0','13','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539876',NULL,'0','0','','',NULL),
-('15','22','0','14','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539876',NULL,'0','0','','',NULL),
-('16','22','0','15','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539877',NULL,'0','0','','',NULL),
-('17','22','0','16','0','0','0',NULL,'AAAA','','','  ','',NULL,'1524539877',NULL,'0','0','','',NULL);
 /*!40000 ALTER TABLE `shm_honor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1091,21 +1092,13 @@ CREATE TABLE `shm_infos` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `files` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='信息表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_infos`
 LOCK TABLES `shm_infos` WRITE;
 /*!40000 ALTER TABLE `shm_infos` DISABLE KEYS */;
-INSERT INTO `shm_infos` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`expiretime`,`status`,`author`,`source`,`click`,`photo`,`thumb`,`files`) VALUES
-('11','2','0','5','1','0','0',NULL,'测试信息','','  ','','<p>测试信息</p>','1492154774',NULL,'0',NULL,NULL,'0','','',NULL),
-('12','2','0','6','1','0','0',NULL,'测试信息','','  ','','<p>测试信息</p>','1492154782',NULL,'0',NULL,NULL,'0','','',NULL),
-('13','2','0','7','1','0','0',NULL,'测试信息','','  ','','<p>测试信息</p>','1492154976',NULL,'0',NULL,NULL,'0','','',NULL),
-('7','2','0','1','1','0','0',NULL,'测试信息','','  ','','<p>测试信息</p>','1492152833',NULL,'0',NULL,NULL,'0','','',NULL),
-('8','2','0','2','1','0','0',NULL,'测试测试','','  ','','<p>测试测试</p>','1492154239',NULL,'0',NULL,NULL,'0','','',NULL),
-('9','2','0','3','1','0','0',NULL,'测试测试','','  ','','<p>测试测试</p>','1492154253',NULL,'0',NULL,NULL,'0','','',NULL),
-('10','2','0','4','1','0','0',NULL,'测试信息','','  ','','<p>测试信息</p>','1492154759',NULL,'0',NULL,NULL,'0','','',NULL);
 /*!40000 ALTER TABLE `shm_infos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1173,15 +1166,13 @@ CREATE TABLE `shm_links` (
   `show` int(1) DEFAULT '1' COMMENT '是否显示',
   `timeline` int(11) DEFAULT NULL COMMENT '发布时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='友情链接';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='友情链接';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_links`
 LOCK TABLES `shm_links` WRITE;
 /*!40000 ALTER TABLE `shm_links` DISABLE KEYS */;
-INSERT INTO `shm_links` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`title`,`content`,`tip`,`link`,`photo`,`thumb`,`show`,`timeline`) VALUES
-('1','12','0','1','1','0','0','测试信息','',NULL,'http://www.baidu.com','>','','1','1487208169');
 /*!40000 ALTER TABLE `shm_links` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1227,39 +1218,13 @@ CREATE TABLE `shm_log` (
   `ip` varchar(20) DEFAULT NULL COMMENT 'IP地址',
   `timeline` int(11) DEFAULT NULL COMMENT '时间线',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=730 DEFAULT CHARSET=utf8 COMMENT='操作日志';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='操作日志';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_log`
 LOCK TABLES `shm_log` WRITE;
 /*!40000 ALTER TABLE `shm_log` DISABLE KEYS */;
-INSERT INTO `shm_log` (`id`,`controller`,`url`,`category`,`message`,`mid`,`ip`,`timeline`) VALUES
-('526','login','/shmweb/web/admin/index.php/login?url=http://localhost/shmweb/web/admin/index.php?','login','manager ID 1: 登录成功！','1','0.0.0.0','1492655082'),
-('525','login','/shmweb/web/admin/index.php/login?url=http://localhost/shmweb/web/admin/index.php?','login','manager ID 1: 登录成功！','1','0.0.0.0','1492598570'),
-('524','feedback','/shmweb/web/admin/index.php/feedback/delete?ids=2','delete','删除数据id:2','1','0.0.0.0','1492597586'),
-('523','recruit_apply','/shmweb/web/admin/index.php/recruit_apply/delete?ids=6%2C2%2C1','delete','删除数据id:6,2,1','1','0.0.0.0','1492597063'),
-('522','recruit_apply','/shmweb/web/admin/index.php/recruit_apply/delete?ids=5%2C4','delete','删除数据id:5,4','1','0.0.0.0','1492596613'),
-('521','recruit_apply','/shmweb/web/admin/index.php/recruit_apply/delete?ids=3','delete','删除数据id:3','1','0.0.0.0','1492596252'),
-('520','upload','/shmweb/web/index.php/upload/delete','delete','删除文件ID:24',NULL,'0.0.0.0','1492596178'),
-('527','login','/shmweb/web/admin/index.php/login','login','manager ID 1: 登录成功！','1','0.0.0.0','1492655126'),
-('528','login','/shmweb/web/admin/index.php/login','login','manager ID 1: 登录成功！','1','0.0.0.0','1492655138'),
-('529','modules','/shmweb/web/admin/index.php/modules/edit/17','update','更新数据id:17','1','0.0.0.0','1492660118'),
-('530','pageirregular','/shmweb/web/admin/index.php/pageirregular/edit?c=13','update','更新数据id:1','1','0.0.0.0','1492660460'),
-('531','pageirregular','/shmweb/web/admin/index.php/pageirregular/edit?c=13','update','更新数据id:1','1','0.0.0.0','1492660568'),
-('532','pageirregular','/shmweb/web/admin/index.php/pageirregular/edit?c=13','update','更新数据id:1','1','0.0.0.0','1492660595'),
-('533','login','/shmweb/web/admin/index.php/login?url=http://localhost/shmweb/web/admin/index.php?','login','manager ID 1: 登录成功！','1','0.0.0.0','1493005023'),
-('719','login','/shmadmin/index.php/login?url=http://ci-web/shmadmin/index.php?','login','manager ID 1: 登录成功！','1','0.0.0.0','1536817343'),
-('720','product','/shmadmin/index.php/product/delete?c=34&ids=9%2C8%2C7%2C6%2C5','delete','删除数据id:9,8,7,6,5','1','0.0.0.0','1536817372'),
-('721','product','/shmadmin/index.php/product/edit/10?c=34','update','更新数据id:10','1','0.0.0.0','1536817392'),
-('722','infos','/shmadmin/index.php/infos/delete?c=24&ids=22%2C21%2C20%2C19%2C18%2C17%2C16%2C15%2C14','delete','删除数据id:22,21,20,19,18,17,16,15,14','1','0.0.0.0','1536817435'),
-('723','columns','/shmadmin/index.php/columns/delete?ids=24','delete','删除数据id:24','1','0.0.0.0','1536817442'),
-('724','upload','/shmadmin/index.php/upload/delete','delete','删除文件ID:23','1','0.0.0.0','1536817483'),
-('725','upload','/shmadmin/index.php/upload/delete','delete','删除文件ID:24','1','0.0.0.0','1536817484'),
-('726','manager_group','/shmadmin/index.php/manager_group/delete?ids=3%2C2','delete','删除数据id:3,2','1','0.0.0.0','1536817505'),
-('727','product','/shmadmin/index.php/product/delete?c=34&ids=13%2C12%2C11%2C10','delete','删除数据id:13,12,11,10','1','0.0.0.0','1536819198'),
-('728','product','/shmadmin/index.php/product/edit/14?c=34','update','更新数据id:14','1','0.0.0.0','1536819332'),
-('729','advert','/shmadmin/index.php/advert/delete?ids=2','delete','删除数据id:2','1','0.0.0.0','1536819345');
 /*!40000 ALTER TABLE `shm_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1295,7 +1260,7 @@ CREATE TABLE `shm_manager` (
 LOCK TABLES `shm_manager` WRITE;
 /*!40000 ALTER TABLE `shm_manager` DISABLE KEYS */;
 INSERT INTO `shm_manager` (`id`,`uname`,`nickname`,`pwd`,`gid`,`email`,`tel`,`phone`,`addr`,`status`,`login_today`,`pwd_errors`,`login_ip`,`reg_time`,`login_time`,`ga`,`getpass`) VALUES
-('1','shmadmin','超级用户','49cc34ec9bfb29a28181541d73cc01f8','1','customservice@shmweb.cn','','','','1','0','0','0.0.0.0','1376471117','1536817343','1','1389317880');
+('1','shmadmin','超级用户','49cc34ec9bfb29a28181541d73cc01f8','1','customservice@shmweb.cn','','','','1','0','0','127.0.0.1','1376471117','1556249563','1','1389317880');
 /*!40000 ALTER TABLE `shm_manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1318,6 +1283,8 @@ CREATE TABLE `shm_manager_group` (
 LOCK TABLES `shm_manager_group` WRITE;
 /*!40000 ALTER TABLE `shm_manager_group` DISABLE KEYS */;
 INSERT INTO `shm_manager_group` (`id`,`purview`,`title`,`title_en`) VALUES
+('2','7afb566e83d3dca2d8a47c8cc29e7e36,ff2fa0336fe8fbc6a51c4707aa47c3e3,a155574e57e9a8a0d0c6ecb1c511da68,fddc215a132fa97ca3c193f1cae5cf9f,c54e594684ebf2862c75ba29d83f71be,2ebbbd65b4e2fc52a3ce44de2160e8d2,12fb6543af2e5541b0fc4f8fdd950be0,8d2159c1e0cf70473e66866eb026e80f,c166381208e23d3f4d65dec1231ccf76,a87d77b65f6d1e8380b3d05290a994d0,430f99bc176c67ec705091d6a5da07d4,d230f6a24270b02237beb82a23e2742f,54b064097df1ab924354f87efcdc4ea0,2338d4221db8f9c52bcc2d64ee436b23,70fc54e47310e38ef19160c17ecd91af,ad92c9d2ad1d512ea852e8ae88f762ff,d0101b9aa277c72e45d078dd8369fc65','用户','users'),
+('3','c867ca63fa6504097128acd1ec81cc1a,8402f762da81b63635478f2d63f2fdb0,83b8b31e64c2f941330581de0015f701,5afe031774d80619f5274fa8468c75ed,dbc863e8a21931db8c1d01bc3db3243a,c1799ca1ca659969ec9a0c8dc3a0883b,690c2a41b4cad051baa6666408bc1bd4,10722981017d6155f9ae2fb1da613169,bf2578f224f9e3097c5e47592ca6f9eb,246ef4ba4849e248bc2b4aa8a25c77a5,b5203f7798cc1d9a3db648385cf92f6f,e365835bb5497e8ecf9ce3e18c81d98b,ff5661ddcf33bab40779b62dd0650519,86a69d1e6fd165d5e5d68a78d8ba620e,92c6849f707eeb59b63e8ae9d142ab5c,473697975e44f6fe35c50508a46eea70,89fde7c17a019a877557924256dbed9d,9b1481c45390195bbc93617657f26aa0,34dfc17876c55eb53e8851438b7eefea,229ceb68059d9d878fd635aa22afa6f7,0b044f0efa50f5d997e64dc511d3153d,15c1d3cc59e786989d3bb025b22bb059,e7d2a3d3c4112dc5845fb09e9ce70201,6917a6f69a3b783d8b2cc9a15f93e0c7,9bb626496f5cae83b00ffb481552432b,705f22cbd86ba40041442191cfabff47,9ad49ff8a09aa1e19238211ff2629aac,a56c0dea5c958f74a88b69840d6b3c3d,9e9c3a8d1b84258f622647dce7e268f9,084ab0d1170972947c92ae901f98b6ec,58b7e1346b741399a048d3a032a72002,2383aecac653eb271fca9de8637fc7f5,9041544f46b0f9e0c861c986e5eb563f,6f767735a4bb03e2dde41f2f81984b18,7882e0b46d58b78d70bee525b2404cb8,5cc8d8792c0074efa30bab193e894cd4,119fbe7447f2b8a4bb9708deed2c34fb,0c34b5dc5c2500e604d64e72b1ca8ed7,5b390301d76c5c95f5daa412234203b1,288a975e28e1fe0d9cb74c19e3b64e0f,72661d180ca59ca2cb509ec2082e3444,605adc5504fb08d17f408bf29231bda0,07e763bc0c7ba75e74499bf434897b93,149566ebf75c0fd85bf05d4d606bb7e5,31548dfbf3b9ca570224047bfe5ee488,033c9db19f4046ee16de3b46ca93d018,f6981606398d069ca744323a7ad0a930,4580445d40923410547b6d2b081afbea,a31ff67bb89565c3b51cfd2515d4c7be,461eafbe71ce986a610eb620bd45fa05,3001d259f201972106029780c96db4cf,416fb1a88f1705bb8a4557e412b60dc1,41f132358455d0f99b45487adc377fe8,06b456c04c97ec1590478e00075811fa,796ffd1e3cf12d51f680f45214dc4510,c17650e5017646ad8d61f6e2ed539634,3f1ae82ea3049ebd146fe83c74732b9a,f866443ba073a8e6c1389b7f0fc8d8bd,46abef163a89d173c91a6f541fe7da11,47403e5600a782bca793c7ed2e088cdc','测试管理员','guest'),
 ('1','a634cc19664a4f86577556784da60940,7afb566e83d3dca2d8a47c8cc29e7e36,ff2fa0336fe8fbc6a51c4707aa47c3e3,bfc0ef3829e8d84dfc8d31e5edc26d0f,a155574e57e9a8a0d0c6ecb1c511da68,fddc215a132fa97ca3c193f1cae5cf9f,52b7869014f743535798ba509432feb1,a2756c433a39a2319e61bcd68a758265,5341fd0c5de128ab7979a7414b2e586a,e537f9c0308cbfeb6ee40b4e4c344947,c2bc4d65c38311ab74b9dc39680d82df,efdb91a0f150375b423d8361d254241f,a3c8c3d444880bda2a553b8f3eb6695b,4141c0f8e6a977cd7048cd9d751af350,3045880458ee8b8734bf6b3307acd0d5,dbc10e6bbc54c0ea6f49e604839f5526,048c50d364a23dfcec0a87aa49e19eb8,c54e594684ebf2862c75ba29d83f71be,3345e3e48188396dc21242fb119ba6b1,2ebbbd65b4e2fc52a3ce44de2160e8d2,12fb6543af2e5541b0fc4f8fdd950be0,8d2159c1e0cf70473e66866eb026e80f,c166381208e23d3f4d65dec1231ccf76,3025704bb00b809798194964bccb8d3d,60decd16ccd83e013261697b7cc93bc6,7847598074d20e5abc220cb05a606213,afef320193ab13431e6b085c847b8094,9b4b25e0ea18183e9b085cc116246220,2e0115348725a3f383d8daa4354c7c3a,524c66aa98b226bd78bc7e7ad0423de7,66bfe11515e892dbf8bb4a5a92792e8b,50b03d671787f35800682c10c90a75bf,a1873764d0aa66fa9c6d34e16dcc86c2,0e69c6f28f25c24fe241da13093f9b12,6d119f7ae0c3c090ed51e672203c000f,7ff25ae6e8120b5ae5b5fb7b86a11641,53a396649c27c4e0dbd96fe57c2377e9,f59d0f67b7223a083e4449d583e90307,a41e16b61dd21e98c8143409d807890b,e44bd2f89f2820521a93c981c8af920d,f729102b0a0a547d20a4322e2d12cf71,7cf04cb70fa2f26d449acfb7974fd417,a7cd680c1676df4fdb93e7bdd83d6b3c,5f667ab7322f039e4e7e0ba8b04edf2f,6470d2304686b20640688c6d9dc44b46,df53f98d0b09ef3173cc8d594671fa6f,051071e245077a8126a4607e2148f327,224a58fde770d8718f7c06ac852fd9ae,0309718bf1a4785dcbf1e34461213c3e,d174c0a461db66945abcd861216dd94a,494b71b75af1e63c628544872f3c54d4,454f6e4ce4e57bd58eefda7d3fea1fa5,a87d77b65f6d1e8380b3d05290a994d0,430f99bc176c67ec705091d6a5da07d4,d230f6a24270b02237beb82a23e2742f,e5ba15d009798276692f84b4e0c9c1e9,026e09db119a340d72c2d5a611dfedb1,33a3ca4433131ad797eb4a7ff8bdb40b,87f64ed3bd52c1d6396fcb9908cb7fdf','管理员','root');
 /*!40000 ALTER TABLE `shm_manager_group` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1336,7 +1303,7 @@ CREATE TABLE `shm_manager_purview` (
   `title` varchar(50) NOT NULL COMMENT '权限名称',
   `status` int(1) NOT NULL DEFAULT '0' COMMENT '是否使用权限',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=660 DEFAULT CHARSET=utf8 COMMENT='用户组权限';
+) ENGINE=MyISAM AUTO_INCREMENT=1190 DEFAULT CHARSET=utf8 COMMENT='用户组权限';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -1547,7 +1514,537 @@ INSERT INTO `shm_manager_purview` (`id`,`model`,`method`,`cid`,`uri`,`title`,`st
 ('656','page','create','37','bcdd1c32d74465787726f7a4bc501342','创建','1'),
 ('657','page','edit','37','a953d6a8714d6f9f40df8c58f754fad1','编辑','1'),
 ('658','page','delete','37','2674d5185c6d56e827310d9dd73526e9','删除','1'),
-('659','page','audit','37','5b0e1cdbb320328d22e6f3702a043d17','审核','1');
+('659','page','audit','37','5b0e1cdbb320328d22e6f3702a043d17','审核','1'),
+('660','page','index','38','87f64ed3bd52c1d6396fcb9908cb7fdf','查看','0'),
+('661','page','create','38','33a3ca4433131ad797eb4a7ff8bdb40b','创建','1'),
+('662','page','edit','38','026e09db119a340d72c2d5a611dfedb1','编辑','1'),
+('663','page','delete','38','e5ba15d009798276692f84b4e0c9c1e9','删除','1'),
+('664','page','audit','38','f6f5a3cb2b62298a4c108b23123575fb','审核','1'),
+('665','page','index','39','35a7b8e5fdc7e1445943dbf17ae6117e','查看','0'),
+('666','page','create','39','7024ccb980bc012c91c63665b054b250','创建','1'),
+('667','page','edit','39','0187766bc8015bbebb36284f1c320656','编辑','1'),
+('668','page','delete','39','90d938ff7c3374f53d052b2a8f902de3','删除','1'),
+('669','page','audit','39','23f101f15c5c1503cd6497d6c9f570fa','审核','1'),
+('670','pageirregular','index','40','87ef11d95e3bfc25a6a2760231752c3e','查看','0'),
+('671','pageirregular','create','40','c6ba544566200f81c19bf555eb82acc4','创建','1'),
+('672','pageirregular','edit','40','310e163f9a8d478343e1a23d0905dcc2','编辑','1'),
+('673','pageirregular','delete','40','ac45c952ebb9cb2c83658a94654f56b8','删除','1'),
+('674','pageirregular','audit','40','35e64a3b6abe65c278c6ab5be3e9930a','审核','1'),
+('675','gallery','index','41','f452867dda97397d749fce3b01c85bab','查看','0'),
+('676','gallery','create','41','f56d80fd954f65f3831fb95bc54156eb','创建','1'),
+('677','gallery','edit','41','dafdd232503e2ac53b7bf77fc8e18161','编辑','1'),
+('678','gallery','delete','41','0d50b8e81fd0010bc3f4fde8fac6e282','删除','1'),
+('679','gallery','audit','41','e5b1b4723c51301be85ee0e81ac41454','审核','1'),
+('680','gallery','index','42','902c6f88cea5d7185ab0e52c98a0705f','查看','0'),
+('681','gallery','create','42','20771f01fcb6709de38e91543e1549cf','创建','1'),
+('682','gallery','edit','42','881efb4dfdf81e20132628f67def5cfd','编辑','1'),
+('683','gallery','delete','42','36ed9dd1b25eca15b270317581064b85','删除','1'),
+('684','gallery','audit','42','debaef456bf899cfc950f35f6cc66e0d','审核','1'),
+('685','gallery','index','43','542609681436dde6d2acd5b5e583a8f8','查看','0'),
+('686','gallery','create','43','4b693afb4bd9cd7c716ede0fcac1417c','创建','1'),
+('687','gallery','edit','43','0f02b9593405f7d6a1e5d5def1d6fb1c','编辑','1'),
+('688','gallery','delete','43','3edeefba81d51d81e48b71eccd44345f','删除','1'),
+('689','gallery','audit','43','d20e86604f0e81cb91eff3088eeb86f6','审核','1'),
+('690','gallery','index','44','7370f3f817588e22027e440c4084341f','查看','0'),
+('691','gallery','create','44','4632389c9e295125d03dd321b4a4368e','创建','1'),
+('692','gallery','edit','44','d5680377c8a51ea0d91f3d71dfa64e32','编辑','1'),
+('693','gallery','delete','44','22402cc0b17a7a8567dc1cdfb6708f4b','删除','1'),
+('694','gallery','audit','44','3372bf3a9b652721c6e518d92aab1a40','审核','1'),
+('695','gallery','index','45','29fac0cadaa8278feed637e08a132d0f','查看','0'),
+('696','gallery','create','45','95099f3c24cfed834c2284049cca479c','创建','1'),
+('697','gallery','edit','45','2b721fbd81d8e57fc836e9332b63781f','编辑','1'),
+('698','gallery','delete','45','facbef2ac9b4854421c40e8dc0ca2bb8','删除','1'),
+('699','gallery','audit','45','e97870a7d17a906ae58836d2e9714631','审核','1'),
+('700','page','index','46','59705f58d82d5c9a90c644cc715db63a','查看','0'),
+('701','page','create','46','a5840506f4faa09f7a87abcfa1ffa98d','创建','1'),
+('702','page','edit','46','36272ad4230b64651f4ad86724d8956c','编辑','1'),
+('703','page','delete','46','4189491b25e0c384ed29ff47fe9bc395','删除','1'),
+('704','page','audit','46','36aafa6b74c06f2e3635a410ac90bf73','审核','1'),
+('705','gallery','index','47','936f37747edc8d654b389a2b0258eb28','查看','0'),
+('706','gallery','create','47','547b65090e1a339dbe0c1ec81c844d38','创建','1'),
+('707','gallery','edit','47','79872364b398e5f24479e193e1fa3b51','编辑','1'),
+('708','gallery','delete','47','03824a7e40b1250c763af37a27ada2bd','删除','1'),
+('709','gallery','audit','47','2a734f636abd238a7f1dd643e23fadcc','审核','1'),
+('710','pageirregular','index','48','f831df302b7e71ac0cb2ebdfba209064','查看','0'),
+('711','pageirregular','create','48','c763ad277546113e67a83e2a4458fc43','创建','1'),
+('712','pageirregular','edit','48','19188bd394b1865cd138deaa25ec9acb','编辑','1'),
+('713','pageirregular','delete','48','9953dbb571784f39b1bf9a01b5f5d783','删除','1'),
+('714','pageirregular','audit','48','babcbabdbdc36fc75e1d0d4d55e9c2cf','审核','1'),
+('715','page','index','49','972ac866a6c7b1ee70746cc1ee94f607','查看','0'),
+('716','page','create','49','89622627ffc295c3ac0df5601a2b9f93','创建','1'),
+('717','page','edit','49','c715120c8b453691187632ea03ba8eac','编辑','1'),
+('718','page','delete','49','b0663b37be6a099b24d5b924b4118337','删除','1'),
+('719','page','audit','49','84a4e0d6e43ca32d6189ca9f79d302d8','审核','1'),
+('720','pageirregular','index','50','5d56638d2e074a3a0035087d2ac669ff','查看','0'),
+('721','pageirregular','create','50','bd40c061ceebb3992e0d5f6e0064152a','创建','1'),
+('722','pageirregular','edit','50','ca939d3e6679222cfc538574a321162a','编辑','1'),
+('723','pageirregular','delete','50','50a42511383ce16dfd513e89601fd4eb','删除','1'),
+('724','pageirregular','audit','50','f7ddbd39c80f768bde612dfc3a0cb5fe','审核','1'),
+('725','pageirregular','index','51','2b85b0f3c25883208a1016aa3c58ea72','查看','0'),
+('726','pageirregular','create','51','53c523d78f776df6bdcdd7598da57d5d','创建','1'),
+('727','pageirregular','edit','51','3a66233bfbbaec15aed55e9240fc0ba4','编辑','1'),
+('728','pageirregular','delete','51','5fbec58004508ddf6435306a97aa93d5','删除','1'),
+('729','pageirregular','audit','51','a3a5d38c19264aa01e1db49dc4b08c47','审核','1'),
+('730','page','index','52','5966c1228cdb19552eaf40d068e417b7','查看','0'),
+('731','page','create','52','b43860f2c143d1bef65a57766a1006c4','创建','1'),
+('732','page','edit','52','4af90aaf73f78991ed8a94750a7e7d10','编辑','1'),
+('733','page','delete','52','dd7ed79a9fec3a92c15da35e907400c7','删除','1'),
+('734','page','audit','52','7effe5cdb74aa177390ff124a924f4d4','审核','1'),
+('735','gallery','index','53','04dfb9418f90fea6749c3189ad660d14','查看','0'),
+('736','gallery','create','53','5bb0ccb138e5d8316f105e2901287737','创建','1'),
+('737','gallery','edit','53','8d161477532e3eb458dc0df425342f79','编辑','1'),
+('738','gallery','delete','53','5694d425da04953635e620ab32df229e','删除','1'),
+('739','gallery','audit','53','e9555643eb72313d7dbf92efa6fe8779','审核','1'),
+('740','page','index','54','ef5882db2dbb9945694c3da8839fb62e','查看','0'),
+('741','page','create','54','47a99a2994195a15e5d382cb2875f9e2','创建','1'),
+('742','page','edit','54','052ae0e6449cd88e7806754662841518','编辑','1'),
+('743','page','delete','54','6b561ba8eb62957d5f3e2a19822cc4a7','删除','1'),
+('744','page','audit','54','3136833f119d269a7c8e790853f153fd','审核','1'),
+('745','pageirregular','index','55','7b5ef0bc487c6f7500e1b19895dac862','查看','0'),
+('746','pageirregular','create','55','c52ff1efc85436894212921aac3516d0','创建','1'),
+('747','pageirregular','edit','55','b50879df0d1e450ba19c5996cef24d30','编辑','1'),
+('748','pageirregular','delete','55','02c8b3d2111d6c6effabf2cba7626edb','删除','1'),
+('749','pageirregular','audit','55','9299441d0cbfb690322d60b0c9ae1e16','审核','1'),
+('750','page','index','56','bf8d7118db7efb9ade80e04c425e2acb','查看','0'),
+('751','page','create','56','754e6ba4c14508dc3a42e1bb9d55f912','创建','1'),
+('752','page','edit','56','6b67eda207aa411a405ea3bca5f00bbb','编辑','1'),
+('753','page','delete','56','7e4579a79c0e582b03b80ae090e858d6','删除','1'),
+('754','page','audit','56','b8de0360819e064db6c9027b3fceb2dd','审核','1'),
+('755','page','index','57','f6981b4e7556f70be0ccec0d92f085fb','查看','0'),
+('756','page','create','57','a8a49b8d88369e0cd77fc3468215e718','创建','1'),
+('757','page','edit','57','b02f889b94da943527c1f9267d6370d0','编辑','1'),
+('758','page','delete','57','a905b979d1b6a66630f8d13d8786a096','删除','1'),
+('759','page','audit','57','7fbae3de275d408ffd15316b69ec6e1f','审核','1'),
+('760','gallery','index','58','de3cd905166cd6f55a95b0cd6d3b9df7','查看','0'),
+('761','gallery','create','58','e14a3ae6e4b29172d4c4dee3b93ed312','创建','1'),
+('762','gallery','edit','58','ca988a7156fa5e35e1650af864a50931','编辑','1'),
+('763','gallery','delete','58','152e22316cf1b62fee2930746594fe00','删除','1'),
+('764','gallery','audit','58','4736beccb8ba2a5a32208089ba6a67fd','审核','1'),
+('765','page','index','59','59e145d7cd53cc8cdc5e1287cec39be3','查看','0'),
+('766','page','create','59','424e07a5df325d6a7feb4914e714687a','创建','1'),
+('767','page','edit','59','eeede8edc85d6631785e192e1e2cd974','编辑','1'),
+('768','page','delete','59','6f750f60a713c83f109ca12fb01f95f1','删除','1'),
+('769','page','audit','59','8a4a7065e50dfec1b3951099e214cfa2','审核','1'),
+('770','download','index','60','70aa10811319fb5ef3bf72f1495df684','查看','0'),
+('771','download','create','60','c08a5fb879874e39a03359940bd8a473','创建','1'),
+('772','download','edit','60','d37e88e48d9289a03d70088ffb437203','编辑','1'),
+('773','download','delete','60','01723436ae76ae5f33a259413f4c2991','删除','1'),
+('774','download','audit','60','b3b06b40711a9e2f77d5015769029924','审核','1'),
+('775','pageirregular','index','61','f2681564f758ccc43c7fe841740a8307','查看','0'),
+('776','pageirregular','create','61','35167f62951f1f027f9c97cb5bd6164e','创建','1'),
+('777','pageirregular','edit','61','8a4a91fb0fd1c31577fa77ab7cb7048d','编辑','1'),
+('778','pageirregular','delete','61','acd5f3bcec431da7f1ac28527c411c06','删除','1'),
+('779','pageirregular','audit','61','346aff71b11247eb33931993c062287d','审核','1'),
+('780','page','index','62','8311a1e4bd0f3c586641309ed374950f','查看','0'),
+('781','page','create','62','0848095c4a2a5f7c1699b312a9cf4418','创建','1'),
+('782','page','edit','62','9758b96192107c8d382f7af525252508','编辑','1'),
+('783','page','delete','62','1a4c276d6cbbdbc80f500689451c58c3','删除','1'),
+('784','page','audit','62','ba00cd4500be3d48875f81ee1e9d5fe4','审核','1'),
+('785','pageirregular','index','1','0527387340af5e226067100ca08f4040','查看','0'),
+('786','pageirregular','create','1','330020b245a16198a3a40f06fce03a25','创建','1'),
+('787','pageirregular','edit','1','09a5d059d02a68bfa0a5552b8eb6e72c','编辑','1'),
+('788','pageirregular','delete','1','de1d2467525fb86cf6a1019aded4df45','删除','1'),
+('789','pageirregular','audit','1','9948f2fc0e1d4e784ed50a7735a197ac','审核','1'),
+('790','pageirregular','index','2','66dc0e1fcfd11b15e4209da4703a5f77','查看','0'),
+('791','pageirregular','create','2','5f3c2ed829f469e346d1f5d6dd9c404e','创建','1'),
+('792','pageirregular','edit','2','747bb0b7f0429e5c1906915abfcfc5db','编辑','1'),
+('793','pageirregular','delete','2','8e3e2020dbb7ea0372ee04a15317bdd4','删除','1'),
+('794','pageirregular','audit','2','6f18d1f54a8a6d54c4d8bc889c37fd9c','审核','1'),
+('795','pageirregular','index','3','fd6ffe7173e87b77d51dc2b6f64dc192','查看','0'),
+('796','pageirregular','create','3','3d579849d846bcf5dcd8d3ef53d13676','创建','1'),
+('797','pageirregular','edit','3','720d03e334a96700bd2f2a1ed0f25e51','编辑','1'),
+('798','pageirregular','delete','3','1fa969022c8d08d292e58cbc3bba8af5','删除','1'),
+('799','pageirregular','audit','3','22630a7d7a0b34cf9f31413eb14b605e','审核','1'),
+('800','page','index','4','b5f7325d8050bc6a843cecf9099cd041','查看','0'),
+('801','page','create','4','4a5167b65c95a4941958db1e6a19d8e8','创建','1'),
+('802','page','edit','4','5dbd86b675208156fd7b4b2af4034e7c','编辑','1'),
+('803','page','delete','4','52049a819f5d87313473f26dc923bf4d','删除','1'),
+('804','page','audit','4','8cd304eb9ffad25bc1d48ef771af0572','审核','1'),
+('805','page','index','5','de1e78874b11fd301c52907f65716491','查看','0'),
+('806','page','create','5','f6b8687e6ce63122b566f9fa3f6ac159','创建','1'),
+('807','page','edit','5','f03bed106b7b007eeb8ccbbf23626600','编辑','1'),
+('808','page','delete','5','8e2a937ecea85f468bc7821b3b5c2fd9','删除','1'),
+('809','page','audit','5','6dbebe685fc6a70124bbc26955aaa587','审核','1'),
+('810','page','index','6','33181661fd48e7188312c970742778f9','查看','0'),
+('811','page','create','6','d2982454f3a7346378e68debfd418fa1','创建','1'),
+('812','page','edit','6','ad74701ba151e59e2268082429c4b25d','编辑','1'),
+('813','page','delete','6','a540d6c5b3011ecb8560b81cee19f6c9','删除','1'),
+('814','page','audit','6','b83f163a799c04800e0a8d19f320fe02','审核','1'),
+('815','pageirregular','index','7','a2a4ce819b102dc21187eb9ee85bfbbc','查看','0'),
+('816','pageirregular','create','7','f91177bf9a98a68fcb1e0a5afd58f06c','创建','1'),
+('817','pageirregular','edit','7','2470fc39bf08b3a32e5a5c826926fd28','编辑','1'),
+('818','pageirregular','delete','7','34cd6f5155224b4f157f9e0c607ffefa','删除','1'),
+('819','pageirregular','audit','7','c8039140e3f3d23d6666153cb34b4a1f','审核','1'),
+('820','page','index','8','0eb080f0966334408324a472c86a15a8','查看','0'),
+('821','page','create','8','3c80b5b566591947b0d98eb8899acfd1','创建','1'),
+('822','page','edit','8','1c1bcb503d17b64f64b4f657b54ca771','编辑','1'),
+('823','page','delete','8','12b11a534786b5bb62cf981590568161','删除','1'),
+('824','page','audit','8','9ab71ef74279d9ff78d6742479fbe4bc','审核','1'),
+('825','page','index','9','990e41112666107e73a78d12837a0784','查看','0'),
+('826','page','create','9','e9bb9f5f467c9c6cad391d01846816b6','创建','1'),
+('827','page','edit','9','943b4eeee1342f15ba8b248cba2107a9','编辑','1'),
+('828','page','delete','9','cc36a50d311c388686523c2241b1dcc3','删除','1'),
+('829','page','audit','9','61263b76b3524fc43f743f2213ef7c1a','审核','1'),
+('830','page','index','10','d0eb6ffd2561c10400febf6b383dae17','查看','0'),
+('831','page','create','10','f89cdef1ad929b19a743cffe96756938','创建','1'),
+('832','page','edit','10','5165d96b092fa61498b846392e4ae802','编辑','1'),
+('833','page','delete','10','1f9562e8cb812cac5d780190609f0038','删除','1'),
+('834','page','audit','10','d56ef64ab64be02ba1eef02bec6ec77a','审核','1'),
+('835','pageirregular','index','11','a7bdc0890384530f87db7404b3757e85','查看','0'),
+('836','pageirregular','create','11','50b49a282afddb9e5d2e75c92a205baf','创建','1'),
+('837','pageirregular','edit','11','57319448ec4f1f7df34d043dd0e83a43','编辑','1'),
+('838','pageirregular','delete','11','c57d1389189d2658911eaeba3f802666','删除','1'),
+('839','pageirregular','audit','11','d63ec4e7a5084aaaaf369d97846a7da2','审核','1'),
+('840','page','index','12','d768afab8dc24e2fa7d176b7b57aa067','查看','0'),
+('841','page','create','12','7a61194d033e0ce5d0945b140a853a94','创建','1'),
+('842','page','edit','12','5b3190d6c44ad2ba7300e4d545d735d3','编辑','1'),
+('843','page','delete','12','5d6865a87566f09147e1e6f3701b329c','删除','1'),
+('844','page','audit','12','f1a99c4fe4c84311e7d50d2969ff5434','审核','1'),
+('845','page','index','13','ea5190e00daaf150cee6e60fd42d091a','查看','0'),
+('846','page','create','13','fc51ee3f845d7a86a0b010d3335ee599','创建','1'),
+('847','page','edit','13','3a3b07340003e746fd5f55b2b53ea2f7','编辑','1'),
+('848','page','delete','13','96d3fcec7b02d1fb50672a898cb0893a','删除','1'),
+('849','page','audit','13','ffe3207424bd264caae11b2635345d2f','审核','1'),
+('850','page','index','14','ca4ceaa95f32895416376c542b53da4b','查看','0'),
+('851','page','create','14','dbe0112a3196932179c1029e62b86181','创建','1'),
+('852','page','edit','14','c92fa4280ebaaf17dbf97f006ae9c6cf','编辑','1'),
+('853','page','delete','14','563f9e7659be19c40e4696fe82806db0','删除','1'),
+('854','page','audit','14','cc080f52fef2112da7cdae00c0e2c7a9','审核','1'),
+('855','pageirregular','index','15','d4b9fa4ed81a0072c14800dabd7ecaa1','查看','0'),
+('856','pageirregular','create','15','b08ea076d17a2172d03bf5573826e382','创建','1'),
+('857','pageirregular','edit','15','f5c573568e5746fbbaf0f7b71994d25e','编辑','1'),
+('858','pageirregular','delete','15','e9e08452e402a43ce82bb12e83cc55fe','删除','1'),
+('859','pageirregular','audit','15','87cf90f97a346ba7501f775039e843df','审核','1'),
+('860','page','index','16','bb33396496707b6764bc6a2e8bc129b6','查看','0'),
+('861','page','create','16','442faf8b2c624250d04ba973e9b75448','创建','1'),
+('862','page','edit','16','276c1d14a55341e78ce4446029417eac','编辑','1'),
+('863','page','delete','16','4446d8754242262c0bc260b36e4f3dc8','删除','1'),
+('864','page','audit','16','a2e6ff8d1742da77c14e5710e0bba897','审核','1'),
+('865','page','index','17','b313940ce4a99f0e84f170aec00a8212','查看','0'),
+('866','page','create','17','a0868c5b6851e063578dff5e29dfe18b','创建','1'),
+('867','page','edit','17','636cf9faf1efae8e61b6ccec214b2ba3','编辑','1'),
+('868','page','delete','17','08deb3c2d5874bb143d259f63c4a4678','删除','1'),
+('869','page','audit','17','63afda6fb8aa2b34849528b5481aecc9','审核','1'),
+('870','pageirregular','index','18','3b7f96d1407072cd600aaa08449d585a','查看','0'),
+('871','pageirregular','create','18','3091763ece8c9f7c094d9dfbe663966e','创建','1'),
+('872','pageirregular','edit','18','df1de24849210725b7f7e5f0a1239a09','编辑','1'),
+('873','pageirregular','delete','18','db6022ec3415481fcaf606c7e5c321b6','删除','1'),
+('874','pageirregular','audit','18','da1f2d783144941e44bbac70cb92ec9b','审核','1'),
+('875','page','index','19','019071abb90e1035d451d27fdd224396','查看','0'),
+('876','page','create','19','92c94fc15c52e5037fb4908373956e54','创建','1'),
+('877','page','edit','19','b1ea5a46f0b27b10f8a32090e6f568d5','编辑','1'),
+('878','page','delete','19','f6fc427dbdc6d1e07af00e77ea778540','删除','1'),
+('879','page','audit','19','fbe0f0b8017971ec98997bdfef531ed4','审核','1'),
+('880','page','index','20','5466387146c24c0bf2e3d16108518fa7','查看','0'),
+('881','page','create','20','046727c78669c6088d2be2b862fd501d','创建','1'),
+('882','page','edit','20','dafc520433ad196ddca6f9938049091a','编辑','1'),
+('883','page','delete','20','b2740f38a985066e9767ad545cf7c8e9','删除','1'),
+('884','page','audit','20','450b5d5189d4272fc15c82132ed4da2b','审核','1'),
+('885','page','index','21','738415a045898e466366b85c88723e69','查看','0'),
+('886','page','create','21','62065420da4c663b7d5c0d7a7947d3cd','创建','1'),
+('887','page','edit','21','8e19b1bb5665bf12831a44c2f6f8af0a','编辑','1'),
+('888','page','delete','21','0115d41918e5050d4d88356973b23547','删除','1'),
+('889','page','audit','21','f6654ab77d7426ecf185f5003f81b7ad','审核','1'),
+('890','pageirregular','index','22','d3fbbf122dbc5fdb53408dea143ea262','查看','0'),
+('891','pageirregular','create','22','48bc9b1468417bd1c719238f132e6ae7','创建','1'),
+('892','pageirregular','edit','22','0d93198ddbdd6d19f31c731a4f3195a7','编辑','1'),
+('893','pageirregular','delete','22','aed64dce2eb7b640ce7daec7b34832d5','删除','1'),
+('894','pageirregular','audit','22','4780f42f482c35dd029e4142ae7caae5','审核','1'),
+('895','page','index','23','45c753bdd6186dd65f538c58714c4f51','查看','0'),
+('896','page','create','23','0e82f25adfb0e7f312c881ddb16a5f0d','创建','1'),
+('897','page','edit','23','8d6f593674fc980af3c1d4e2e18850ee','编辑','1'),
+('898','page','delete','23','98b51ae87774001b9930500272e7c84f','删除','1'),
+('899','page','audit','23','e1313eaf15429ca5e8b251b3d8776c48','审核','1'),
+('900','page','index','24','cb228aa8b48f284bff32250f10279d31','查看','0'),
+('901','page','create','24','4a96b59d4878c8d5ab187ae6e4a8fa08','创建','1'),
+('902','page','edit','24','a3df21c498fae06f38816d6f49eb014d','编辑','1'),
+('903','page','delete','24','ae7d4a54bc649a8cd2b94320e88cc886','删除','1'),
+('904','page','audit','24','fe1f0c309332225ff039512ae96ad15f','审核','1'),
+('905','page','index','25','572c2b012731079c6dd52ef2aeda21c2','查看','0'),
+('906','page','create','25','2553f73a031d56c054b65ebda5e2e109','创建','1'),
+('907','page','edit','25','e62503bd66ab0424aeb484f3478e297b','编辑','1'),
+('908','page','delete','25','199f745f65ed815f77bb7857583d442a','删除','1'),
+('909','page','audit','25','a69d2941fa1418b5e3f18e9462f8306e','审核','1'),
+('910','page','index','26','ac27755640c5653919bcabcfdecea051','查看','0'),
+('911','page','create','26','dae18aa6e604e59d03a0c53f7cc333c5','创建','1'),
+('912','page','edit','26','093b9049ba11c684043556bb59a12eb5','编辑','1'),
+('913','page','delete','26','b5dc0945f94a22b427b024cb1f682638','删除','1'),
+('914','page','audit','26','7204834ccec1f71f3999e8d4916ea13c','审核','1'),
+('915','page','index','27','2306012ac7f9d26755a91b6eb1538d62','查看','0'),
+('916','page','create','27','186809ea86d6b21d3a02b86a8c1a6b89','创建','1'),
+('917','page','edit','27','03ac7ee245cfa7aa6ba4f3e4ab30d178','编辑','1'),
+('918','page','delete','27','d2f87b22eccf2509a9d835f0bb5f0b22','删除','1'),
+('919','page','audit','27','03625f75a49d05890eeb151644b63a56','审核','1'),
+('920','pageirregular','index','28','e7a800e656befb99840007703a865ed8','查看','0'),
+('921','pageirregular','create','28','452588d8372bfd9ca057aac34948f320','创建','1'),
+('922','pageirregular','edit','28','0bf25e1803ce6e5aafd4ac13881a2a66','编辑','1'),
+('923','pageirregular','delete','28','8d7336f4051acb853dd0cb9c509ba8f2','删除','1'),
+('924','pageirregular','audit','28','aad289ea60b17c303ba4e0dc4e5293a2','审核','1'),
+('925','page','index','29','05a7b1a9c2cd26861b8a87aafb000d8c','查看','0'),
+('926','page','create','29','017c1d6fae3be3a95a26f99a9b5c7a88','创建','1'),
+('927','page','edit','29','73fe92a083eab23335362e5fdc0879f3','编辑','1'),
+('928','page','delete','29','eae953d32c1420712ec8f08228474c6e','删除','1'),
+('929','page','audit','29','c3974e7ef3e4641be2048448719a86c7','审核','1'),
+('930','page','index','30','e0fd975319c874c5f02f802b3201949b','查看','0'),
+('931','page','create','30','29d0934ab8155adbbd6b94df4bac3ea5','创建','1'),
+('932','page','edit','30','7c6f9430eb960f52be2eb420645bdcc1','编辑','1'),
+('933','page','delete','30','16bacb294eeaa66b0e326abd2fdb7910','删除','1'),
+('934','page','audit','30','a6ee4e3e7f6e8f858b3ad8b34071bbb8','审核','1'),
+('935','page','index','31','42addba1d5649b3bc02dfebfe5833622','查看','0'),
+('936','page','create','31','6370b2e913e91163efa997f10fed6b0c','创建','1'),
+('937','page','edit','31','f96f8e3599fd3be147af77f0f638d166','编辑','1'),
+('938','page','delete','31','5a8c2356ee4f7cf22b9d8a94458dbce0','删除','1'),
+('939','page','audit','31','615e298980da384bea6e6d7aac0f8131','审核','1'),
+('940','page','index','32','3dee839e4c32f0d926823a50e7f5dc22','查看','0'),
+('941','page','create','32','e539ddd1769bbd0a212275353b11cd78','创建','1'),
+('942','page','edit','32','7e08efc1106244abe505a6d1b27662be','编辑','1'),
+('943','page','delete','32','0d5216f77d2caba37b983a3c103ac3ef','删除','1'),
+('944','page','audit','32','a5aac2448a15b0be86c0ebe402694c4d','审核','1'),
+('945','page','index','33','6659e411bab6cd5cd42f896e468cc180','查看','0'),
+('946','page','create','33','c55f5848a7d1f5c98e14453504a10815','创建','1'),
+('947','page','edit','33','08adf7fe2e452f3321770215b9e2417e','编辑','1'),
+('948','page','delete','33','65fc72d8f9a6854ec53fa53ca58b085d','删除','1'),
+('949','page','audit','33','c0bb5a4aa6971529c267e51694fc3ec3','审核','1'),
+('950','page','index','34','36bcc6a7b0352f242c83e90f5d9e17df','查看','0'),
+('951','page','create','34','f85f41279e4fc46bafd341ed5c9bc59b','创建','1'),
+('952','page','edit','34','419a12d56315590115e9dad24bb0b93f','编辑','1'),
+('953','page','delete','34','957a89d3746f2a9f05855451f0efc29c','删除','1'),
+('954','page','audit','34','ee36456d2a6f22f497eb0b6a22434cc7','审核','1'),
+('955','pageirregular','index','35','f374ae3bac9884c8d2eb9454f70c52c6','查看','0'),
+('956','pageirregular','create','35','49f3b777e27a773ccad03a7faeea6918','创建','1'),
+('957','pageirregular','edit','35','13e676ce0c04bf130a934c2165f336cf','编辑','1'),
+('958','pageirregular','delete','35','1889c64bb27e403a00dd5cae63e09332','删除','1'),
+('959','pageirregular','audit','35','a13b3593351c87f27120ead7dc55a667','审核','1'),
+('960','page','index','36','a35b5fcff88ea7561f8a447daddb9270','查看','0'),
+('961','page','create','36','aca659045e9995bb283f5a6113a6cdff','创建','1'),
+('962','page','edit','36','b73bd461a9be23a18097a9b4e3a543bb','编辑','1'),
+('963','page','delete','36','2691a75c1a5c8b434fda6ea65cd1af6d','删除','1'),
+('964','page','audit','36','a02c039ab524ede366216fb67ef0479d','审核','1'),
+('965','pageirregular','index','37','8cab0f3c490a367a27c37ba6fb4f8b3c','查看','0'),
+('966','pageirregular','create','37','866dfeb95691f8c1f1f8abf48963a445','创建','1'),
+('967','pageirregular','edit','37','f4527fe7f10fd376df60888116559c3e','编辑','1'),
+('968','pageirregular','delete','37','849c1c1c107a1890735560c473ea5cf8','删除','1'),
+('969','pageirregular','audit','37','9484947c7f74e05903d6b089a642c94e','审核','1'),
+('970','page','index','38','87f64ed3bd52c1d6396fcb9908cb7fdf','查看','0'),
+('971','page','create','38','33a3ca4433131ad797eb4a7ff8bdb40b','创建','1'),
+('972','page','edit','38','026e09db119a340d72c2d5a611dfedb1','编辑','1'),
+('973','page','delete','38','e5ba15d009798276692f84b4e0c9c1e9','删除','1'),
+('974','page','audit','38','f6f5a3cb2b62298a4c108b23123575fb','审核','1'),
+('975','page','index','39','35a7b8e5fdc7e1445943dbf17ae6117e','查看','0'),
+('976','page','create','39','7024ccb980bc012c91c63665b054b250','创建','1'),
+('977','page','edit','39','0187766bc8015bbebb36284f1c320656','编辑','1'),
+('978','page','delete','39','90d938ff7c3374f53d052b2a8f902de3','删除','1'),
+('979','page','audit','39','23f101f15c5c1503cd6497d6c9f570fa','审核','1'),
+('980','page','index','40','892029312e24851d9fdf17ac877451fb','查看','0'),
+('981','page','create','40','cc33307639320469ac4016678e4fa151','创建','1'),
+('982','page','edit','40','584fb2a7e08c97af1a5bef2394152102','编辑','1'),
+('983','page','delete','40','4c96c0e9316c3a72a4583c641b295fff','删除','1'),
+('984','page','audit','40','9d82c0416d6c1254fff962a9a89d456e','审核','1'),
+('985','page','index','41','9b4678d9da4f2bba290f1a403212024f','查看','0'),
+('986','page','create','41','62c2457c52b9fa6eb0071ffdb78a032e','创建','1'),
+('987','page','edit','41','2e584c2a05e68baa8368838b0773b5c2','编辑','1'),
+('988','page','delete','41','58da48735ef8c08881062700d5a96b31','删除','1'),
+('989','page','audit','41','185c6f4f71c2911b50bc60fe3e2f97d7','审核','1'),
+('990','page','index','42','aed5083f7f12d4fa443095867fde1771','查看','0'),
+('991','page','create','42','fad0262d662100d46227cba414f716c0','创建','1'),
+('992','page','edit','42','ff4a14f5d15a1a037bd50d84799fd481','编辑','1'),
+('993','page','delete','42','2d4bca8093e095b0364cae94167fce7b','删除','1'),
+('994','page','audit','42','40b6f11dfea57638dc4d7d6c85843d04','审核','1'),
+('995','pageirregular','index','44','3b2e1f1c7af089da5b2dcdab68e89ad1','查看','0'),
+('996','pageirregular','create','44','d255b4db06c58873ed09eb581498eac0','创建','1'),
+('997','pageirregular','edit','44','2d11ccc2a23c687a896cc700e81065d4','编辑','1'),
+('998','pageirregular','delete','44','bd6123737cc55b9b9ff2553c72ab9458','删除','1'),
+('999','pageirregular','audit','44','073ff4f494ff5a84c52bf3f7c4ce85c3','审核','1'),
+('1000','page','index','45','4e239dea1050da74ed1383c57661a641','查看','0'),
+('1001','page','create','45','7e542f4bea0c8feb37845cb2b6c6df9c','创建','1'),
+('1002','page','edit','45','2ee4e7ad7b3be0795917d0267a82dd71','编辑','1'),
+('1003','page','delete','45','288f5b8b92905b04df68ac49fcbe255a','删除','1'),
+('1004','page','audit','45','ddf07e7e297d2ef8ddd050e14c4a61c1','审核','1'),
+('1005','article','index','46','e3b148daf2ebe66180e833665a9ae269','查看','0'),
+('1006','article','create','46','ac56e228648e1671006e342d368f94d5','创建','1'),
+('1007','article','edit','46','5aa08d1689e06fc487b247914988bcd7','编辑','1'),
+('1008','article','delete','46','59a2800a5a5201a6f4db517be7c8dee9','删除','1'),
+('1009','article','audit','46','94ac587a70383a5a0f1da1f630877224','审核','1'),
+('1010','article','index','47','122af41a3029fca9a379ad0170fa80e8','查看','0'),
+('1011','article','create','47','4da3882a4d2d05bf1fb6c777bdb29651','创建','1'),
+('1012','article','edit','47','c1038d88948b3a6213467f0f3222362a','编辑','1'),
+('1013','article','delete','47','ef8062ebface8d92c44456dffcd194de','删除','1'),
+('1014','article','audit','47','776990a91088bbc03fc365da4f8e07bd','审核','1'),
+('1015','pageirregular','index','48','f831df302b7e71ac0cb2ebdfba209064','查看','0'),
+('1016','pageirregular','create','48','c763ad277546113e67a83e2a4458fc43','创建','1'),
+('1017','pageirregular','edit','48','19188bd394b1865cd138deaa25ec9acb','编辑','1'),
+('1018','pageirregular','delete','48','9953dbb571784f39b1bf9a01b5f5d783','删除','1'),
+('1019','pageirregular','audit','48','babcbabdbdc36fc75e1d0d4d55e9c2cf','审核','1'),
+('1020','article','index','49','fbfdfa8a6e62699181cf6c1eaa16c724','查看','0'),
+('1021','article','create','49','2b45dd3b15f7b3f5ce403339dc6e5331','创建','1'),
+('1022','article','edit','49','99084268ee68d9699e7d577775065ac5','编辑','1'),
+('1023','article','delete','49','351b2ed8e0aca2da03687d8d193a1e96','删除','1'),
+('1024','article','audit','49','9e22dc70c6ba47d3655326d0602a8456','审核','1'),
+('1025','pageirregular','index','50','5d56638d2e074a3a0035087d2ac669ff','查看','0'),
+('1026','pageirregular','create','50','bd40c061ceebb3992e0d5f6e0064152a','创建','1'),
+('1027','pageirregular','edit','50','ca939d3e6679222cfc538574a321162a','编辑','1'),
+('1028','pageirregular','delete','50','50a42511383ce16dfd513e89601fd4eb','删除','1'),
+('1029','pageirregular','audit','50','f7ddbd39c80f768bde612dfc3a0cb5fe','审核','1'),
+('1030','page','index','51','75083b2ec5739d5ef12883bdf26dcaac','查看','0'),
+('1031','page','create','51','2fd3bb2519259dcf126abdbfc57c0a3e','创建','1'),
+('1032','page','edit','51','c88ffe5bed81a413181979dfbda0313b','编辑','1'),
+('1033','page','delete','51','a07e3706fe9ed1133f575fb21d7c84d7','删除','1'),
+('1034','page','audit','51','bfbdf566e22f7362207470d47b388f9a','审核','1'),
+('1035','article','index','52','1a9019abc8ec730b4f7973ff243bd063','查看','0'),
+('1036','article','create','52','783085874ef2302a03b1ce22a2341380','创建','1'),
+('1037','article','edit','52','dc655ccb77f8308d7421763d85cc754f','编辑','1'),
+('1038','article','delete','52','0378f856915e021c30035de15bfda221','删除','1'),
+('1039','article','audit','52','c3c8738b15dec46d530b807de2af2001','审核','1'),
+('1040','pageirregular','index','53','9a40b5582e7680658cb5d9e89564a994','查看','0'),
+('1041','pageirregular','create','53','47b0af56e033cd942850bde6b91719b7','创建','1'),
+('1042','pageirregular','edit','53','809d12af094f1be912e0beea6f270bd8','编辑','1'),
+('1043','pageirregular','delete','53','d4c88faced5eae4152f47b8e77ba05a6','删除','1'),
+('1044','pageirregular','audit','53','afbb7546fc5868a11744589507efc0cd','审核','1'),
+('1045','page','index','54','ef5882db2dbb9945694c3da8839fb62e','查看','0'),
+('1046','page','create','54','47a99a2994195a15e5d382cb2875f9e2','创建','1'),
+('1047','page','edit','54','052ae0e6449cd88e7806754662841518','编辑','1'),
+('1048','page','delete','54','6b561ba8eb62957d5f3e2a19822cc4a7','删除','1'),
+('1049','page','audit','54','3136833f119d269a7c8e790853f153fd','审核','1'),
+('1050','article','index','55','e84281453321fd57d13bfe595888308e','查看','0'),
+('1051','article','create','55','8662305675611e3f7195252303dfdc56','创建','1'),
+('1052','article','edit','55','bc70bc85d21d92fec7e3f7ae0e1bf653','编辑','1'),
+('1053','article','delete','55','23072d25437b3d781739eb0bf6201786','删除','1'),
+('1054','article','audit','55','6e4af579a96d1b0c881bac3935ed551f','审核','1'),
+('1055','pageirregular','index','56','457e6a81e4b9183cf035247bc2d3b44c','查看','0'),
+('1056','pageirregular','create','56','1c8335796a33ca9fc9387866b29496e5','创建','1'),
+('1057','pageirregular','edit','56','c18d5290d50b466c831be050f9438cec','编辑','1'),
+('1058','pageirregular','delete','56','cd8ae461ae8c4279bc8dee6350fbc304','删除','1'),
+('1059','pageirregular','audit','56','7fb48abf0d4529f0616207192d51792b','审核','1'),
+('1060','article','index','57','95e5e526c1c62c47aa446b9e44b10480','查看','0'),
+('1061','article','create','57','8be0c1a799b14510613e700d71388462','创建','1'),
+('1062','article','edit','57','596baa4a548db319d1f17855051c8bce','编辑','1'),
+('1063','article','delete','57','7f75a825a691a96c879c23168b273481','删除','1'),
+('1064','article','audit','57','829f43ccb57150757805553a4aed2fc0','审核','1'),
+('1065','article','index','58','efc904311f067b6f96907a06b78c5784','查看','0'),
+('1066','article','create','58','26b39deaf978d14aa4ef9175f60e2f7b','创建','1'),
+('1067','article','edit','58','7da8aad056598397a155a505c424a3e9','编辑','1'),
+('1068','article','delete','58','820255a3ac5d68e6c4315555dc69ae36','删除','1'),
+('1069','article','audit','58','1260e385692e345842d0212fda5dfc2c','审核','1'),
+('1070','pageirregular','index','59','9f5b1a31744842e24f9bff62fbba0e27','查看','0'),
+('1071','pageirregular','create','59','55838d1c7ee9e613515ba756f81e7412','创建','1'),
+('1072','pageirregular','edit','59','bd0a678724d44b596b5234f121e39a32','编辑','1'),
+('1073','pageirregular','delete','59','c535ee1eafd523a04e0322684cc07b7b','删除','1'),
+('1074','pageirregular','audit','59','0b9ca77eeea9ae898bdf9fad95fffad7','审核','1'),
+('1075','article','index','60','3593260833f0b39faa8c50f6b30675a1','查看','0'),
+('1076','article','create','60','e4280728ee6bb249ba8efb395c10b52b','创建','1'),
+('1077','article','edit','60','0bf99503133512d8f8f30f0d22a67251','编辑','1'),
+('1078','article','delete','60','81a5dbbe4ea01af282740fd6e5e9f090','删除','1'),
+('1079','article','audit','60','2b946df66f69d944757daedca3bcd826','审核','1'),
+('1080','pageirregular','index','61','f2681564f758ccc43c7fe841740a8307','查看','0'),
+('1081','pageirregular','create','61','35167f62951f1f027f9c97cb5bd6164e','创建','1'),
+('1082','pageirregular','edit','61','8a4a91fb0fd1c31577fa77ab7cb7048d','编辑','1'),
+('1083','pageirregular','delete','61','acd5f3bcec431da7f1ac28527c411c06','删除','1'),
+('1084','pageirregular','audit','61','346aff71b11247eb33931993c062287d','审核','1'),
+('1085','pageirregular','index','64','9831e5f9b09ea896cb7b902715ae2251','查看','0'),
+('1086','pageirregular','create','64','bb42523b155ac347b6243f5f36d21218','创建','1'),
+('1087','pageirregular','edit','64','97918bc4ca8b711c09b7aa4772d10560','编辑','1'),
+('1088','pageirregular','delete','64','eda7e449c5cb07e29aeb62f16e2a476f','删除','1'),
+('1089','pageirregular','audit','64','87691a4b50fcb25fae6d012c63b9ea9d','审核','1'),
+('1090','page','index','65','81e7cc92adec48b78e175844a06e7df3','查看','0'),
+('1091','page','create','65','5098eaa093807538607f8aec045fa09c','创建','1'),
+('1092','page','edit','65','62a6eeeab1acabad6aa8fa2b846c4460','编辑','1'),
+('1093','page','delete','65','e96ceb66ca53fce0f0f0ed3bc99e33c5','删除','1'),
+('1094','page','audit','65','69b3f55c586dd8751be18534484dc588','审核','1'),
+('1095','page','index','66','45874128b2c3d6a514fb009a43dc64fb','查看','0'),
+('1096','page','create','66','98c6f45a54036742ec5f4a4fe23562e4','创建','1'),
+('1097','page','edit','66','1bfbdc944f44350fe893e2e4a8d6faf7','编辑','1'),
+('1098','page','delete','66','b7faf98a4cac9afdd74862195a534802','删除','1'),
+('1099','page','audit','66','e3be88c3aa647fbad41ff1053680595a','审核','1'),
+('1100','article','index','67','51cd7af30ad4d4838665b3403ce81292','查看','0'),
+('1101','article','create','67','2e4866ade42ff91f58dacb416ab88c29','创建','1'),
+('1102','article','edit','67','0266e433d0953480670b41dac92a3ecc','编辑','1'),
+('1103','article','delete','67','d4949bc844d7f3c9ebbe36f8c6eca0de','删除','1'),
+('1104','article','audit','67','6a5370b8aec71b50e123aec9d410de42','审核','1'),
+('1105','article','index','68','ce8ea22ae29fc12ce66982dc82ce384b','查看','0'),
+('1106','article','create','68','e4530862b1aa16da33cb937c2583b806','创建','1'),
+('1107','article','edit','68','4e9a8d77a4407a420c38838995d62b9c','编辑','1'),
+('1108','article','delete','68','0b31e6dc9e62f9c2e40cff6a7d4665d0','删除','1'),
+('1109','article','audit','68','0ce5f1e3bcdbe4d9f653ea1b1302c016','审核','1'),
+('1110','pageirregular','index','69','dd7c2dc397bd6525e9880ec5ef973eb9','查看','0'),
+('1111','pageirregular','create','69','fb4500e1a6442e59c8b5c535b5d1ed86','创建','1'),
+('1112','pageirregular','edit','69','2bcb147a8529e5b8fb3d72784a8fa9d6','编辑','1'),
+('1113','pageirregular','delete','69','39a1f105142f1a2e8512f36849f8065e','删除','1'),
+('1114','pageirregular','audit','69','e93ac38c8f5f80568dd753e139c63f3c','审核','1'),
+('1115','page','index','70','1e2cdbfd8bbeb8f717579bbbd5025d1d','查看','0'),
+('1116','page','create','70','6de3abb5ef4e8a9ce7bfc5d5f41afd6b','创建','1'),
+('1117','page','edit','70','286fdade0b612a2eb096a61532e5fe3d','编辑','1'),
+('1118','page','delete','70','2711c80fd83693ceef41f8346740e8be','删除','1'),
+('1119','page','audit','70','9556afadeb18977aa3fdaf188e745588','审核','1'),
+('1120','page','index','71','1ebcf0b11990271148cf21ff05793782','查看','0'),
+('1121','page','create','71','2de1110f13b3ac4be6aedc1eaf1e1854','创建','1'),
+('1122','page','edit','71','ba2c62e7008125a7a3d44b521656d6ca','编辑','1'),
+('1123','page','delete','71','e5a30f6a618992cb26da1a96d5b60bd2','删除','1'),
+('1124','page','audit','71','846e962f92ea4f245a3d6df89d06af8c','审核','1'),
+('1125','page','index','72','8a39424cc5a27268c24bdb7661a4436f','查看','0'),
+('1126','page','create','72','a1a9e0e1de35250ce1f2731a05d99dd6','创建','1'),
+('1127','page','edit','72','ce633e8deb9313d9ee8640ca83f1e8c5','编辑','1'),
+('1128','page','delete','72','80a5b4eb19db31896912c331ea601266','删除','1'),
+('1129','page','audit','72','32c3f648a61b7276568de62eb18e5851','审核','1'),
+('1130','pageirregular','index','73','02896f13dccb5051b5b15d2ea2ef4dc3','查看','0'),
+('1131','pageirregular','create','73','8b318f3af385c7cefe12ac662ae0b34f','创建','1'),
+('1132','pageirregular','edit','73','0d27555ad9b97393d0ce55a3ec6c607f','编辑','1'),
+('1133','pageirregular','delete','73','0864f2157ab1bb0c70dd7dd8abb3f1c1','删除','1'),
+('1134','pageirregular','audit','73','2a5b7092d116347fef960c5a074f5acf','审核','1'),
+('1135','page','index','74','e864514759e3f9a171404bc25e904897','查看','0'),
+('1136','page','create','74','495f0c45ede9968fdbc216a41ddf82f4','创建','1'),
+('1137','page','edit','74','2100bd1f29ec9f95e737ff527447601a','编辑','1'),
+('1138','page','delete','74','773bacd547b1ed2fe99269f2baeee89f','删除','1'),
+('1139','page','audit','74','252d2b2e10ed856dd68b467633c3401e','审核','1'),
+('1140','page','index','75','f66a4c72d7de12caed74f45dd19e435f','查看','0'),
+('1141','page','create','75','5f3815a800c9c31473f0125c8007f6ef','创建','1'),
+('1142','page','edit','75','119ce829654ea5ca55b5455b506d6e9d','编辑','1'),
+('1143','page','delete','75','bb4e937e9ab108f7b1f06aa4f129617f','删除','1'),
+('1144','page','audit','75','1081d6752567c3634352c3e86a20ae15','审核','1'),
+('1145','page','index','76','0deb0749272fe40f5249b663e457ac91','查看','0'),
+('1146','page','create','76','4f6b578bc00c539ad8c4b40562a8f98f','创建','1'),
+('1147','page','edit','76','6ef876b27653acf446128d12cfbb9b45','编辑','1'),
+('1148','page','delete','76','601bcbefa8dc2965d4b83375f730b002','删除','1'),
+('1149','page','audit','76','ff08d5f5466609e72c2f4c1819d97fa0','审核','1'),
+('1150','pageirregular','index','77','5ab1cb860b34df3e3870ae2f207b9f4d','查看','0'),
+('1151','pageirregular','create','77','3095fc6bab0131b32b806000475251a5','创建','1'),
+('1152','pageirregular','edit','77','8c3ba3a5a127a770b0e87f4733975884','编辑','1'),
+('1153','pageirregular','delete','77','7cdfaaf3896268a9b5efc680200ad731','删除','1'),
+('1154','pageirregular','audit','77','edfc3bfa0924a4321ad912f4bb316e5f','审核','1'),
+('1155','pageirregular','index','78','eeedb75d2facf0c5806bc30778dee12b','查看','0'),
+('1156','pageirregular','create','78','34691a23cd487c998a266e799863c0ad','创建','1'),
+('1157','pageirregular','edit','78','8b653ca53db9a147fe4cc8cf68fac41b','编辑','1'),
+('1158','pageirregular','delete','78','f5134e9852fda81841c3428d22d3fceb','删除','1'),
+('1159','pageirregular','audit','78','3e1ad466c3798bafff914c51ede9c5bd','审核','1'),
+('1160','page','index','79','f6b83d86b864184953ed3de4816a39f8','查看','0'),
+('1161','page','create','79','ce35f4a3444bcd191a6251d2c41efb6d','创建','1'),
+('1162','page','edit','79','5718ff87f7f97ba448054088383fed28','编辑','1'),
+('1163','page','delete','79','5745affe39d0b291e480f8c473fa420c','删除','1'),
+('1164','page','audit','79','2d2cee2d7005e7b84c039e50fa4204a0','审核','1'),
+('1165','page','index','80','b42e3a5c7c2e9f551fcd0a0b5ee771cb','查看','0'),
+('1166','page','create','80','ee4c0ce1df6a5b39fa567dc1bc16b293','创建','1'),
+('1167','page','edit','80','1fad6c941377b44535c3a50a227f12aa','编辑','1'),
+('1168','page','delete','80','7b5cd7f72fe2c8863f4125a36bd5f67f','删除','1'),
+('1169','page','audit','80','e559567e7c200475a9bbfcded96617b5','审核','1'),
+('1170','pageirregular','index','81','3adf7b87a12b338d2a7f1befc5903dcd','查看','0'),
+('1171','pageirregular','create','81','b1adfd3965bada7d88d40097af75d9ea','创建','1'),
+('1172','pageirregular','edit','81','78996c6d269baac76bc9d0111e2736cd','编辑','1'),
+('1173','pageirregular','delete','81','4b468b239179a8b559adfb00ed29eac0','删除','1'),
+('1174','pageirregular','audit','81','6e4daff80f18bf3b5278dbee322705d7','审核','1'),
+('1175','pageirregular','index','82','20d14fcdb515fcfcc545c38e26a8f8ec','查看','0'),
+('1176','pageirregular','create','82','550cd000eaaa2396a04c130249b44fd2','创建','1'),
+('1177','pageirregular','edit','82','b84b4e548a91b689d1b7ac3fcb050a18','编辑','1'),
+('1178','pageirregular','delete','82','3a604f52260ce5cfa53f6dcfc67a9c26','删除','1'),
+('1179','pageirregular','audit','82','36ed9575cc084908647ba74f14fccbb5','审核','1'),
+('1180','page','index','83','7f23df4738703eaf5f64680a60f4233a','查看','0'),
+('1181','page','create','83','882fb34b46129f5c3ed69bd78fdf953c','创建','1'),
+('1182','page','edit','83','bbbbd41900c41b772a61e3eb829b1b2e','编辑','1'),
+('1183','page','delete','83','c2b45724881083db819736422f1d3ecb','删除','1'),
+('1184','page','audit','83','a683d1d2ddc1374e775aeb42941e722d','审核','1'),
+('1185','recruit','index','84','132dbb8ca024b9d68e1f96efd0f55be5','查看','0'),
+('1186','recruit','create','84','599f879419e489f8d84e958c616e0c54','创建','1'),
+('1187','recruit','edit','84','f225c5c165f1894bc45f388e7bf23222','编辑','1'),
+('1188','recruit','delete','84','fe9701de993b8137beb33ef29aa18ed2','删除','1'),
+('1189','recruit','audit','84','533fa2ff2d4a6dcb1220f861d6d0c3df','审核','1');
 /*!40000 ALTER TABLE `shm_manager_purview` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1662,41 +2159,26 @@ CREATE TABLE `shm_page` (
   `sort_id` int(11) DEFAULT '0' COMMENT '排序编号',
   `audit` int(1) DEFAULT '0' COMMENT '审核',
   `title` tinytext COMMENT '标题',
+  `title_en` tinytext COMMENT '标题(英文)',
   `title_seo` tinytext,
   `intro` varchar(500) DEFAULT NULL COMMENT '简介(200汉字)',
   `tags` tinytext COMMENT '标签',
+  `text` tinytext COMMENT '文字',
   `content` text COMMENT '内容',
+  `content_mobile` text COMMENT '内容(手机版)',
   `photo` varchar(200) DEFAULT NULL COMMENT '图片组',
   `thumb` varchar(200) DEFAULT NULL COMMENT '缩略图',
   `template` varchar(200) DEFAULT NULL COMMENT '模板',
   `timeline` int(10) DEFAULT NULL COMMENT '发布/修改时间',
   `attachment` tinytext COMMENT '附件',
-  `content_1` text,
-  `content_m` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='单页表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='单页表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_page`
 LOCK TABLES `shm_page` WRITE;
 /*!40000 ALTER TABLE `shm_page` DISABLE KEYS */;
-INSERT INTO `shm_page` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`title`,`title_seo`,`intro`,`tags`,`content`,`photo`,`thumb`,`template`,`timeline`,`attachment`,`content_1`,`content_m`) VALUES
-('1','7','0','1','0','单页','','','','<p>测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息</p><p style="text-align:center"><img src="http://localhost/shmweb/web/upload/148781714626451.jpg"/></p><p>测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息</p><p>测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息测试信息</p>','','',NULL,'1468750490',NULL,NULL,NULL),
-('2','15','0','2','0','banner图','','','',NULL,'23,24','2018/04/24/thumbnail/15245385442457mz002.jpg',NULL,'1524538201',NULL,NULL,NULL),
-('3','16','0','3','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524538619',NULL,NULL,NULL),
-('4','17','0','4','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524538846',NULL,NULL,NULL),
-('5','18','0','5','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524538893',NULL,NULL,NULL),
-('6','20','0','6','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524539362',NULL,NULL,NULL),
-('7','21','0','7','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524539386',NULL,NULL,NULL),
-('8','25','0','8','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524539561',NULL,NULL,NULL),
-('9','27','0','9','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524540085',NULL,NULL,NULL),
-('10','28','0','10','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524540101',NULL,NULL,NULL),
-('11','29','0','11','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524540189',NULL,NULL,NULL),
-('12','30','0','12','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524540224',NULL,NULL,NULL),
-('13','36','0','13','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524552465',NULL,NULL,NULL),
-('14','37','0','14','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524552484',NULL,NULL,NULL),
-('15','33','0','15','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1536817399',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `shm_page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1726,16 +2208,13 @@ CREATE TABLE `shm_pageirregular` (
   `tagintro` varchar(200) DEFAULT NULL,
   `url` varchar(240) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='不规则单页表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='不规则单页表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_pageirregular`
 LOCK TABLES `shm_pageirregular` WRITE;
 /*!40000 ALTER TABLE `shm_pageirregular` DISABLE KEYS */;
-INSERT INTO `shm_pageirregular` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`title`,`title_seo`,`intro`,`tags`,`content`,`photo`,`thumb`,`template`,`timeline`,`attachment`,`tagtitle`,`entitle`,`tagintro`,`url`) VALUES
-('1','13','0','1','0','标题','','','','','','',NULL,'1492660146',NULL,'副标题','英文标题','概述','http://www.shmweb.cn'),
-('2','14','0','2','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'1524538143',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `shm_pageirregular` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1763,22 +2242,13 @@ CREATE TABLE `shm_product` (
   `click` int(11) DEFAULT '0' COMMENT '点击量',
   `timeline` int(11) DEFAULT NULL COMMENT '发布时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='产品';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='产品';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_product`
 LOCK TABLES `shm_product` WRITE;
 /*!40000 ALTER TABLE `shm_product` DISABLE KEYS */;
-INSERT INTO `shm_product` (`id`,`cid`,`sort_id`,`ccid`,`audit`,`flag`,`ctype`,`title`,`title_seo`,`intro`,`tags`,`content`,`photo`,`thumb`,`show`,`click`,`timeline`) VALUES
-('1','9','1','0','1','0','3','测试产品信息1','','','','<p>测试产品信息1</p>','','','1','0','1487142465'),
-('2','9','2','0','1','0','3','测试产品信息2','','','','<p>测试产品信息2</p>','','','1','0','1487142993'),
-('3','9','3','0','1','0','3','测试产品信息3','','','','<p>测试产品信息3</p>','','','1','0','1493191774'),
-('4','9','4','0','1','0','3','测试产品信息4','','','','<p>测试产品信息4</p>','','','1','0','1493191782'),
-('14','34','14','0','1','0','11','测试','','','','<p>测试</p><p>测试<br/></p>','31','2018/09/13/thumbnail/153681933106d0aaa.jpg','1','0','1536817396'),
-('15','34','15','0','1','0','11','测试','','','','<p>测试</p><p>测试<br/></p>','31','2018/09/13/thumbnail/153681933106d0aaa.jpg','1','0','1536819335'),
-('16','34','16','0','1','0','11','测试','','','','<p>测试</p><p>测试<br/></p>','31','2018/09/13/thumbnail/153681933106d0aaa.jpg','1','0','1536819336'),
-('17','34','17','0','1','0','11','测试','','','','<p>测试</p><p>测试<br/></p>','31','2018/09/13/thumbnail/153681933106d0aaa.jpg','1','0','1536819336');
 /*!40000 ALTER TABLE `shm_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2308,11 +2778,11 @@ CREATE TABLE `shm_recruit` (
   `sort_id` int(11) DEFAULT '1' COMMENT '排序编号',
   `cid` int(11) DEFAULT NULL COMMENT '类型',
   `ccid` int(11) DEFAULT '0',
-  `title` varchar(250) NOT NULL COMMENT '标题',
+  `title` varchar(250) NOT NULL COMMENT '标题:招聘岗位',
   `title_seo` tinytext,
   `intro` tinytext COMMENT '简介',
   `tags` tinytext,
-  `content` mediumtext COMMENT '内容',
+  `content` mediumtext COMMENT '内容:岗位职责',
   `timeline` int(11) DEFAULT NULL COMMENT '发布/修改时间',
   `expiretime` int(11) DEFAULT NULL COMMENT '公告过期时间',
   `click` int(11) DEFAULT '0' COMMENT '浏览次数',
@@ -2323,45 +2793,32 @@ CREATE TABLE `shm_recruit` (
   `photo` varchar(255) DEFAULT NULL COMMENT '相关图片',
   `thumb` varchar(255) DEFAULT NULL COMMENT '图片缩略图',
   `attachment` varchar(255) DEFAULT NULL COMMENT '相关文件',
-  `country` varchar(50) DEFAULT NULL,
-  `province` varchar(50) DEFAULT NULL,
-  `city` varchar(50) DEFAULT NULL,
-  `county` varchar(50) DEFAULT NULL,
-  `place` varchar(255) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL COMMENT '国家',
+  `province` varchar(50) DEFAULT NULL COMMENT '省',
+  `city` varchar(50) DEFAULT NULL COMMENT '市',
+  `county` varchar(50) DEFAULT NULL COMMENT '县',
+  `place` varchar(255) DEFAULT NULL COMMENT '工作地区',
   `require` varchar(50) DEFAULT NULL COMMENT '职称要求',
-  `amount` int(11) DEFAULT NULL,
-  `department` varchar(50) DEFAULT NULL,
-  `gender` tinyint(1) NOT NULL DEFAULT '0',
-  `age` smallint(6) DEFAULT NULL,
-  `age_max` smallint(6) DEFAULT NULL,
-  `edu` varchar(50) DEFAULT NULL,
-  `major` varchar(50) DEFAULT NULL,
-  `experience` varchar(50) DEFAULT NULL,
-  `requirement` text,
-  `telphone` varchar(20) DEFAULT NULL,
-  `person` varchar(20) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
+  `amount` int(11) DEFAULT NULL COMMENT '招聘人数',
+  `department` varchar(50) DEFAULT NULL COMMENT '招聘部门',
+  `gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT '性别要求',
+  `age` smallint(6) DEFAULT NULL COMMENT '年龄要求',
+  `age_max` smallint(6) DEFAULT NULL COMMENT '年龄要求',
+  `edu` varchar(50) DEFAULT NULL COMMENT '学历要求',
+  `major` varchar(50) DEFAULT NULL COMMENT '专业要求',
+  `experience` varchar(50) DEFAULT NULL COMMENT '工作经验',
+  `requirement` text COMMENT '任职职责',
+  `telphone` varchar(20) DEFAULT NULL COMMENT '电话',
+  `person` varchar(20) DEFAULT NULL COMMENT '联系人',
+  `email` varchar(50) DEFAULT NULL COMMENT '邮箱',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='人才招聘';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='人才招聘';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_recruit`
 LOCK TABLES `shm_recruit` WRITE;
 /*!40000 ALTER TABLE `shm_recruit` DISABLE KEYS */;
-INSERT INTO `shm_recruit` (`id`,`sort_id`,`cid`,`ccid`,`title`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`expiretime`,`click`,`status`,`flag`,`audit`,`show`,`photo`,`thumb`,`attachment`,`country`,`province`,`city`,`county`,`place`,`require`,`amount`,`department`,`gender`,`age`,`age_max`,`edu`,`major`,`experience`,`requirement`,`telphone`,`person`,`email`) VALUES
-('1','1','10','0','岗位名称1',NULL,NULL,NULL,'<p>详细说明<br/></p>','1487088000','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'工作地区','职称要求','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>能力要求<br/></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('2','2','10','0','岗位名称2',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492444800','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('3','3','10','0','岗位名称3',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496598','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('4','4','10','0','岗位名称4',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496600','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('5','5','10','0','岗位名称5',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496601','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('6','6','10','0','岗位名称6',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496602','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('7','7','10','0','岗位名称7',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496603','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('8','8','10','0','岗位名称8',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496604','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('9','9','10','0','岗位名称9',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496605','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('10','10','10','0','岗位名称10',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496605','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('11','11','10','0','岗位名称11',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496607','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn'),
-('12','12','10','0','岗位名称12',NULL,NULL,NULL,'<p>&nbsp; &nbsp; &nbsp; &nbsp; 详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明详细说明<span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span>详细说明<span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span><span style="white-space: normal;">详细说明</span></p>','1492496608','1500220800','0','1','0','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'杭州','职称信息','0','部门信息','0','18','35','本科','专业要求','2年以上','<p>&nbsp; &nbsp; &nbsp; 能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span>能力要求能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span>能力要求<span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span><span style="white-space: normal;">能力要求</span></p>','0571-87651828','赵小姐','zhaochongxu@shmweb.cn');
 /*!40000 ALTER TABLE `shm_recruit` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2457,7 +2914,13 @@ CREATE TABLE `shm_sessions_adminer` (
 LOCK TABLES `shm_sessions_adminer` WRITE;
 /*!40000 ALTER TABLE `shm_sessions_adminer` DISABLE KEYS */;
 INSERT INTO `shm_sessions_adminer` (`session_id`,`ip_address`,`user_agent`,`last_activity`,`user_data`) VALUES
-('725490363fa170825d28ccb0c7886bf6','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.3','1536819331','a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:7:"0.0.0.0";s:3:"gid";s:1:"1";}');
+('fb30c298293ccc97d2455d4c76997493','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249225','a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}'),
+('6d3a935241e76813d25c2675b8c6c945','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249226',''),
+('9053657d847650f4daf688bae79ef97c','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249227',''),
+('f0b2f63186cb13785ec8c78251e07ac3','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249551','a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}'),
+('d16deafa808296f701887a1f00e2ae08','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249551',''),
+('6bc242418939acc3a1da6d93192eeb63','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556249551',''),
+('d6242797b9aa0f05d287101ef71f8a45','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36','1556260455','a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}');
 /*!40000 ALTER TABLE `shm_sessions_adminer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2548,32 +3011,13 @@ CREATE TABLE `shm_upload` (
   `timeline` int(11) DEFAULT NULL COMMENT '时间线',
   `origin_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COMMENT='文件上传';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文件上传';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_upload`
 LOCK TABLES `shm_upload` WRITE;
 /*!40000 ALTER TABLE `shm_upload` DISABLE KEYS */;
-INSERT INTO `shm_upload` (`id`,`name`,`size`,`type`,`url`,`thumb`,`deleteUrl`,`alt`,`title`,`text`,`timeline`,`origin_name`) VALUES
-('1','14893891775331cprts.jpg','34769','image/jpeg','2017/03/13/14893891775331cprts.jpg','2017/03/13/thumbnail/14893891775331cprts.jpg','?file=14893891775331cprts.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389177','20151103104740.jpg'),
-('2','14893892035051vvu0w.jpg','101669','image/jpeg','2017/03/13/14893892035051vvu0w.jpg','2017/03/13/thumbnail/14893892035051vvu0w.jpg','?file=14893892035051vvu0w.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389203','1.jpg'),
-('3','14893892187479s1vqp.jpg','134686','image/jpeg','2017/03/13/14893892187479s1vqp.jpg','2017/03/13/thumbnail/14893892187479s1vqp.jpg','?file=14893892187479s1vqp.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389218','2.jpg'),
-('4','14893892305067qloi4.jpg','71853','image/jpeg','2017/03/13/14893892305067qloi4.jpg','2017/03/13/thumbnail/14893892305067qloi4.jpg','?file=14893892305067qloi4.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389230','3.jpg'),
-('5','14893892411976clryg.jpg','132359','image/jpeg','2017/03/13/14893892411976clryg.jpg','2017/03/13/thumbnail/14893892411976clryg.jpg','?file=14893892411976clryg.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389241','4.jpg'),
-('6','14893892559326x71d4.jpg','112969','image/jpeg','2017/03/13/14893892559326x71d4.jpg','2017/03/13/thumbnail/14893892559326x71d4.jpg','?file=14893892559326x71d4.jpg&dt=2017/03/13',NULL,NULL,NULL,'1489389255','5.jpg'),
-('20','14957788622974degra.jpg','76651','image/jpeg','2017/05/26/14957788622974degra.jpg','2017/05/26/thumbnail/14957788622974degra.jpg','?file=14957788622974degra.jpg&dt=2017/05/26',NULL,NULL,NULL,'1495778862','mb-img.jpg'),
-('13','14924159147287ins5x.jpg','94464','image/jpeg','2017/04/17/14924159147287ins5x.jpg','2017/04/17/thumbnail/14924159147287ins5x.jpg','?file=14924159147287ins5x.jpg&dt=2017/04/17',NULL,NULL,NULL,'1492415914','1.jpg'),
-('14','14924159235296dxq84.jpg','28929','image/jpeg','2017/04/17/14924159235296dxq84.jpg','2017/04/17/thumbnail/14924159235296dxq84.jpg','?file=14924159235296dxq84.jpg&dt=2017/04/17',NULL,NULL,NULL,'1492415923','2.jpg'),
-('15','14924159336625fonvz.jpg','55381','image/jpeg','2017/04/17/14924159336625fonvz.jpg','2017/04/17/thumbnail/14924159336625fonvz.jpg','?file=14924159336625fonvz.jpg&dt=2017/04/17',NULL,NULL,NULL,'1492415933','3.jpg'),
-('16','14924159404476vzltt.jpg','40536','image/jpeg','2017/04/17/14924159404476vzltt.jpg','2017/04/17/thumbnail/14924159404476vzltt.jpg','?file=14924159404476vzltt.jpg&dt=2017/04/17',NULL,NULL,NULL,'1492415940','4.jpg'),
-('17','149256812539143bm7h.jpg','101604','image/jpeg','2017/04/19/149256812539143bm7h.jpg','2017/04/19/thumbnail/149256812539143bm7h.jpg','?file=149256812539143bm7h.jpg&dt=2017/04/19',NULL,NULL,NULL,'1492568125','6.jpg'),
-('18','14925681384586shijf.jpg','121373','image/jpeg','2017/04/19/14925681384586shijf.jpg','2017/04/19/thumbnail/14925681384586shijf.jpg','?file=14925681384586shijf.jpg&dt=2017/04/19',NULL,NULL,NULL,'1492568138','7.jpg'),
-('19','149259711243383tyi0.doc','11264','application/msword','2017/04/19/149259711243383tyi0.doc',NULL,'?file=149259711243383tyi0.doc&dt=2017/04/19',NULL,NULL,NULL,'1492597112','test.doc'),
-('31','153681933106d0aaa.jpg','30736','image/jpeg','2018/09/13/153681933106d0aaa.jpg','2018/09/13/thumbnail/153681933106d0aaa.jpg','?file=153681933106d0aaa.jpg&dt=2018/09/13',NULL,NULL,NULL,'1536819331','u=2882284884,1913504836&fm=26&gp=0.jpg'),
-('25','152453985067240z24k.jpg','7240','image/jpeg','2018/04/24/152453985067240z24k.jpg','2018/04/24/thumbnail/152453985067240z24k.jpg','?file=152453985067240z24k.jpg&dt=2018/04/24',NULL,NULL,NULL,'1524539850','58b65fb1N0f604dab.jpg'),
-('29','15245404804734nfqf2.jpg','2008','image/jpeg','2018/04/24/15245404804734nfqf2.jpg','2018/04/24/thumbnail/15245404804734nfqf2.jpg','?file=15245404804734nfqf2.jpg&dt=2018/04/24',NULL,NULL,NULL,'1524540480','TB1AYgnPpXXXXa8XXXXSutbFXXX.jpg_q70.jpg'),
-('28','152454044866366z8c8.jpg','7240','image/jpeg','2018/04/24/152454044866366z8c8.jpg','2018/04/24/thumbnail/152454044866366z8c8.jpg','?file=152454044866366z8c8.jpg&dt=2018/04/24',NULL,NULL,NULL,'1524540448','58b65fb1N0f604dab.jpg');
 /*!40000 ALTER TABLE `shm_upload` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2648,16 +3092,13 @@ CREATE TABLE `shm_videos` (
   `thumb` varchar(200) DEFAULT NULL COMMENT '图片缩略图',
   `files` tinytext COMMENT '附件',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='视频';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='视频';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
 -- Dumping data for table `shm_videos`
 LOCK TABLES `shm_videos` WRITE;
 /*!40000 ALTER TABLE `shm_videos` DISABLE KEYS */;
-INSERT INTO `shm_videos` (`id`,`cid`,`ccid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`entitle`,`title`,`title_seo`,`intro`,`tags`,`videourl`,`content`,`timeline`,`expiretime`,`status`,`author`,`source`,`click`,`color`,`photo`,`thumb`,`files`) VALUES
-('1','1','0','1','1','0','0',NULL,NULL,'测试信息','','  ','','',NULL,'1487208079',NULL,'0',NULL,NULL,'0','0','','',''),
-('2','1','0','2','1','0','0',NULL,NULL,'测试信息','','  ','','',NULL,'1489659424',NULL,'0',NULL,NULL,'0','0','','','');
 /*!40000 ALTER TABLE `shm_videos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2695,9 +3136,9 @@ LOCK TABLES `shm_webmodels` WRITE;
 /*!40000 ALTER TABLE `shm_webmodels` DISABLE KEYS */;
 INSERT INTO `shm_webmodels` (`id`,`cid`,`ccid`,`mid`,`sort_id`,`audit`,`flag`,`ctype`,`type_id`,`title`,`link`,`title_seo`,`intro`,`tags`,`content`,`timeline`,`photo`,`thumb`) VALUES
 ('21','0','0','2','2','0','0','0','4',NULL,NULL,NULL,NULL,NULL,NULL,'1492415649',NULL,NULL),
-('20','0','0','1','1','0','0','0','7',NULL,NULL,NULL,NULL,NULL,NULL,'1489116841',NULL,'');
+('20','0','0','1','1','0','0','0','5',NULL,NULL,NULL,NULL,NULL,NULL,'1489116841',NULL,'');
 /*!40000 ALTER TABLE `shm_webmodels` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
--- END TIME: 2018-09-13 14:16:12
+-- END TIME: 2019-04-26 14:34:49

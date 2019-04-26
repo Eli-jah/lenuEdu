@@ -1,5 +1,6 @@
 .idea
+shm/shmadmin/cache/*
 shm/shmadmin/logs/*.php
 shm/site/logs/*.php
-web/shmweb/node_modules
+web/shmweb/node_modules/*
 web/upload/*
