@@ -2677,14 +2677,6 @@ CREATE TABLE IF NOT EXISTS `shm_sessions_adminer` (
 -- Dumping data for table shm.shm_sessions_adminer: 27 rows
 DELETE FROM `shm_sessions_adminer`;
 /*!40000 ALTER TABLE `shm_sessions_adminer` DISABLE KEYS */;
-INSERT INTO `shm_sessions_adminer` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-	('fb30c298293ccc97d2455d4c76997493', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249225, 'a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}'),
-	('6d3a935241e76813d25c2675b8c6c945', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249226, ''),
-	('9053657d847650f4daf688bae79ef97c', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249227, ''),
-	('f0b2f63186cb13785ec8c78251e07ac3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249551, 'a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}'),
-	('d16deafa808296f701887a1f00e2ae08', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249551, ''),
-	('6bc242418939acc3a1da6d93192eeb63', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556249551, ''),
-	('21b88b253abbf785a5919b2083f1a5ed', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36', 1556254363, 'a:6:{s:9:"user_data";s:0:"";s:3:"mid";s:1:"1";s:5:"uname";s:8:"shmadmin";s:8:"nickname";s:12:"超级用户";s:8:"login_ip";s:9:"127.0.0.1";s:3:"gid";s:1:"1";}');
 /*!40000 ALTER TABLE `shm_sessions_adminer` ENABLE KEYS */;
 
 -- Dumping structure for table shm.shm_sessions_site
