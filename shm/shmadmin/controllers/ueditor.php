@@ -10,20 +10,19 @@ class Ueditor extends Base_Controller
 {
     public function __construct()
     {
-        //header('Access-Control-Allow-Origin: http://www.baidu.com'); //设置http://www.baidu.com允许跨域访问
-        //header('Access-Control-Allow-Headers: X-Requested-With,X_Requested_With'); //设置允许的跨域header
+        // header('Access-Control-Allow-Origin: http://www.baidu.com'); //设置http://www.baidu.com允许跨域访问
+        // header('Access-Control-Allow-Headers: X-Requested-With,X_Requested_With'); //设置允许的跨域header
         parent::__construct();
 
         $this->php_url = UE_UPLOAD_URL;
         // 用不定符号来表达编辑器
-        $this->php_path = "at";  //str_replace($_SERVER['DOCUMENT_ROOT'], "",UPLOAD_PATH."editor")  ;
+        $this->php_path = "at"; // str_replace($_SERVER['DOCUMENT_ROOT'], "",UPLOAD_PATH."editor")  ;
 
         $this->load->Helper('file');
     }
 
     public function upload()
     {
-
         date_default_timezone_set("Asia/Chongqing");
         error_reporting(E_ERROR);
         header("Content-Type: text/html; charset=utf-8");
@@ -219,12 +218,10 @@ class Ueditor extends Base_Controller
 
         /* 返回数据 */
         return json_encode($data);
-
     }
 
     public function _list($CONFIG)
     {
-
         /**
          * 获取已上传的文件列表
          * Date: 14-04-09
@@ -286,7 +283,6 @@ class Ueditor extends Base_Controller
         ));
 
         return $result;
-
     }
 
     public function _crawler($CONFIG)
@@ -395,7 +391,6 @@ class Ueditor extends Base_Controller
             }
         }
     }
-
 }
 
 /**
