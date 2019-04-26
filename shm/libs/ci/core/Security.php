@@ -89,8 +89,14 @@ class CI_Security
      * @var array
      * @access protected
      */
-    protected $_never_allowed_regex = array(
+    /*protected $_never_allowed_regex = array(
         'javascript\s*:',
+        'expression\s*(\(|&\#40;)', // CSS and IE
+        'vbscript\s*:', // IE, surprise!
+        'Redirect\s+302',
+        "([\"'])?data\s*:[^\\1]*?base64[^\\1]*?,[^\\1]*?\\1?"
+    );*/
+    protected $_never_allowed_regex = array(
         'expression\s*(\(|&\#40;)', // CSS and IE
         'vbscript\s*:', // IE, surprise!
         'Redirect\s+302',
@@ -345,7 +351,7 @@ class CI_Security
         /*
          * Convert all tabs to spaces
          *
-         * This prevents strings like this: ja	vascript
+         * This prevents strings like this: javascript
          * NOTE: we deal with spaces between characters later.
          * NOTE: preg_replace was found to be amazingly slow here on
          * large blocks of data, so we use str_replace.
@@ -387,8 +393,12 @@ class CI_Security
          * This corrects words like:  j a v a s c r i p t
          * These words are compacted back to their correct state.
          */
-        $words = array(
+        /*$words = array(
             'javascript', 'expression', 'vbscript', 'script', 'base64',
+            'applet', 'alert', 'document', 'write', 'cookie', 'window'
+        );*/
+        $words = array(
+            'expression', 'vbscript', 'script', 'base64',
             'applet', 'alert', 'document', 'write', 'cookie', 'window'
         );
 
@@ -458,8 +468,8 @@ class CI_Security
          * code, it simply converts the parenthesis to entities
          * rendering the code un-executable.
          *
-         * For example:	eval('some code')
-         * Becomes:		eval&#40;'some code'&#41;
+         * For example: eval('some code')
+         * Becomes: eval&#40;'some code'&#41;
          */
         $str = preg_replace('#(alert|cmd|passthru|eval|exec|expression|system|fopen|fsockopen|file|file_get_contents|readfile|unlink)(\s*)\((.*?)\)#si', "\\1\\2&#40;\\3&#41;", $str);
 
@@ -608,12 +618,12 @@ class CI_Security
      * Remove Evil HTML Attributes (like evenhandlers and style)
      *
      * It removes the evil attribute and either:
-     * 	- Everything up until a space
-     *		For example, everything between the pipes:
-     *		<a |style=document.write('hello');alert('world');| class=link>
-     * 	- Everything inside the quotes
-     *		For example, everything between the pipes:
-     *		<a |style="document.write('hello'); alert('world');"| class="link">
+     * Everything up until a space
+     * For example, everything between the pipes:
+     * <a |style=document.write('hello');alert('world');| class=link>
+     * Everything inside the quotes
+     * For example, everything between the pipes:
+     * <a |style="document.write('hello'); alert('world');"| class="link">
      *
      * @param string $str The string to check
      * @param boolean $is_image TRUE if this is an image
@@ -702,10 +712,19 @@ class CI_Security
      */
     protected function _js_link_removal($match)
     {
-        return str_replace(
+        /*return str_replace(
             $match[1],
             preg_replace(
                 '#href=.*?(alert\(|alert&\#40;|javascript\:|livescript\:|mocha\:|charset\=|window\.|document\.|\.cookie|<script|<xss|data\s*:)#si',
+                '',
+                $this->_filter_attributes(str_replace(array('<', '>'), '', $match[1]))
+            ),
+            $match[0]
+        );*/
+        return str_replace(
+            $match[1],
+            preg_replace(
+                '#href=.*?(alert\(|alert&\#40;|livescript\:|mocha\:|charset\=|window\.|document\.|\.cookie|<script|<xss|data\s*:)#si',
                 '',
                 $this->_filter_attributes(str_replace(array('<', '>'), '', $match[1]))
             ),
@@ -728,10 +747,19 @@ class CI_Security
      */
     protected function _js_img_removal($match)
     {
-        return str_replace(
+        /*return str_replace(
             $match[1],
             preg_replace(
                 '#src=.*?(alert\(|alert&\#40;|javascript\:|livescript\:|mocha\:|charset\=|window\.|document\.|\.cookie|<script|<xss|base64\s*,)#si',
+                '',
+                $this->_filter_attributes(str_replace(array('<', '>'), '', $match[1]))
+            ),
+            $match[0]
+        );*/
+        return str_replace(
+            $match[1],
+            preg_replace(
+                '#src=.*?(alert\(|alert&\#40;|livescript\:|mocha\:|charset\=|window\.|document\.|\.cookie|<script|<xss|base64\s*,)#si',
                 '',
                 $this->_filter_attributes(str_replace(array('<', '>'), '', $match[1]))
             ),
