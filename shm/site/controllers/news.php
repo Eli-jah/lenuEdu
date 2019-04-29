@@ -8,17 +8,18 @@ class news extends MY_Controller
         parent::__construct();
         $this->load->helpers('uisite_helper');
         $this->load->model('article_model');
-        $this->banner_id = 28;
-        $this->seo_id = 26;
+        $this->banner_id = 65;
+        $this->seo_id = 68;
     }
 
-    public function index($type = 0, $page = 1)
+    public function index($type = 3, $page = 1)
     {
         // seo
         $data['header'] = header_seoinfo($this->seo_id, 0);
         $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
+        $data['bg_image'] = $this->getPhotoByColumnId(67);
 
-        $data['type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 31))->result_array();
+        $data['types'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => $this->seo_id))->result_array();
         $data['active_type'] = tag_coltypes($type);
 
         /*分页*/
@@ -26,9 +27,9 @@ class news extends MY_Controller
         $config['uri_segment'] = 4;//页码所在URI段
         //计算当前页面新闻总条数
         if ($type == 0) {
-            $where = array('audit' => 1, 'cid' => 31);
+            $where = array('audit' => 1, 'cid' => $this->seo_id);
         } else {
-            $where = array('audit' => 1, 'cid' => 31, 'ctype' => $type);
+            $where = array('audit' => 1, 'cid' => $this->seo_id, 'type_id' => $type);
         }
         $config['total_rows'] = $this->db->where($where)->from('article')->count_all_results();
 
@@ -56,14 +57,14 @@ class news extends MY_Controller
         $this->load->view('news/index', $data);
     }
 
-    public function info($id = '')
+    public function show($id = 1)
     {
         $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
 
-        $data['info'] = $this->db->get_where('article', array('cid' => 31, 'audit' => 1, 'id' => $id))->row_array();
-        $data['type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 31))->result_array();
+        $data['info'] = $this->db->get_where('article', array('cid' => $this->seo_id, 'audit' => 1, 'id' => $id))->row_array();
 
-        $data['active_type'] = tag_coltypes($data['info']['ctype']);
+        $data['types'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => $this->seo_id))->result_array();
+        $data['active_type'] = tag_coltypes($data['info']['type_id']);
 
         //点击率
         $click = $data['info']['click'];
@@ -79,15 +80,16 @@ class news extends MY_Controller
         // $data['relation_product'] = $this->db->order_by('sort_id', 'desc')->limit(2)->get_where('product', array('cid' => 34, 'audit' => 1, 'flag' => 1))->result_array();
 
         /*seo*/
-        $data['header'] = header_seoinfo($this->seo_id, 0);
-        $data['seo'] = $this->db->get_where('article', array('id' => $id))->row_array();//获取seo
+        // $data['header'] = header_seoinfo($this->seo_id, 0);
+        // $data['seo'] = $this->db->get_where('article', array('id' => $id))->row_array();//获取seo
+        $data['header'] = array('title' => $data['info']['title_seo'], 'tags' => $data['info']['tags'], 'intro' => $data['info']['intro']);
 
-        $data['updown'] = $this->article_model->change_type_page($id, $cid = 31);
+        $data['updown'] = $this->article_model->change_type_page($id, $cid = $this->seo_id);
 
-        $this->load->view('news/info', $data);
+        $this->load->view('news/show', $data);
     }
 
-    /*public function modelajax()
+    /*public function getList()
     {
         $page = $this->input->get('page');
         // $ctype=$this->input->get('ctype');
@@ -96,6 +98,5 @@ class news extends MY_Controller
         $data['list'] = $list;
 
         $this->load->view('news/modelajax', $data);
-
     }*/
 }

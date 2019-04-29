@@ -20,6 +20,9 @@ $data['subject'] = $this->db->order_by('sort_id', 'desc')->get_where('product', 
 
 // partner type
 $data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 63))->result_array();
+
+// news type
+$data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => '68'))->result_array();
 ?>
 
 <header>
@@ -37,11 +40,11 @@ $data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltyp
             <!--header展开时显示-->
             <div class="header_menus">
                 <ul class="sorting_menu">
-                    <li class="active"><a href="<?php echo site_url('about/index') ?>">关于我们</a></li>
-                    <li><a href="javascript:void(0);">课程分类</a></li>
-                    <li><a href="<?php echo site_url('partner/index') ?>">合作伙伴</a></li>
-                    <li><a href="javascript:void(0);">新闻资讯</a></li>
-                    <li><a href="javascript:void(0);">联系我们</a></li>
+                    <li class="active"><a href="<?php echo site_url('about/index'); ?>">关于我们</a></li>
+                    <li><a href="<?php echo site_url('subject/index'); ?>">课程分类</a></li>
+                    <li><a href="<?php echo site_url('partner/index/1'); ?>">合作伙伴</a></li>
+                    <li><a href="<?php echo site_url('news/index/3'); ?>">新闻资讯</a></li>
+                    <li><a href="<?php echo site_url('contact/index'); ?>">联系我们</a></li>
                 </ul>
                 <div class="content_menu">
                     <ul class="aboutus_menu">
@@ -51,23 +54,25 @@ $data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltyp
                         <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment" ?>">住宿环境</a></li>
                     </ul>
                     <ul class="classification_menu">
-                        <?php if (!empty($data['subject'])): ?>
-                            <?php foreach ($data['subject'] as $k => $v): ?>
+                        <?php if (!empty($data['subject'])) { ?>
+                            <?php foreach ($data['subject'] as $k => $v) { ?>
                                 <li><a href="<?php echo site_url('subject/info/' . $v['id']) ?>"><?php echo $v['subtitle'] ?></a></li>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                            <?php } ?>
+                        <?php } ?>
                     </ul>
                     <ul class="enterprise_menu">
-                        <?php if (!empty($data['partner_type'])): ?>
-                            <?php foreach ($data['partner_type'] as $k => $v): ?>
+                        <?php if (!empty($data['partner_type'])) { ?>
+                            <?php foreach ($data['partner_type'] as $k => $v) { ?>
                                 <li><a href="<?php echo site_url('partner/index/' . $v['id']) ?>"><?php echo $v['title'] ?></a></li>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                            <?php } ?>
+                        <?php } ?>
                     </ul>
                     <ul class="news _menu">
-                        <li><a href="NewsLists.php">公司新闻</a></li>
-                        <li><a href="NewsLists.php">行业资讯</a></li>
-                        <li><a href="NewsLists.php">招生动态</a></li>
+                        <?php if (!empty($data['news_type'])) { ?>
+                            <?php foreach ($data['news_type'] as $k => $v) { ?>
+                                <li><a href="<?php echo site_url('news/index/' . $v['id']) ?>"><?php echo $v['title'] ?></a></li>
+                            <?php } ?>
+                        <?php } ?>
                     </ul>
                     <ul class="contactus_menu">
                         <li><a href="Contactus.php">联系方式</a></li>

@@ -23,6 +23,22 @@ if (!empty($minfo)) {
 
     <div class="boxed-inner seamless">
 
+        <!-- ctype -->
+        <?php if ($ctype = list_coltypes($this->cid)) { ?>
+            <div class="control-group">
+                <label class="control-label" for="type_id"> 所属分类:</label>
+                <div class="controls">
+                    <?php // $ctypeid = isset($_GET['ctype']) ? $_GET['ctype'] : 0; ?>
+                    <?php $ctypeid = isset($_GET['type_id']) ? $_GET['type_id'] : 0; ?>
+                    <?php
+                    // echo ui_btn_select('ctype', set_value("ctype", $ctypeid), $ctype);
+                    echo ui_btn_select('type_id', set_value("type_id", $ctypeid), $ctype);
+                    ?>
+                    <span class="help-inline"></span>
+                </div>
+            </div>
+        <?php } ?>
+
         <div class="control-group">
             <label class="control-label" for="title"> 招聘岗位 </label>
             <div class="controls">
@@ -143,7 +159,7 @@ if (!empty($minfo)) {
         <div class="tabbable">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">岗位职责</a></li>
-                <li><a href="#tab2" data-toggle="tab">任职职责</a></li>
+                <!--<li><a href="#tab2" data-toggle="tab">任职职责</a></li>-->
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
@@ -152,12 +168,12 @@ if (!empty($minfo)) {
                         <span class="help-inline"></span>
                     </div>
                 </div>
-                <div class="tab-pane" id="tab2">
+                <!--<div class="tab-pane" id="tab2">
                     <div class="control-group uefull">
                         <textarea id="requirement" name="requirement"></textarea>
                         <span class="help-inline"></span>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
 

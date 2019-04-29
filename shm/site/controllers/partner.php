@@ -23,14 +23,9 @@ class Partner extends MY_Controller
 
         $data['active_type'] = tag_coltypes($type);
 
-
         $data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 63))->result_array();
 
-
         $data['partner_list'] = $this->db->order_by('sort_id', 'desc')->get_where('gallery', array('ctype' => $type, 'cid' => 63, 'audit' => 1))->result_array();
-
-
-
 
         $this->load->view('partner/index', $data);
     }

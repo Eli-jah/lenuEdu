@@ -23,8 +23,9 @@
         <div class="section">
             <div class="swiper-container" id="page1_banner">
                 <div class="swiper-wrapper">
-                    <?php foreach($banners as $key => $banner) { ?>
-                        <div class="swiper-slide slide_<?php echo $key+1; ?>" style="background: url(<?php echo $banner['photo_url']; ?>) center no-repeat;">
+                    <?php foreach ($banners as $key => $banner) { ?>
+                        <div class="swiper-slide slide_<?php echo $key + 1; ?>"
+                             style="background: url(<?php echo $banner['photo_url']; ?>) center no-repeat;">
                             <?php echo $banner['content']; ?>
                         </div>
                     <?php } ?>
@@ -84,38 +85,35 @@
                     <div class="fullpage5_main">
                         <div class="swiper-container" id="page5_banner">
                             <div class="swiper-wrapper">
-                                <?php $_ii = 0;
-                                while ($_ii++ < 3): ?>
-                                    <div class="swiper-slide">
-                                        <div class="opacity_box"></div>
-                                        <div class="swiper-slide-content">
-                                            <div class="parts_img">
-                                                <img src="/web/shmweb/assets/images/banner/banner5_imgbanner1.png">
-                                            </div>
-                                            <div class="parts_textcontent">
-                                                <div class="parts_textcontent_title">
-                                                    <h3 title="大数据人工智能行业终于爆发了">
-                                                        大数据人工智能行业终于爆发了！
-                                                    </h3>
+                                <?php if (!empty($news['list'])) { ?>
+                                    <?php foreach ($news['list'] as $news) { ?>
+                                        <div class="swiper-slide">
+                                            <div class="opacity_box"></div>
+                                            <div class="swiper-slide-content">
+                                                <div class="parts_img">
+                                                    <img src="<?php echo UPLOAD_URL . $news['thumb']; ?>">
                                                 </div>
-                                                <p class="parts_textcontent_time">
-                                                    <img src="/web/shmweb/assets/images/icon/time.png">
-                                                    <span>2019.3.28</span>
-                                                </p>
-                                                <div class="parts_textcontent_content">
-                                                    <p>
-                                                        随着科学技术的不断进步，大数据时代已经到来，其是以数据技术为基础，
-                                                        在人类学习生活各个方面都起到不可或缺的作用，它促进了社会的转型和媒介的发展。
-                                                        在企业品牌传播方面，以大量的数据为基础并且进行深度挖掘，来获得消费者状态、
-                                                        品牌传播的有效方法和传播效果。一般的数据分析方法已经落伍，满足不了企业品牌
-                                                        传播的更高要求。所以，很多企业关注的问题就在于
+                                                <div class="parts_textcontent">
+                                                    <div class="parts_textcontent_title">
+                                                        <h3 title="大数据人工智能行业终于爆发了">
+                                                            <?php echo $news['title']; ?>
+                                                        </h3>
+                                                    </div>
+                                                    <p class="parts_textcontent_time">
+                                                        <img src="/web/shmweb/assets/images/icon/time.png">
+                                                        <span><?php echo date('Y.m.d', $news['timeline']); ?></span>
                                                     </p>
+                                                    <div class="parts_textcontent_content">
+                                                        <p>
+                                                            <?php echo msubstr(strip_tags($news['content']), 0, 150); ?>
+                                                        </p>
+                                                    </div>
+                                                    <a href="<?php echo site_url('news/show/' . $news['id']); ?>">了解更多</a>
                                                 </div>
-                                                <a href="NewsLists.php">了解更多</a>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php endwhile; ?>
+                                    <?php } ?>
+                                <?php } ?>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -203,7 +201,6 @@
         </div>
     </div>
 </div>
-
 
 
 <?php include_once VIEWS . 'inc/footer.php'; ?>

@@ -51,6 +51,7 @@ class Welcome extends MY_Controller
         // news
         $data['news']['titles'] = $this->getTitlesByColumnId(16);
         $data['news']['bg_image'] = $this->getPhotoByColumnId(17);
+        $data['news']['list'] = $this->db->order_by('sort_id', 'desc')->get_where('article', array('cid' => 68), 8)->result_array();
 
         // achievement
         $data['achievement']['titles'] = $this->getTitlesByColumnId(19);

@@ -575,10 +575,8 @@ if (!function_exists('header_seoinfo')) {
             $intro = $CI->mcfg->get_config('site', 'intro');
         }
         return $data['header'] = array('title' => $title, 'tags' => $tags, 'intro' => $intro);
-
     }
 }
-
 
 // 漂浮广告
 if (!function_exists('footad')) {

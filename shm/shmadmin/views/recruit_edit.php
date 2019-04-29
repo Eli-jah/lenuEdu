@@ -23,6 +23,20 @@ if (!empty($minfo)) {
 
     <div class="boxed-inner seamless">
 
+        <!-- ctype -->
+        <?php if ($ctypes = list_coltypes($this->cid)) { ?>
+            <div class="control-group">
+                <label class="control-label" for="type_id"> 所属分类:</label>
+                <div class="controls">
+                    <?php
+                    // echo ui_btn_select('ctype', set_value("ctype", $it['ctype']), $ctype);
+                    echo ui_btn_select('type_id', set_value("type_id", $it['type_id']), $ctypes);
+                    ?>
+                    <span class="help-inline"></span>
+                </div>
+            </div>
+        <?php } ?>
+
         <div class="control-group">
             <label class="control-label" for="title"> 招聘岗位 </label>
             <div class="controls">
@@ -143,7 +157,7 @@ if (!empty($minfo)) {
         <div class="tabbable">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">岗位职责</a></li>
-                <li><a href="#tab2" data-toggle="tab">任职职责</a></li>
+                <!--<li><a href="#tab2" data-toggle="tab">任职职责</a></li>-->
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
@@ -151,11 +165,11 @@ if (!empty($minfo)) {
                         <textarea id="content" name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
                     </div>
                 </div>
-                <div class="tab-pane" id="tab2">
+                <!--<div class="tab-pane" id="tab2">
                     <div class="control-group uefull">
-                        <textarea id="requirement" name="requirement"> <?php echo set_value('requirement', $it['requirement']); ?></textarea>
+                        <textarea id="requirement" name="requirement"> <?php /*echo set_value('requirement', $it['requirement']); */?></textarea>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
 

@@ -27,11 +27,8 @@
     </div>
     <div class="container">
         <!--公司简介-->
-        <div class="container_partcontent container_part1"
-             name='companyProfile'
-             id="companyProfile"
-             style="background: url('/web/shmweb/assets/images/aboutus_img1.png') center no-repeat;"
-        >
+        <div class="container_partcontent container_part1" name='companyProfile' id="companyProfile"
+             style="background: url('/web/shmweb/assets/images/aboutus_img1.png') center no-repeat;">
             <div class="container_part1_left">
                 <div class="part1_leftContent">
 
@@ -58,8 +55,8 @@
             <div class="container_part4_content introduction_banner_pic">
                 <div class="office_accom_tabs">
                     <ul class="container_tabs">
-                        <li class="active officeBtn" name='officeenvironment'><a href="javascript:void(0)">办公环境</a></li>
-                        <li name='accommodation'><a href="javascript:void(0)">住宿环境</a></li>
+                        <li class="active officeBtn" name='officeenvironment'><a href="javascript:void(0);">办公环境</a></li>
+                        <li name='accommodation'><a href="javascript:void(0);">住宿环境</a></li>
                     </ul>
                     <div class="nav-marker" id="markerLine"></div>
                 </div>
@@ -69,7 +66,7 @@
                         <div class="bank">
                             <?php if (!empty($office)): ?>
                                 <?php foreach ($office as $k => $v): ?>
-                                    <a rel="<?php echo $v; ?>" href="javascript:void(0)"></a>
+                                    <a rel="<?php echo $v; ?>" href="javascript:void(0);"></a>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
@@ -79,7 +76,7 @@
                         <div class="bank">
                             <?php if (!empty($accommodation)): ?>
                                 <?php foreach ($office as $k => $v): ?>
-                                    <a rel="<?php echo $v; ?>" href="javascript:void(0)"></a>
+                                    <a rel="<?php echo $v; ?>" href="javascript:void(0);"></a>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
@@ -90,6 +87,5 @@
         </div>
     </div>
 </div>
-
 
 <?php include_once VIEWS . 'inc/footer.php'; ?>

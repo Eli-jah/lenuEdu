@@ -16,9 +16,9 @@
         </div>
         <div class="Partition-nav">
             <ul class="nav-breadcrumb">
-                <li><a href="<?php echo site_url('') ?>">首页</a></li>
+                <li><a href="<?php echo site_url(''); ?>">首页</a></li>
                 <li class=""><a href="javascript:void(0);">课程分类</a></li>
-                <li class="active"><a href="javascript:void(0);"><?php echo $info['title'] ?></a></li>
+                <li class="active"><a href="javascript:void(0);"><?php echo $info['title']; ?></a></li>
             </ul>
             <ul class="Partition-nav-tabs Curricular_tabs">
                 <li class="active">
@@ -27,7 +27,9 @@
 
                         <?php if (!empty($data['subject'])): ?>
                             <?php foreach ($data['subject'] as $k => $v): ?>
-                                <li><a href="<?php echo site_url('subject/info/' . $v['id']) ?>"><?php echo $v['subtitle'] ?></a></li>
+                                <li>
+                                    <a href="<?php echo site_url('subject/info/' . $v['id']); ?>"><?php echo $v['subtitle']; ?></a>
+                                </li>
                             <?php endforeach; ?>
                         <?php endif; ?>
 
@@ -44,26 +46,25 @@
                 <div class="wrapper_evaluate"></div>
             </div>
             <div class="wrapper_content">
-                <?php echo $info['content'] ?>
+                <?php echo $info['content']; ?>
             </div>
-            <?php if (!empty($info_photo)): ?>
+            <?php if (!empty($info_photo)) { ?>
                 <div class="wrapper_swiper">
                     <div class="swiper-container CourseRotation">
                         <div class="swiper-wrapper">
-                            <?php foreach ($info_photo as $k => $v): ?>
+                            <?php foreach ($info_photo as $k => $v) { ?>
                                 <div class="swiper-slide">
-                                    <img src="<?php echo $v ?>"/>
+                                    <img src="<?php echo $v; ?>"/>
                                 </div>
-                            <?php endforeach; ?>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="swiper-button-prev swiper-button-black"></div>
                     <div class="swiper-button-next swiper-button-black"></div>
                 </div>
-            <?php endif; ?>
+            <?php } ?>
         </div>
     </div>
 </div>
-
 
 <?php include_once VIEWS . 'inc/footer.php'; ?>
