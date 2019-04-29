@@ -36,24 +36,24 @@ class Welcome extends Base_Controller
         }
 
         // 获取shm news php 4/5
-        $shm_file_path = APPPATH . 'cache/shm_feed.json';
+        /*$shm_file_path = APPPATH . 'cache/shm_feed.json';
 
         if (file_exists($shm_file_path) and new_is_writeable(APPPATH . 'cache')) {
             if ((filemtime($shm_file_path) + 60 * 60 * 24 * 30 - time()) > 0) {
                 $shm = file_get_contents($shm_file_path);
             } else {
-                $shm = file_get_contents("http://www.shmweb.cn/news.php?shm_notice/shmweb2013");
+                $shm = file_get_contents("http://www.sahereman.com/news.php?shm_notice/shmweb2013");
                 file_put_contents($shm_file_path, $shm);
             }
         } else {
-            $shm = file_get_contents("http://www.shmweb.cn/news.php?shm_notice/shmweb2013");
+            $shm = file_get_contents("http://www.sahereman.com/news.php?shm_notice/shmweb2013");
             if (new_is_writeable(APPPATH . 'cache')) {
                 $fp = fopen("$shm_file_path", "w+");
                 fclose($fp);
                 file_put_contents($shm_file_path, $shm);
             }
         }
-        $vdata['shm'] = json_decode($shm, true);
+        $vdata['shm'] = json_decode($shm, true);*/
 
         // 当前IP
         $vdata['server']['ip'] = get_ip();

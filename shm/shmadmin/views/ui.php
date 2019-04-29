@@ -77,7 +77,7 @@
             <div class="container">
                 <ul class="nav-logo pull-left">
                     <li>
-                        <a href="http://www.shmweb.cn/" target="_blank">
+                        <a href="http://www.sahereman.com/" target="_blank">
                             <img src=" <?php echo static_file('shmlogo.png') ?>">
                         </a>
                     </li>

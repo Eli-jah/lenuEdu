@@ -10,11 +10,11 @@ class contact extends MY_Controller
                 "label" => "标题",
                 "rules" => "trim|required"
             ),*/
-            array(
+            /*array(
                 "field" => "company",
                 "label" => "公司名称",
                 "rules" => "trim|required"
-            ),
+            ),*/
             array(
                 "field" => "username",
                 "label" => "姓名",
@@ -59,24 +59,21 @@ class contact extends MY_Controller
         parent::__construct();
         $this->load->model('feedback_model', 'mfeedback');
         $this->model = &$this->mfeedback;
-        $this->banner_id = 93;
-        $this->seo_id = 92;
+        $this->banner_id = 70;
+        $this->seo_id = 69;
+    }
+
+    public function index()
+    {
+        $this->us();
     }
 
     public function us()
     {
-        $data['header'] = header_seoinfo($this->seo_id, 0);
+        $data['header'] = header_seoinfo(72, 0);
         $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
-
-        // 青岛分公司
-        $data['tsingtao'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['tsingtao']['titles'] = explode('|', $data['tsingtao']['intro']);
-        $data['tsingtao']['photos'] = $this->multiImg($data['tsingtao']['photo']);
-
-        // 济南分公司
-        $data['jinan'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['jinan']['titles'] = explode('|', $data['jinan']['intro']);
-        $data['jinan']['photos'] = $this->multiImg($data['jinan']['photo']);
+        $data['content'] = $this->getContentByColumnId(72);
+        $data['route'] = $this->getContentByColumnId(75);
 
         $this->load->view('contact/index', $data);
     }
@@ -85,17 +82,30 @@ class contact extends MY_Controller
     {
         // seo
         $data['header'] = header_seoinfo(0, 0);
-        $data['header']['title'] = $this->mcfg->get_config('site', 'title_suffix') . '-' . '在线留言';
+        $data['header']['title'] = $this->mcfg->get_config('site', 'title_suffix') . '-' . '入学申请';
         $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
+
         $this->load->view('contact/application', $data);
     }
 
-    public function recruitment()
+    public function recruitment($type = 0)
     {
         // seo
         $data['header'] = header_seoinfo(0, 0);
-        $data['header']['title'] = $this->mcfg->get_config('site', 'title_suffix') . '-' . '在线留言';
+        $data['header']['title'] = $this->mcfg->get_config('site', 'title_suffix') . '-' . '企业招聘';
         $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
+
+        $data['types'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 84))->result_array();
+
+        if ($type == 0) {
+            $where = array('cid' => 84, 'audit' => 1);
+            $data['active_type'] = false;
+        } else {
+            $where = array('cid' => 84, 'type_id' => $type, 'audit' => 1);
+            $data['active_type'] = tag_coltypes($type);
+        }
+        $data['jobs'] = $this->db->order_by('sort_id', 'desc')->get_where('recruit', $where)->result_array();
+
         $this->load->view('contact/recruitment', $data);
     }
 
@@ -111,8 +121,7 @@ class contact extends MY_Controller
                 $errs = form_errors();
                 $vdata ['msg'] = $errs;
             } else {
-
-                unset($_POST['captcha']);
+                // unset($_POST['captcha']);
                 $data = $this->input->post();
                 $data['content'] = str_replace("\n", "<br/>", $this->input->post('content', true));
                 if ($this->model->create($data)) {

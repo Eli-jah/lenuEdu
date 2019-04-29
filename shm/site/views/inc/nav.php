@@ -32,7 +32,8 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
                 <!--默认显示-->
                 <a href="<?php echo site_url(''); ?>"">
                 <img class="nomarl_show_logo" src="/web/shmweb/assets/images/logo_white.png" title="莱牛教育">
-                <img class="nomarl_show_logo_theme dis_n" src="/web/shmweb/assets/images/logo_theme_noword.png" title="莱牛教育">
+                <img class="nomarl_show_logo_theme dis_n" src="/web/shmweb/assets/images/logo_theme_noword.png"
+                     title="莱牛教育">
                 <!--header展开时显示-->
                 <img class="active_show_logo" src="/web/shmweb/assets/images/logo_theme.png" title="莱牛教育"/>
                 </a>
@@ -48,37 +49,43 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
                 </ul>
                 <div class="content_menu">
                     <ul class="aboutus_menu">
-                        <li><a href="<?php echo site_url('about/index') ?>">公司简介</a></li>
-                        <li><a href="<?php echo site_url('about/culture') ?>">企业文化</a></li>
-                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment" ?>">办公环境</a></li>
-                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment" ?>">住宿环境</a></li>
+                        <li><a href="<?php echo site_url('about/index'); ?>">公司简介</a></li>
+                        <li><a href="<?php echo site_url('about/culture'); ?>">企业文化</a></li>
+                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">办公环境</a></li>
+                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">住宿环境</a></li>
                     </ul>
                     <ul class="classification_menu">
                         <?php if (!empty($data['subject'])) { ?>
                             <?php foreach ($data['subject'] as $k => $v) { ?>
-                                <li><a href="<?php echo site_url('subject/info/' . $v['id']) ?>"><?php echo $v['subtitle'] ?></a></li>
+                                <li>
+                                    <a href="<?php echo site_url('subject/info/' . $v['id']); ?>"><?php echo $v['subtitle']; ?></a>
+                                </li>
                             <?php } ?>
                         <?php } ?>
                     </ul>
                     <ul class="enterprise_menu">
                         <?php if (!empty($data['partner_type'])) { ?>
                             <?php foreach ($data['partner_type'] as $k => $v) { ?>
-                                <li><a href="<?php echo site_url('partner/index/' . $v['id']) ?>"><?php echo $v['title'] ?></a></li>
+                                <li>
+                                    <a href="<?php echo site_url('partner/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                                </li>
                             <?php } ?>
                         <?php } ?>
                     </ul>
                     <ul class="news _menu">
                         <?php if (!empty($data['news_type'])) { ?>
                             <?php foreach ($data['news_type'] as $k => $v) { ?>
-                                <li><a href="<?php echo site_url('news/index/' . $v['id']) ?>"><?php echo $v['title'] ?></a></li>
+                                <li>
+                                    <a href="<?php echo site_url('news/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                                </li>
                             <?php } ?>
                         <?php } ?>
                     </ul>
                     <ul class="contactus_menu">
-                        <li><a href="Contactus.php">联系方式</a></li>
-                        <li><a href="Contactus.php#OnlineMessage">在线留言</a></li>
-                        <li><a href="Entrance.php">申请入学</a></li>
-                        <li><a href="Recruitment.php">企业招聘</a></li>
+                        <li><a href="<?php echo site_url('contact/us'); ?>">联系方式</a></li>
+                        <li><a href="<?php echo site_url('contact/us'); ?>#OnlineMessage">在线留言</a></li>
+                        <li><a href="<?php echo site_url('contact/application'); ?>">申请入学</a></li>
+                        <li><a href="<?php echo site_url('contact/recruitment'); ?>">企业招聘</a></li>
                     </ul>
                 </div>
             </div>
@@ -136,48 +143,60 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
             <span class="btn-line"></span>
         </button>
         <ul class="nav-list1">
-            <li><a href="index.php">首页</a></li>
+            <li><a href="<?php echo site_url(''); ?>">首页</a></li>
             <li class="mobile_more">
-                <a href="javascript:void(0);">关于我们</a>
+                <a href="<?php echo site_url('about/index'); ?>">关于我们</a>
                 <ul class="nav-list2">
-                    <li><a href="aboutus_introduction.php">公司简介</a></li>
-                    <li><a href="aboutus.php">企业文化</a></li>
-                    <li><a href="aboutus.php">荣誉资质</a></li>
-                    <li><a href="aboutus.php#OfficeEnvironment">办公环境</a></li>
-                    <li><a href="aboutus.php#OfficeEnvironment">住宿环境</a></li>
+                    <li><a href="<?php echo site_url('about/index'); ?>">公司简介</a></li>
+                    <li><a href="<?php echo site_url('about/culture'); ?>">企业文化</a></li>
+                    <li><a href="<?php echo site_url('about/culture'); ?>#company_honor">荣誉资质</a></li>
+                    <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">办公环境</a></li>
+                    <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">住宿环境</a></li>
                 </ul>
             </li>
             <li class="mobile_more">
                 <a href="javascript:void(0);">课程分类</a>
                 <ul class="nav-list2">
-                    <li><a href="Curriculum.php">ETL</a></li>
-                    <li><a href="Curriculum.php">JAVA</a></li>
-                    <li><a href="Curriculum.php">UI</a></li>
-                    <li><a href="Curriculum.php">Python</a></li>
+                    <?php if (!empty($data['subject'])) { ?>
+                        <?php foreach ($data['subject'] as $k => $v) { ?>
+                            <li>
+                                <a href="<?php echo site_url('subject/info/' . $v['id']); ?>"><?php echo $v['subtitle']; ?></a>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="javascript:void(0);">合作伙伴</a>
+                <a href="<?php echo site_url('partner/index/'); ?>">合作伙伴</a>
                 <ul class="nav-list2">
-                    <li><a href="Transportation.php">院校合作</a></li>
-                    <li><a href="Enterprisepartner.php">企业合作</a></li>
+                    <?php if (!empty($data['partner_type'])) { ?>
+                        <?php foreach ($data['partner_type'] as $k => $v) { ?>
+                            <li>
+                                <a href="<?php echo site_url('partner/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="javascript:void(0);">新闻资讯</a>
+                <a href="<?php echo site_url('news/index/'); ?>">新闻资讯</a>
                 <ul class="nav-list2">
-                    <li><a href="NewsLists.php">公司新闻</a></li>
-                    <li><a href="NewsLists.php">行业资讯</a></li>
-                    <li><a href="NewsLists.php">招生动态</a></li>
+                    <?php if (!empty($data['news_type'])) { ?>
+                        <?php foreach ($data['news_type'] as $k => $v) { ?>
+                            <li>
+                                <a href="<?php echo site_url('news/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="javascript:void(0);">联系我们</a>
+                <a href="<?php echo site_url('contact/us'); ?>">联系我们</a>
                 <ul class="nav-list2">
-                    <li><a href="Contactus.php">联系方式</a></li>
-                    <li><a href="Contactus.php#OnlineMessage">在线留言</a></li>
-                    <li><a href="Entrance.php">申请入学</a></li>
-                    <li><a href="Recruitment.php">企业招聘</a></li>
+                    <li><a href="<?php echo site_url('contact/us'); ?>">联系方式</a></li>
+                    <li><a href="<?php echo site_url('contact/us'); ?>#OnlineMessage">在线留言</a></li>
+                    <li><a href="<?php echo site_url('contact/application'); ?>">申请入学</a></li>
+                    <li><a href="<?php echo site_url('contact/recruitment'); ?>">企业招聘</a></li>
                 </ul>
             </li>
         </ul>

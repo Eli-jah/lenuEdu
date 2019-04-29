@@ -72,43 +72,45 @@ if (!empty($minfo)) {
         <div class="control-group">
             <label class="control-label" for="timeline"> 招聘有效期 </label>
             <div class="controls">
-                <input type="text" value="<?php echo date('Y-m-d'); ?>" readonly class="input-datepicker" name='timeline' x-webkit-speech>
+                <input type="text" value="<?php echo date('Y-m-d'); ?>" readonly class="input-datepicker"
+                       name='timeline' x-webkit-speech>
                 至
-                <input type="text" value="<?php echo date('Y-m-d', time() + 3600 * 24 * 90); ?>" readonly class="input-datepicker" name='expiretime' x-webkit-speech>
+                <input type="text" value="<?php echo date('Y-m-d', time() + 3600 * 24 * 90); ?>" readonly
+                       class="input-datepicker" name='expiretime' x-webkit-speech>
             </div>
         </div>
 
-        <?php if ($mtype_id == 3 || $mtype_id == 4) { ?>
-            <div class="control-group">
-                <label class="control-label" for="amount"> 招聘人数 </label>
-                <div class="controls">
-                    <input type="text" name="amount" value="0" id="amount">
-                    <span class='help-inline'> 填0表示不限制 </span>
-                </div>
+        <?php // if ($mtype_id == 3 || $mtype_id == 4) { ?>
+        <div class="control-group">
+            <label class="control-label" for="amount"> 招聘人数 </label>
+            <div class="controls">
+                <input type="text" name="amount" value="0" id="amount">
+                <span class='help-inline'> 填0表示不限制 </span>
             </div>
+        </div>
 
-            <div class="control-group">
-                <label class="control-label" for="department"> 招聘部门 </label>
-                <div class="controls">
-                    <input type="text" name="department" value="<?php echo set_value('department') ?>" id="department">
-                </div>
+        <!--<div class="control-group">
+            <label class="control-label" for="department"> 招聘部门 </label>
+            <div class="controls">
+                <input type="text" name="department" value="<?php /*echo set_value('department') */?>" id="department">
             </div>
+        </div>
 
-            <div class="control-group">
-                <label class="control-label" for="experience"> 工作经验 </label>
-                <div class="controls">
-                    <input type="text" name="experience" value="<?php echo set_value('experience') ?>" id="experience">
-                </div>
+        <div class="control-group">
+            <label class="control-label" for="experience"> 工作经验 </label>
+            <div class="controls">
+                <input type="text" name="experience" value="<?php /*echo set_value('experience') */?>" id="experience">
             </div>
+        </div>
 
-            <div class="control-group">
-                <label class="control-label" for="place"> 工作地区 </label>
-                <div class="controls">
-                    <input type="text" name="place" value="<?php echo set_value('place') ?>" id="place">
-                </div>
+        <div class="control-group">
+            <label class="control-label" for="place"> 工作地区 </label>
+            <div class="controls">
+                <input type="text" name="place" value="<?php /*echo set_value('place') */?>" id="place">
             </div>
+        </div>-->
 
-        <?php } ?>
+        <?php // } ?>
 
         <!-- <div class="control-group">
             <label class="control-label" for="require"> 职称要求 </label>
@@ -139,21 +141,21 @@ if (!empty($minfo)) {
                 <span class="help-inline"></span>
             </div>
         </div> -->
-        <!-- <div class="control-group">
+        <div class="control-group">
             <label class="control-label" for="age"> 年龄要求 </label>
             <div class="controls">
                 <input type="text" name="age" value="18" id="age">
                 至
                 <input type="text" name="age_max" value="35" id="age_max">
             </div>
-        </div> -->
+        </div>
 
-        <!-- <div class="control-group">
+        <div class="control-group">
             <label class="control-label" for="edu"> 学历要求 </label>
             <div class="controls">
-                <input type="text" name="edu" value="<?php // echo set_value('edu') ?>" id="edu">
+                <input type="text" name="edu" value="<?php echo set_value('edu') ?>" id="edu">
             </div>
-        </div> -->
+        </div>
 
 
         <div class="tabbable">

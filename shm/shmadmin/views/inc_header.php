@@ -86,7 +86,7 @@
             <div class="container">
                 <ul class="nav-logo pull-left">
                     <li>
-                        <a href="http://www.shmweb.cn/" target="_blank"></a>
+                        <a href="http://www.sahereman.com/" target="_blank"></a>
                     </li>
                     <li>
                         <a href="<?php echo site_url() ?>"> <?php echo $this->config->item('title_suffix'); ?> </a>

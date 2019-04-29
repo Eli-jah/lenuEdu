@@ -85,12 +85,12 @@
 		<?php include_once 'inc_form_errors.php'; ?>
 	</div>
 	<div class='clear' id="footer-push"></div>
-	<div style="text-align:center;color:#0088cc; font-size:14px; margin-top:400px;"><a href="http://www.shmweb.cn/" target="_blank"> <?php echo lang('shm') ?> </a> 客服热线：<?php echo lang('shm404');?> </div>
+	<div style="text-align:center;color:#0088cc; font-size:14px; margin-top:400px;"><a href="http://www.sahereman.com/" target="_blank"> <?php echo lang('shm') ?> </a> 客服热线：<?php echo lang('shm404');?> </div>
 </div>
 
 <div id="body-footer">
 	<div class="container-fluid">
-		<p class="muted credit"> Power by  <a href="http://www.shmweb.cn/"> &copy; <?php echo lang('shm') ?></a> .</p>
+		<p class="muted credit"> Power by  <a href="http://www.sahereman.com/"> &copy; <?php echo lang('shm') ?></a> .</p>
 	</div>
 </div>
 

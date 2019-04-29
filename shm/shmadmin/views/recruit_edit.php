@@ -40,7 +40,8 @@ if (!empty($minfo)) {
         <div class="control-group">
             <label class="control-label" for="title"> 招聘岗位 </label>
             <div class="controls">
-                <input type="text" name="title" value="<?php echo set_value('title', $it['title']) ?>" id="title" x-webkit-speech>
+                <input type="text" name="title" value="<?php echo set_value('title', $it['title']) ?>" id="title"
+                       x-webkit-speech>
             </div>
         </div>
 
@@ -48,7 +49,8 @@ if (!empty($minfo)) {
             <div class="control-group">
                 <label class="control-label" for="person"> 联系人 </label>
                 <div class="controls">
-                    <input type="text" name="person" value="<?php echo set_value('person', $it['person']) ?>" id="person">
+                    <input type="text" name="person" value="<?php echo set_value('person', $it['person']) ?>"
+                           id="person">
                 </div>
             </div>
 
@@ -62,7 +64,8 @@ if (!empty($minfo)) {
             <div class="control-group">
                 <label class="control-label" for="telphone"> 电话 </label>
                 <div class="controls">
-                    <input type="text" name="telphone" value="<?php echo set_value('telphone', $it['telphone']) ?>" id="telphone">
+                    <input type="text" name="telphone" value="<?php echo set_value('telphone', $it['telphone']) ?>"
+                           id="telphone">
                 </div>
             </div>
         <?php } ?>
@@ -70,42 +73,44 @@ if (!empty($minfo)) {
         <div class="control-group">
             <label class="control-label" for="timeline"> 招聘有效期 </label>
             <div class="controls">
-                <input type="text" value="<?php echo date('Y-m-d', set_value('timeline', $it['timeline'])); ?>" readonly class="input-datepicker" name='timeline' x-webkit-speech>
+                <input type="text" value="<?php echo date('Y-m-d', set_value('timeline', $it['timeline'])); ?>" readonly
+                       class="input-datepicker" name='timeline' x-webkit-speech>
                 至
-                <input type="text" value="<?php echo date('Y-m-d', set_value('expiretime', $it['expiretime'])); ?>" readonly class="input-datepicker" name='expiretime' x-webkit-speech>
+                <input type="text" value="<?php echo date('Y-m-d', set_value('expiretime', $it['expiretime'])); ?>"
+                       readonly class="input-datepicker" name='expiretime' x-webkit-speech>
             </div>
         </div>
 
-        <?php if ($mtype_id == 3 || $mtype_id == 4) { ?>
-            <div class="control-group">
-                <label class="control-label" for="set_value('amount')"> 招聘人数 </label>
-                <div class="controls">
-                    <input type="text" name="amount" value="<?php echo set_value('amount', $it['amount']) ?>" id="amount">
-                    <span class='help-inline'> 填0表示不限制 </span>
-                </div>
+        <?php // if ($mtype_id == 3 || $mtype_id == 4) { ?>
+        <div class="control-group">
+            <label class="control-label" for="set_value('amount')"> 招聘人数 </label>
+            <div class="controls">
+                <input type="text" name="amount" value="<?php echo set_value('amount', $it['amount']) ?>" id="amount">
+                <span class='help-inline'> 填0表示不限制 </span>
             </div>
+        </div>
 
-            <div class="control-group">
+        <!--<div class="control-group">
                 <label class="control-label" for="department"> 招聘部门 </label>
                 <div class="controls">
-                    <input type="text" name="department" value="<?php echo set_value('department', $it['department']) ?>" id="department">
+                    <input type="text" name="department" value="<?php /*echo set_value('department', $it['department']) */ ?>" id="department">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label" for="experience"> 工作经验 </label>
                 <div class="controls">
-                    <input type="text" name="experience" value="<?php echo set_value('experience', $it['experience']) ?>" id="experience">
+                    <input type="text" name="experience" value="<?php /*echo set_value('experience', $it['experience']) */ ?>" id="experience">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label" for="place"> 工作地区 </label>
                 <div class="controls">
-                    <input type="text" name="place" value="<?php echo set_value('place', $it['place']) ?>" id="place">
+                    <input type="text" name="place" value="<?php /*echo set_value('place', $it['place']) */ ?>" id="place">
                 </div>
-            </div>
-        <?php } ?>
+            </div>-->
+        <?php // } ?>
 
         <!-- <div class="control-group">
                 <label class="control-label" for="require"> 职称要求 </label>
@@ -126,32 +131,33 @@ if (!empty($minfo)) {
                 <div class="controls">
                     <select name="gender" id="gender" class='bselect show-tick '>
                         <?php
-                        /*foreach (lang('recruit_gender') as $k => $o) {
-                            echo '<option value="' . $k . '"' . set_selected('gender', $k, $it['gender'], ' selected="selected" class="option-select" ') . '>';
-                            echo $o;
-                            echo '</option>';
-                        }*/
-                        ?>
+        /*foreach (lang('recruit_gender') as $k => $o) {
+            echo '<option value="' . $k . '"' . set_selected('gender', $k, $it['gender'], ' selected="selected" class="option-select" ') . '>';
+            echo $o;
+            echo '</option>';
+        }*/
+        ?>
                     </select>
                     <span class="help-inline"></span>
                 </div>
             </div> -->
 
-        <!-- <div class="control-group">
-                <label class="control-label" for="age"> 年龄要求 </label>
-                <div class="controls">
-                    <input type="text" name="age" value="<?php // echo set_value('age', $it['age']); ?>" id="age">
-                     至
-                    <input type="text" name="age_max" value="<?php // echo set_value('age_max', $it['age_max']); ?>" id="age_max">
-                </div>
-            </div> -->
+        <div class="control-group">
+            <label class="control-label" for="age"> 年龄要求 </label>
+            <div class="controls">
+                <input type="text" name="age" value="<?php echo set_value('age', $it['age']); ?>" id="age">
+                至
+                <input type="text" name="age_max" value="<?php echo set_value('age_max', $it['age_max']); ?>"
+                       id="age_max">
+            </div>
+        </div>
 
-        <!-- <div class="control-group">
-                <label class="control-label" for="edu"> 学历要求 </label>
-                <div class="controls">
-                    <input type="text" name="edu" value="<?php // echo set_value('edu', $it['edu']); ?>" id="edu">
-                </div>
-            </div> -->
+        <div class="control-group">
+            <label class="control-label" for="edu"> 学历要求 </label>
+            <div class="controls">
+                <input type="text" name="edu" value="<?php echo set_value('edu', $it['edu']); ?>" id="edu">
+            </div>
+        </div>
 
 
         <div class="tabbable">
@@ -162,12 +168,13 @@ if (!empty($minfo)) {
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
                     <div class="control-group uefull">
-                        <textarea id="content" name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
+                        <textarea id="content"
+                                  name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
                     </div>
                 </div>
                 <!--<div class="tab-pane" id="tab2">
                     <div class="control-group uefull">
-                        <textarea id="requirement" name="requirement"> <?php /*echo set_value('requirement', $it['requirement']); */?></textarea>
+                        <textarea id="requirement" name="requirement"> <?php /*echo set_value('requirement', $it['requirement']); */ ?></textarea>
                     </div>
                 </div>-->
             </div>

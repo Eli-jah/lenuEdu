@@ -52,7 +52,7 @@
                 </div>
             </div>
             <!--荣誉资质-->
-            <div class="container_part3">
+            <div class="container_part3" id="company_honor">
                 <div class="pagePart_title">
                     <h1>荣誉资质</h1>
                     <p>Honors</p>

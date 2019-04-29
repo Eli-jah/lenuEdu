@@ -8,7 +8,7 @@
 <div id="body-footer">
     <div class="container-fluid">
         <p class="muted credit">
-            Power by <a href="http://www.shmweb.cn/" target="_blank"> &copy; <?php echo lang('shm') ?></a> .
+            Power by <a href="http://www.sahereman.com/" target="_blank"> &copy; <?php echo lang('shm') ?></a> .
         </p>
     </div>
 </div>

@@ -123,13 +123,13 @@ echo static_file('require.config.js');
 
 	<div style="text-align:center;color:#0088cc; font-size:14px; margin-top:421px; position:relative; z-index:1">
 		<div class="login_links">
-			<a href="http://shmweb.cn/interact/website.html" target="_blank">网站建设</a><span>|</span><a href="http://shmweb.cn/interact/platform.html" target="_blank">技术开发</a><span>|</span><a href="http://shmweb.cn/digital/wechat.html" target="_blank">微信运营</a><span>|</span><a href="http://shmweb.cn/digital.html" target="_blank">数字营销</a>
+			<a href="http://www.sahereman.com/interact/website.html" target="_blank">网站建设</a><span>|</span><a href="http://www.sahereman.com/interact/platform.html" target="_blank">技术开发</a><span>|</span><a href="http://www.sahereman.com/digital/wechat.html" target="_blank">微信运营</a><span>|</span><a href="http://www.sahereman.com/digital.html" target="_blank">数字营销</a>
 		</div>
-		<a href="http://www.shmweb.cn/" target="_blank"> 青岛尚禾维曼网络 </a> 客服热线：400-800-5790
+		<a href="http://www.sahereman.com/" target="_blank"> 青岛尚禾维曼网络 </a> 客服热线：400-800-5790
 	</div>
 
 
-	<!--div style="text-align:center;color:#0088cc; font-size:14px; margin-top:400px;"><a href="http://www.shmweb.cn/" target="_blank"> < ?php echo lang('shm') ?> </a> 客服热线：< ?php echo lang('shm404');?> </div-->
+	<!--div style="text-align:center;color:#0088cc; font-size:14px; margin-top:400px;"><a href="http://www.sahereman.com/" target="_blank"> < ?php echo lang('shm') ?> </a> 客服热线：< ?php echo lang('shm404');?> </div-->
 
 
 </div>
@@ -138,7 +138,7 @@ echo static_file('require.config.js');
 
 <div id="body-footer">
 	<div class="container-fluid">
-		<p class="muted credit"> Power by  <a href="http://www.shmweb.cn/"> &copy; <?php echo lang('shm') ?></a> .</p>
+		<p class="muted credit"> Power by  <a href="http://www.sahereman.com/"> &copy; <?php echo lang('shm') ?></a> .</p>
 	</div>
 </div>
 
