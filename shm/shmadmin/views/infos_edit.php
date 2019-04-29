@@ -56,15 +56,15 @@
 			</div>
 		</div>
 
-		<div class="control-group">
-			<label for="title" class="control-label">时间:</label>
-			<div class="controls">
-				<div class="input-append date timepicker">
-					<input type="text" value="<?php echo date("Y/m/d H:i:s",set_value('timeline',$it['timeline'])); ?>" id="timeline" name="timeline">
-					<span class="add-on"><i class="icon-th"></i></span>
-				</div>
-			</div>
-		</div>
+<!--		<div class="control-group">-->
+<!--			<label for="title" class="control-label">时间:</label>-->
+<!--			<div class="controls">-->
+<!--				<div class="input-append date timepicker">-->
+<!--					<input type="text" value="--><?php //echo date("Y/m/d H:i:s",set_value('timeline',$it['timeline'])); ?><!--" id="timeline" name="timeline">-->
+<!--					<span class="add-on"><i class="icon-th"></i></span>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 
 
 		<!-- ctype -->
@@ -83,34 +83,34 @@
 		<div class="control-group uefull">
 			<textarea id="content" name="content"> <?php echo set_value('content',$it['content']); ?></textarea>
 		</div>
-
-		<div class="control-group">
-			<label class="control-label" for="status"> 下载远程图片 </label>
-			<div class="controls">
-				<input type='radio' name="isremote" value="1" >是
-				<input type='radio' name="isremote" value="0" checked='checked'>否
-				<span class="help-inline"></span> <span style="color:#F00">内容中的图片可以选择是否要下载到本网站中！</span>
-			</div>
-		</div>
+<!---->
+<!--		<div class="control-group">-->
+<!--			<label class="control-label" for="status"> 下载远程图片 </label>-->
+<!--			<div class="controls">-->
+<!--				<input type='radio' name="isremote" value="1" >是-->
+<!--				<input type='radio' name="isremote" value="0" checked='checked'>否-->
+<!--				<span class="help-inline"></span> <span style="color:#F00">内容中的图片可以选择是否要下载到本网站中！</span>-->
+<!--			</div>-->
+<!--		</div>-->
 
 		<!-- 图片上传 -->
-		<div class="control-group">
-			<label for="img" class="control-label">图片：</label>
-			<div class="controls">
-				<div class="btn-group">
-					<span class="btn btn-success">
-						<i class="fa fa-upload"></i>
-						<span> <?php echo lang('upload_file') ?> </span>
-						<input class="fileupload" type="file" accept="">
-					</span>
-					<input type="hidden" name="photo" class="form-upload" data-more="0" value="<?php echo set_value('photo',$it['photo']) ?>">
-					<input type="hidden" name="thumb" class="form-upload-thumb" value="<?php echo set_value('thumb',$it['thumb']) ?>">
-				</div>
-			</div>
-		</div>
-		<div id="js-photo-show" class="js-img-list-f">
-		</div>
-		<div class="clear"></div>
+<!--		<div class="control-group">-->
+<!--			<label for="img" class="control-label">图片：</label>-->
+<!--			<div class="controls">-->
+<!--				<div class="btn-group">-->
+<!--					<span class="btn btn-success">-->
+<!--						<i class="fa fa-upload"></i>-->
+<!--						<span> --><?php //echo lang('upload_file') ?><!-- </span>-->
+<!--						<input class="fileupload" type="file" accept="">-->
+<!--					</span>-->
+<!--					<input type="hidden" name="photo" class="form-upload" data-more="0" value="--><?php //echo set_value('photo',$it['photo']) ?><!--">-->
+<!--					<input type="hidden" name="thumb" class="form-upload-thumb" value="--><?php //echo set_value('thumb',$it['thumb']) ?><!--">-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div id="js-photo-show" class="js-img-list-f">-->
+<!--		</div>-->
+<!--		<div class="clear"></div>-->
 		<!-- 图片上传 -->
 
 	</div>

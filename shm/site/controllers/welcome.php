@@ -57,21 +57,6 @@ class Welcome extends MY_Controller
         $data['achievement']['intro'] = $this->getContentByColumnId(20);
         $data['achievement']['bg_image'] = $this->getPhotoByColumnId(21);
 
-        // header info
-        $data['header_info']['address'] = $this->getTextByColumnId(23);
-        $data['header_info']['telephone'] = $this->getTextByColumnId(24);
-        $data['header_info']['phone'] = $this->getTextByColumnId(25);
-        $data['header_info']['qq'] = $this->getTextByColumnId(26);
-        $data['header_info']['qr_code'] = $this->getPhotoByColumnId(27);
-
-        // footer info
-        $data['footer_info']['address'] = $this->getTextByColumnId(23);
-        $data['footer_info']['telephone'] = $this->getTextByColumnId(24);
-        $data['footer_info']['phone'] = $this->getTextByColumnId(25);
-        $data['footer_info']['qq'] = $this->getTextByColumnId(26);
-        $data['footer_info']['qr_code'] = $this->getPhotoByColumnId(27);
-        $data['footer_info']['icp'] = $this->getContentByColumnId(28);
-
         $this->load->view('welcome', $data);
     }
 }

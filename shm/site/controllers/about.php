@@ -11,81 +11,48 @@ class About extends MY_Controller
         $this->load->helpers('uisite_helper');
         $this->load->model('article_model');
 
-        $this->seo_id = 71;
-        $this->banner_id = 72;
+        $this->banner_id = 36;
     }
 
-    public function index()
-    {
-        $this->us();
-    }
 
     // 公司简介
-    public function company()
+    public function index()
     {
-        $data = array();
+        $data['header'] = header_seoinfo(41, 0);
+        $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
 
-        // seo
-        $data['header'] = header_seoinfo($this->seo_id, 0);
 
-        // local name
-        $data['local_name'] = '关于我们';
+        $data['office'] = $this->db->get_where('page', array('cid' => 50))->row_array();
+        $data['office'] = $this->multiImg($data['office']['photo']);
 
-        // introduction
-        $data['introduction'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['introduction']['titles'] = explode('|', $data['introduction']['intro']);
-        $data['introduction']['photos'] = $this->multiImg($data['introduction']['photo']);
 
-        // environment
-        $data['environment']['classroom'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['environment']['classroom']['photos'] = $this->multiImg($data['environment']['classroom']['photo']);
-        $data['environment']['dormitory'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['environment']['dormitory']['photos'] = $this->multiImg($data['environment']['dormitory']['photo']);
+        $data['accommodation'] = $this->db->get_where('page', array('cid' => 53))->row_array();
+        $data['accommodation'] = $this->multiImg($data['accommodation']['photo']);
 
-        // footer
-        $data['footer']['navigation'] = tag_single(29, 'content');
-        $data['footer']['icp'] = tag_single(30, 'content');
-        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
-        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
-        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
+        $this->load->view('about/index', $data);
 
-        $this->load->view('about/us', $data);
     }
 
     // 企业文化
     public function culture()
     {
-        $data = array();
 
-        // seo
-        $data['header'] = header_seoinfo($this->seo_id, 0);
+        $data['header'] = header_seoinfo(46, 0);
+        $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
 
-        // local name
-        $data['local_name'] = '关于我们';
+        $data['culture'] = $this->db->order_by('sort_id', 'desc')->get_where('infos', array('cid' => 46, 'audit' => 1))->result_array();
 
-        // events
-        $data['events'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
+        $data['honor'] = $this->db->order_by('sort_id', 'desc')->get_where('honor', array('cid' => 47, 'audit' => 1))->result_array();
 
-        // honours
-        $data['honours'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
 
-        // contact us
-        $data['contact_us'] = $this->db->get_where('page', array('cid' => 73))->row_array();
-        $data['contact_us']['photo'] = tag_photo($data['contact_us']['photo'], 'url');
+        $data['office'] = $this->db->get_where('page', array('cid' => 50))->row_array();
+        $data['office'] = $this->multiImg($data['office']['photo']);
 
-        // environment
-        $data['environment']['classroom'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['environment']['classroom']['photos'] = $this->multiImg($data['environment']['classroom']['photo']);
-        $data['environment']['dormitory'] = $this->db->get_where('page', array('cid' => 72))->row_array();
-        $data['environment']['dormitory']['photos'] = $this->multiImg($data['environment']['dormitory']['photo']);
 
-        // footer
-        $data['footer']['navigation'] = tag_single(29, 'content');
-        $data['footer']['icp'] = tag_single(30, 'content');
-        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
-        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
-        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
+        $data['accommodation'] = $this->db->get_where('page', array('cid' => 53))->row_array();
+        $data['accommodation'] = $this->multiImg($data['accommodation']['photo']);
 
-        $this->load->view('about/us', $data);
+        $this->load->view('about/culture', $data);
+
     }
 }

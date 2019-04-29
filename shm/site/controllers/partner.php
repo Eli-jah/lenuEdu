@@ -11,60 +11,27 @@ class Partner extends MY_Controller
         $this->load->helpers('uisite_helper');
         $this->load->model('article_model');
 
-        $this->seo_id = 71;
-        $this->banner_id = 72;
+        $this->seo_id = 63;
+        $this->banner_id = 61;
     }
 
-    public function index()
+    public function index($type = 1)
     {
-        $this->company();
-    }
-
-    // 院校合作
-    public function academy()
-    {
-        $data = array();
-
         // seo
         $data['header'] = header_seoinfo($this->seo_id, 0);
+        $data['banner'] = tag_photo(tag_single($this->banner_id, "photo"));
 
-        // local name
-        $data['local_name'] = '合作伙伴';
+        $data['active_type'] = tag_coltypes($type);
 
-        // academies
-        $data['academies'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
 
-        // footer
-        $data['footer']['navigation'] = tag_single(29, 'content');
-        $data['footer']['icp'] = tag_single(30, 'content');
-        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
-        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
-        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
+        $data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 63))->result_array();
 
-        $this->load->view('about/us', $data);
-    }
 
-    // 企业合作
-    public function company()
-    {
-        $data = array();
+        $data['partner_list'] = $this->db->order_by('sort_id', 'desc')->get_where('gallery', array('ctype' => $type, 'cid' => 63, 'audit' => 1))->result_array();
 
-        // seo
-        $data['header'] = header_seoinfo($this->seo_id, 0);
 
-        // local name
-        $data['local_name'] = '合作伙伴';
 
-        // companies
-        $data['companies'] = $this->db->order_by('sort_id', 'asc')->where_in('cid', array(22, 23, 24, 25, 26, 27))->get('page')->result_array();
 
-        // footer
-        $data['footer']['navigation'] = tag_single(29, 'content');
-        $data['footer']['icp'] = tag_single(30, 'content');
-        $data['footer']['mp'] = $this->db->get_where('page', array('cid' => 31))->row_array();
-        $data['footer']['mp']['photo'] = tag_photo($data['footer']['mp']['photo'], 'url');
-        $data['footer']['iso'] = tag_photo(tag_single(32, 'photo'));
-
-        $this->load->view('about/us', $data);
+        $this->load->view('partner/index', $data);
     }
 }

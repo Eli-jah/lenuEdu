@@ -1,60 +1,68 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <title>莱牛教育</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link href="/web/shmweb/assets/images/favicon.ico" rel="shortcut icon">
-    <link href="/web/shmweb/assets/images/favicon.png" rel="shortcut icon">
-    <link rel="stylesheet" href="/web/shmweb/assets/js/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/web/shmweb/assets/js/animate.css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/web/shmweb/assets/js/swiper/css/swiper.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/web/shmweb/assets/js/fullPage/css/fullpage.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/web/shmweb/assets/fonts/iconfont.css">
-    <!--分享-->
-    <link rel="stylesheet" type="text/css" href="/web/shmweb/assets/js/shareJS/css/share.min.css">
-    <link rel="stylesheet" href="/web/shmweb/assets/css/style.css">
-</head>
-<body>
+<?php
+
+// header info
+$data['header_info']['address'] = tag_single(23, 'text');
+$data['header_info']['telephone'] = tag_single(24, 'text');
+$data['header_info']['phone'] = tag_single(25, 'text');
+$data['header_info']['qq'] = tag_single(26, 'text');
+$data['header_info']['qr_code'] = tag_photo(tag_single(27, "photo"));
+
+// footer info
+$data['footer_info']['address'] = tag_single(29, 'text');
+$data['footer_info']['telephone'] = tag_single(30, 'text');
+$data['footer_info']['phone'] = tag_single(31, 'text');
+$data['footer_info']['qq'] = tag_single(32, 'text');
+$data['footer_info']['qr_code'] = tag_photo(tag_single(33, "photo"));
+$data['footer_info']['icp'] = tag_single(34, 'content');
+
+// subject list
+$data['subject'] = $this->db->order_by('sort_id', 'desc')->get_where('product', array('cid' => 59, 'audit' => 1))->result_array();
+
+// partner type
+$data['partner_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes', array('cid' => 63))->result_array();
+?>
+
 <header>
     <div class="header_content">
         <div class="header_content_top">
             <div class="logo">
                 <!--默认显示-->
-                <a href="index.php">
-                    <img class="nomarl_show_logo" src="/web/shmweb/assets/images/logo_white.png" title="莱牛教育">
-                    <img class="nomarl_show_logo_theme dis_n" src="/web/shmweb/assets/images/logo_theme_noword.png" title="莱牛教育">
-                    <!--header展开时显示-->
-                    <img class="active_show_logo" src="/web/shmweb/assets/images/logo_theme.png" title="莱牛教育"/>
+                <a href="<?php echo site_url(''); ?>"">
+                <img class="nomarl_show_logo" src="/web/shmweb/assets/images/logo_white.png" title="莱牛教育">
+                <img class="nomarl_show_logo_theme dis_n" src="/web/shmweb/assets/images/logo_theme_noword.png" title="莱牛教育">
+                <!--header展开时显示-->
+                <img class="active_show_logo" src="/web/shmweb/assets/images/logo_theme.png" title="莱牛教育"/>
                 </a>
             </div>
             <!--header展开时显示-->
             <div class="header_menus">
                 <ul class="sorting_menu">
-                    <li class="active"><a href="javascript:void(0);">关于我们</a></li>
+                    <li class="active"><a href="<?php echo site_url('about/index') ?>">关于我们</a></li>
                     <li><a href="javascript:void(0);">课程分类</a></li>
-                    <li><a href="javascript:void(0);">合作伙伴</a></li>
+                    <li><a href="<?php echo site_url('partner/index') ?>">合作伙伴</a></li>
                     <li><a href="javascript:void(0);">新闻资讯</a></li>
                     <li><a href="javascript:void(0);">联系我们</a></li>
                 </ul>
                 <div class="content_menu">
                     <ul class="aboutus_menu">
-                        <li><a href="aboutus_introduction.php">公司简介</a></li>
-                        <li><a href="aboutus.php">企业文化</a></li>
-                        <li><a href="aboutus.php#OfficeEnvironment">办公环境</a></li>
-                        <li><a href="aboutus.php#OfficeEnvironment">住宿环境</a></li>
+                        <li><a href="<?php echo site_url('about/index') ?>">公司简介</a></li>
+                        <li><a href="<?php echo site_url('about/culture') ?>">企业文化</a></li>
+                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment" ?>">办公环境</a></li>
+                        <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment" ?>">住宿环境</a></li>
                     </ul>
                     <ul class="classification_menu">
-                        <li><a href="Curriculum.php">ETL</a></li>
-                        <li><a href="Curriculum.php">JAVA</a></li>
-                        <li><a href="Curriculum.php">UI</a></li>
-                        <li><a href="Curriculum.php">Python</a></li>
+                        <?php if (!empty($data['subject'])): ?>
+                            <?php foreach ($data['subject'] as $k => $v): ?>
+                                <li><a href="<?php echo site_url('subject/info/' . $v['id']) ?>"><?php echo $v['subtitle'] ?></a></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </ul>
                     <ul class="enterprise_menu">
-                        <li><a href="Transportation.php">院校合作</a></li>
-                        <li><a href="Enterprisepartner.php">企业合作</a></li>
+                        <?php if (!empty($data['partner_type'])): ?>
+                            <?php foreach ($data['partner_type'] as $k => $v): ?>
+                                <li><a href="<?php echo site_url('partner/index/' . $v['id']) ?>"><?php echo $v['title'] ?></a></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </ul>
                     <ul class="news _menu">
                         <li><a href="NewsLists.php">公司新闻</a></li>
@@ -83,7 +91,7 @@
                         </a>
                     </div>
                     <div class="closeercode_code dis_n">
-                        <img src="/web/shmweb/assets/images/ercode.png">
+                        <img src="<?php echo $data['header_info']['qr_code']; ?>">
                     </div>
                 </div>
             </div>
@@ -92,24 +100,24 @@
             <ul>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/address_icon.png"/>
-                    <span><?php echo $header_info['address']; ?></span>
+                    <span><?php echo $data['header_info']['address']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/qq_icon.png"/>
-                    <span><?php echo $header_info['qq']; ?></span>
+                    <span><?php echo $data['header_info']['qq']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/tel_icon.png"/>
-                    <span><?php echo $header_info['phone']; ?></span>
+                    <span><?php echo $data['header_info']['phone']; ?></span>
                 </li>
                 <li>
                     <img src="/web/shmweb/assets/images/icon/phone_icon.png"/>
-                    <span><?php echo $header_info['telephone']; ?></span>
+                    <span><?php echo $data['header_info']['telephone']; ?></span>
                 </li>
             </ul>
             <div class="ercode_btn_box">
                 <a href="javascript:void(0);">
-                    <img src="<?php echo $header_info['qr_code']; ?>"/>
+                    <img src="/web/shmweb/assets/images/icon/ercode_icon.png"/>
                 </a>
             </div>
         </div>

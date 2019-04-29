@@ -20,7 +20,7 @@
         </div>
 
         <!-- ctype -->
-        <?php if(in_array($this->cid, array(47,53))): ?>
+        <?php if(in_array($this->cid, array(63))): ?>
             <?php if ($ctype = list_coltypes($this->cid)) { ?>
                 <div class="control-group">
                     <label class="control-label" for="status"> 所属分类:</label>
@@ -80,22 +80,44 @@
 
         <!-- 图片上传 -->
         <div class="control-group">
-            <label for="img" class="control-label"> 图片： </label>
+            <label for="img" class="control-label"> Logo： </label>
             <div class="controls">
                 <div class="btn-group">
-					<span class="btn btn-success">
-						<i class="fa fa-upload"></i>
-						<span> <?php echo lang('upload_file') ?> </span>
-						<input class="fileupload" type="file" accept="" data-for="photo" multiple="multiple">
-					</span>
-                    <input type="hidden" id="photo" name="photo" class="form-upload" data-more='1' value="<?php echo set_value('photo', $it['photo']) ?>">
+               <span class="btn btn-success">
+                  <i class="fa fa-upload"></i>
+                  <span> <?php echo lang('upload_file') ?> </span>
+                  <input class="fileupload" type="file" accept="" data-for="photo" >
+               </span>
+                    <input type="hidden" id="photo" name="photo" class="form-upload" data-more='0' value="<?php echo set_value('photo', $it['photo']) ?>">
                     <input type="hidden" id="thumb" name="thumb" class="form-upload-thumb" value="<?php echo set_value('thumb', $it['thumb']) ?>">
                 </div>
-                <span class="help-inline">最佳大小: 600 * 400 像素</span>
+                <span class="help-inline">最佳大小: 240 * 120 像素</span>
             </div>
         </div>
 
         <div id="js-photo-show" class="js-img-list-f">
+            <!-- 模板 #tpl-img-list -->
+        </div>
+        <div class="clear"></div>
+
+
+        <!-- 图片上传 -->
+        <div class="control-group">
+            <label for="img" class="control-label">背景Logo</label>
+            <div class="controls">
+                <div class="btn-group">
+               <span class="btn btn-success">
+                  <i class="fa fa-upload"></i>
+                  <span> <?php echo lang('upload_file') ?> </span>
+                  <input class="fileupload" type="file" accept="" data-for="back_photo"  data-size="">
+               </span>
+                    <input type="hidden" name="back_photo" class="form-upload" data-more="0" value="<?php echo set_value('back_photo',$it['back_photo']) ?>">
+                </div>
+                <span class="help-inline">最佳大小: 360 * 40 像素</span>
+            </div>
+        </div>
+
+        <div id="js-back_photo-show" class="js-img-list-f">
             <!-- 模板 #tpl-img-list -->
         </div>
         <div class="clear"></div>
@@ -120,7 +142,7 @@
 <script charset="utf-8">
     require(['tools', 'adminer/js/media', 'jquery', 'adminer/js/ui'], function (tools, media, $, ui) {
         // 表单规则
-        var rules = {
+        /*var rules = {
             title: {
                 required: true,
                 minlength: 3
@@ -131,16 +153,19 @@
                 required: "请输入标题！",
                 minlength: jQuery.format("输入字符数不的小于 {0} ！"),
             }
-        };
+        };*/
         // 验证
-        tools.make_validate('frm-create', rules, message);
-        var gallery_photos = <?php echo json_encode(list_upload(set_value('photo', $it['photo']))) ?>;
-        media.init();
-        media.show(gallery_photos, "photo");
-        media.sort('photo');
+        // tools.make_validate('frm-create', rules, message);
+        // var gallery_photos = <?php echo json_encode(list_upload(set_value('photo', $it['photo']))) ?>;
 
+        media.init();
+
+        var gallery_photos = <?php echo json_encode(one_upload(set_value('photo', $it['photo']))) ?>;
+        media.show(gallery_photos, "photo");
+
+        var gallery_back_photos = <?php echo json_encode(one_upload(set_value('back_photo',$it['back_photo']))) ?>;
+        media.show(gallery_back_photos, "back_photo");
 
         ui.editor_create('content');
-
     });
 </script>

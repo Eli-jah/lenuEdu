@@ -20,7 +20,7 @@
         </div>
 
         <!-- ctype -->
-        <?php if(in_array($this->cid, array(47,53))): ?>
+        <?php if(in_array($this->cid, array(63))): ?>
             <?php if ($ctype = list_coltypes($this->cid)) { ?>
                 <div class="control-group">
                     <label class="control-label" for="status"> 所属分类:</label>
@@ -78,24 +78,47 @@
             <textarea id="content" name="content"><?php echo set_value("content") ?></textarea>
         </div>
 
+
         <!-- 图片上传 -->
         <div class="control-group">
-            <label for="img" class="control-label"><?php echo lang('photo') ?></label>
+            <label for="img" class="control-label">Logo</label>
             <div class="controls">
                 <div class="btn-group">
-					<span class="btn btn-success">
-						<i class="fa fa-upload"></i>
-						<span> <?php echo lang('upload_file') ?> </span>
-						<input class="fileupload" type="file" accept="" data-for="photo" multiple="multiple" data-size="">
-					</span>
-                    <input type="hidden" name="photo" class="form-upload" data-more="1" value="<?php echo set_value('photo') ?>">
+                    <span class="btn btn-success">
+                        <i class="fa fa-upload"></i>
+                        <span> <?php echo lang('upload_file') ?> </span>
+                        <input class="fileupload" type="file" accept="" data-for="photo"  data-size="">
+                    </span>
+                    <input type="hidden" name="photo" class="form-upload" data-more="0" value="<?php echo set_value('photo') ?>">
                     <input type="hidden" name="thumb" class="form-upload-thumb" value="<?php echo set_value('thumb') ?>">
                 </div>
-                <span class="help-inline">最佳大小: 600 * 400 像素</span>
+                <span class="help-inline">最佳大小: 240 * 120 像素</span>
             </div>
         </div>
 
         <div id="js-photo-show" class="js-img-list-f">
+            <!-- 模板 #tpl-img-list -->
+        </div>
+        <div class="clear"></div>
+
+
+        <!-- 图片上传 -->
+        <div class="control-group">
+            <label for="img" class="control-label">背景Logo</label>
+            <div class="controls">
+                <div class="btn-group">
+                    <span class="btn btn-success">
+                        <i class="fa fa-upload"></i>
+                        <span> <?php echo lang('upload_file') ?> </span>
+                        <input class="fileupload" type="file" accept="" data-for="back_photo"  data-size="">
+                    </span>
+                    <input type="hidden" name="back_photo" class="form-upload" data-more="0" value="<?php echo set_value('back_photo') ?>">
+                </div>
+                <span class="help-inline">最佳大小: 360 * 40 像素</span>
+            </div>
+        </div>
+
+        <div id="js-back_photo-show" class="js-img-list-f">
             <!-- 模板 #tpl-img-list -->
         </div>
         <div class="clear"></div>
@@ -119,7 +142,7 @@
 <script type="text/javascript">
     require(['tools', 'adminer/js/media', 'jquery', 'adminer/js/ui'], function (tools, media, $, ui) {
         // 表单规则
-        var rules = {
+        /*var rules = {
             title: {
                 required: true,
                 minlength: 3
@@ -130,16 +153,19 @@
                 required: "请输入标题！",
                 minlength: jQuery.format("输入字符数不的小于 {0} ！"),
             }
-        };
+        };*/
         // 验证
-        tools.make_validate('frm-create', rules, message);
+        // tools.make_validate('frm-create', rules, message);
 
         media.init();
-        var gallery_photos = <?php echo json_encode(list_upload(set_value('photo'))) ?>;
+
+        var gallery_photos = <?php echo json_encode(one_upload(set_value('photo'))) ?>;
         media.show(gallery_photos, "photo");
-        media.sort('photo');
+
+
+        var gallery_back_photos = <?php echo json_encode(one_upload(set_value('back_photo'))) ?>;
+        media.show(gallery_back_photos, "back_photo");
 
         ui.editor_create('content');
-
     });
 </script>

@@ -1,4 +1,13 @@
-<?php include_once VIEWS . 'inc/header.php'; ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <?php include_once VIEWS . 'inc/head.php'; ?>
+</head>
+<body>
+<?php include_once VIEWS . 'inc/nav.php'; ?>
+
+<!--内容开始-->
+
 
 <div class="index_content">
     <ul id="menu">
@@ -76,7 +85,7 @@
                         <div class="swiper-container" id="page5_banner">
                             <div class="swiper-wrapper">
                                 <?php $_ii = 0;
-                                while ($_ii++ < 12): ?>
+                                while ($_ii++ < 3): ?>
                                     <div class="swiper-slide">
                                         <div class="opacity_box"></div>
                                         <div class="swiper-slide-content">
@@ -169,10 +178,10 @@
                         </ul>
                     </div>
                     <div class="footer_up_local">
-                        <p><span>地址 ：</span><span><?php echo $footer_info['address']; ?></span></p>
-                        <p><span>电话 ：</span><span><?php echo $footer_info['telephone']; ?></span></p>
-                        <p><span>手机 ：</span><span><?php echo $footer_info['phone']; ?></span></p>
-                        <p><span>Q Q ：</span><span><?php echo $footer_info['qq']; ?></span></p>
+                        <p><span>地址 ：</span><span><?php echo $data['footer_info']['address']; ?></span></p>
+                        <p><span>电话 ：</span><span><?php echo $data['footer_info']['telephone']; ?></span></p>
+                        <p><span>手机 ：</span><span><?php echo $data['footer_info']['phone']; ?></span></p>
+                        <p><span>Q Q ：</span><span><?php echo $data['footer_info']['qq']; ?></span></p>
                         <div class="bdsharebuttonbox">
                             <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
                             <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给QQ好友"></a>
@@ -182,23 +191,20 @@
                     </div>
                     <div class="footer_up_ercode">
                         <div class="footer_ercode_box">
-                            <img src="/web/shmweb/assets/images/ercode.png">
+                            <img src="<?php echo $data['footer_info']['qr_code']; ?>">
                         </div>
                         <span>关注微信</span>
                     </div>
                 </div>
                 <div class="home_footer_down">
-                    <p>
-                        <span>Copyright &#169; 2019</span>
-                        <span>青岛莱牛教育</span>
-                        <span>版权所有</span>
-                        <span>鲁ICP备1601060</span>
-                    </p>
+                    <?php echo $data['footer_info']['icp']; ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <?php include_once VIEWS . 'inc/footer.php'; ?>
 

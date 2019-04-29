@@ -19,14 +19,28 @@
         </div>
 
         <div class="control-group">
-            <label for="title" class="control-label">时间:</label>
+            <label class="control-label" for="subtitle"> 副标题: </label>
             <div class="controls">
-                <div class="input-append date timepicker">
-                    <input type="text" value="<?php echo date("Y-m-d H:i:s",set_value('timeline',now())); ?>" id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">
-                    <span class="add-on"><i class="icon-th"></i></span>
-                </div>
+                <input type="text" class='span4' id="subtitle" name="subtitle" value="<?php echo set_value("subtitle") ?>">
             </div>
         </div>
+
+        <div class="control-group">
+            <label class="control-label" for="decorate"> 修饰语: </label>
+            <div class="controls">
+                <input type="text" class='span4' id="decorate" name="decorate" value="<?php echo set_value("decorate") ?>">
+            </div>
+        </div>
+
+<!--        <div class="control-group">-->
+<!--            <label for="title" class="control-label">时间:</label>-->
+<!--            <div class="controls">-->
+<!--                <div class="input-append date timepicker">-->
+<!--                    <input type="text" value="--><?php //echo date("Y-m-d H:i:s",set_value('timeline',now())); ?><!--" id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">-->
+<!--                    <span class="add-on"><i class="icon-th"></i></span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!-- ctype -->
         <?php if ($ctype = list_coltypes($this->cid)) { ?>
@@ -42,7 +56,6 @@
         </div>
         <?php } ?>
 
-        弹出
         <div id="seo-modal" class="modal hide fade">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>

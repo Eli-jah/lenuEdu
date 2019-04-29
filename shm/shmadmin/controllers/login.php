@@ -215,11 +215,10 @@ class Login extends Base_Controller
             $to = $this->form_validation->set_value('email');
             $link = site_url('login/setpass/' . $this->mail . '/' . $hash);
 
-
             $mail = array(
-                'subject' => "SHM：找回密码"
-            , 'message' => '点击下面的链接或者复制到浏览器地址栏，重新设置密码：<br/><a href="' . $link . '" target="_blank">' . $link . '</a>'
-            , 'to' => $to
+                'subject' => "SHM：找回密码",
+                'message' => '点击下面的链接或者复制到浏览器地址栏，重新设置密码：<br/><a href="' . $link . '" target="_blank">' . $link . '</a>',
+                'to' => $to,
             );
 
             smtp_sendmail($mail);

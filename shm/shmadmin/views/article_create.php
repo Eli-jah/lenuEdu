@@ -62,32 +62,32 @@
             <div class="modal-body seamless">
 
                 <div class="control-group">
-                    <label for="title_seo" class="control-label"><?php echo lang('title_seo') ?></label>
+                    <label for="title_seo" class="control-label"><?php echo lang('title_seo'); ?></label>
                     <div class="controls">
-                        <input type="text" id="title_seo" name="title_seo" value="<?php echo set_value("title_seo") ?>" x-webkit-speech>
+                        <input type="text" id="title_seo" name="title_seo" value="<?php echo set_value("title_seo"); ?>" x-webkit-speech>
                         <span class="help-inline"></span>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="tags"><?php echo lang('tag') ?></label>
+                    <label class="control-label" for="tags"><?php echo lang('tag'); ?></label>
                     <div class="controls">
-                        <input type="text" id="tags" name="tags" value="<?php echo set_value("tags") ?>">
+                        <input type="text" id="tags" name="tags" value="<?php echo set_value("tags"); ?>">
                         <span class="help-inline">使用英文标点`,`隔开</span>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label for="intro" class="control-label"><?php echo lang('intro') ?></label>
+                    <label for="intro" class="control-label"><?php echo lang('intro'); ?></label>
                     <div class="controls">
-                        <textarea name="intro" id="intro" rows='8' class='span4'><?php echo set_value('intro') ?></textarea>
+                        <textarea name="intro" id="intro" rows='8' class='span4'><?php echo set_value('intro'); ?></textarea>
                         <span class="help-inline"></span>
                     </div>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <a href="#" data-dismiss="modal" aria-hidden="true" class="btn"><?php echo lang('close') ?></a>
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="btn"><?php echo lang('close'); ?></a>
             </div>
         </div>
 

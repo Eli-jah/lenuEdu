@@ -62,7 +62,7 @@
         <?php } ?>
 
         <!-- 图片上传 -->
-        <?php if (in_array($cid, array(6, 10, 14, 17, 21, 27, 33, 36, 38, 42, 43, 52, 55, 57, 61, 65, 67, 70, 77, 81))) { // 21 ?>
+        <?php if (in_array($cid, array(6, 10, 14, 17, 21, 27, 33, 36, 38, 42, 43,50, 52,53, 55, 57, 61, 65, 67, 70, 77, 81))) { // 21 ?>
             <div class="control-group">
                 <label for="img" class="control-label">图片：</label>
                 <div class="controls">

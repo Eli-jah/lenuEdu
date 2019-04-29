@@ -14,10 +14,10 @@
 			<thead>
 				<tr>
 					<th class="width-small"><input id='selectbox-all' type="checkbox" > </th>
-					<th>图</th>
-					<th>排序</th>
-					<th>标题</th>
-					<th>时间</th>
+<!--					<th>图</th>-->
+                    <th>标题</th>
+                    <th>排序</th>
+<!--					<th>时间</th>-->
 					<th class="span1">操作</th>
 				</tr>
 			</thead>
@@ -25,16 +25,16 @@
 				<?php foreach ($list as $v):?>
 					<tr data-id="<?php echo $v['id'] ?>" data-sort="<?php echo $v['sort_id'] ?>">
 						<td><input class="select-it" type="checkbox" value="<?php echo $v['id']; ?>" ></td>
-						<td>
-							<?php if ($v['thumb']): ?>
-								<a class="fancybox-img" href="<?php echo UPLOAD_URL. str_replace('thumbnail/', '', $v['thumb']); ?>" title="<?php echo $v['title'] ?>">
-									<img src="<?php echo UPLOAD_URL.$v['thumb'] ?>" alt="<?php echo $v['title'];?>">
-								</a>
-							<?php endif ?>
-						</td>
-						<td> <a title='越大越前'><input type="text" class="sortid" value="<?php echo $v['sort_id']?>" data-id="<?php echo $v['id'] ?>"></a></td>
-						<td> <?php echo $v['title'] ?></td>
-						<td> <?php echo date("Y/m/d H:i:s",$v['timeline']); ?> </td>
+<!--						<td>-->
+<!--							--><?php //if ($v['thumb']): ?>
+<!--								<a class="fancybox-img" href="--><?php //echo UPLOAD_URL. str_replace('thumbnail/', '', $v['thumb']); ?><!--" title="--><?php //echo $v['title'] ?><!--">-->
+<!--									<img src="--><?php //echo UPLOAD_URL.$v['thumb'] ?><!--" alt="--><?php //echo $v['title'];?><!--">-->
+<!--								</a>-->
+<!--							--><?php //endif ?>
+<!--						</td>-->
+                        <td> <?php echo $v['title'] ?></td>
+                        <td> <a title='越大越前'><input type="text" class="sortid" value="<?php echo $v['sort_id']?>" data-id="<?php echo $v['id'] ?>"></a></td>
+<!--						<td> --><?php //echo date("Y/m/d H:i:s",$v['timeline']); ?><!-- </td>-->
 						<td>
 							<div class="btn-group">
 								<?php include 'inc_ui_flag.php'; ?>

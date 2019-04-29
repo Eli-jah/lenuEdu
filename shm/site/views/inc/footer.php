@@ -40,10 +40,10 @@
                     </ul>
                 </div>
                 <div class="footer_up_local">
-                    <p><span>地址 ：</span><span><?php echo $footer_info['address']; ?></span></p>
-                    <p><span>电话 ：</span><span><?php echo $footer_info['telephone']; ?></span></p>
-                    <p><span>手机 ：</span><span><?php echo $footer_info['phone']; ?></span></p>
-                    <p><span>Q Q ：</span><span><?php echo $footer_info['qq']; ?></span></p>
+                    <p><span>地址 ：</span><span><?php echo $data['footer_info']['address']; ?></span></p>
+                    <p><span>电话 ：</span><span><?php echo $data['footer_info']['telephone']; ?></span></p>
+                    <p><span>手机 ：</span><span><?php echo $data['footer_info']['phone']; ?></span></p>
+                    <p><span>Q Q ：</span><span><?php echo $data['footer_info']['qq']; ?></span></p>
                     <div class="bdsharebuttonbox">
                         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
                         <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给QQ好友"></a>
@@ -53,13 +53,13 @@
                 </div>
                 <div class="footer_up_ercode">
                     <div class="footer_ercode_box">
-                        <img src="/web/shmweb/assets/images/ercode.png">
+                        <img src="<?php echo $data['footer_info']['qr_code']; ?>">
                     </div>
                     <span>关注微信</span>
                 </div>
             </div>
             <div class="home_footer_down">
-                <?php echo $footer_info['icp']; ?>
+                <?php echo $data['footer_info']['icp']; ?>
             </div>
         </div>
     </div>
@@ -107,28 +107,28 @@
     home.eventBind();
 </script>
 <!--客服系统-->
-<script type='text/javascript'>
-    (function (m, ei, q, i, a, j, s) {
-        m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-        j = ei.createElement(q),
-            s = ei.getElementsByTagName(q)[0];
-        j.async = true;
-        j.charset = 'UTF-8';
-        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
-        s.parentNode.insertBefore(j, s);
-    })(window, document, 'script', '_MEIQIA');
-    _MEIQIA('entId', 134891);
-    if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        // 强制打开对话窗口
-        _MEIQIA('allSet', function () {
-            _MEIQIA('showPanel');
-        });
-    } else {
-        _MEIQIA('withoutBtn');
-    }
-</script>
+<!--<script type='text/javascript'>-->
+<!--    (function (m, ei, q, i, a, j, s) {-->
+<!--        m[i] = m[i] || function () {-->
+<!--                (m[i].a = m[i].a || []).push(arguments)-->
+<!--            };-->
+<!--        j = ei.createElement(q),-->
+<!--            s = ei.getElementsByTagName(q)[0];-->
+<!--        j.async = true;-->
+<!--        j.charset = 'UTF-8';-->
+<!--        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';-->
+<!--        s.parentNode.insertBefore(j, s);-->
+<!--    })(window, document, 'script', '_MEIQIA');-->
+<!--    _MEIQIA('entId', 134891);-->
+<!--    if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {-->
+<!--        // 强制打开对话窗口-->
+<!--        _MEIQIA('allSet', function () {-->
+<!--            _MEIQIA('showPanel');-->
+<!--        });-->
+<!--    } else {-->
+<!--        _MEIQIA('withoutBtn');-->
+<!--    }-->
+<!--</script>-->
 <script type="text/javascript">
     //创建和初始化地图函数：
     function initMap() {
