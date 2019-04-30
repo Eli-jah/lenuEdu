@@ -5,6 +5,7 @@
 </div>
 
 <?php include_once 'inc_modules_path.php'; ?>
+<?php include_once 'inc_ctype_index.php'; ?>
 
 <div class="boxed">
     <div class="boxed-inner seamless">

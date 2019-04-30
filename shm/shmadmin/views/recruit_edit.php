@@ -143,12 +143,12 @@ if (!empty($minfo)) {
             </div> -->
 
         <div class="control-group">
-            <label class="control-label" for="age"> 年龄要求 </label>
+            <label class="control-label" for="age_text"> 年龄要求 </label>
             <div class="controls">
-                <input type="text" name="age" value="<?php echo set_value('age', $it['age']); ?>" id="age">
+                <!--<input type="text" name="age" value="<?php /*echo set_value('age', $it['age']); */?>" id="age">
                 至
-                <input type="text" name="age_max" value="<?php echo set_value('age_max', $it['age_max']); ?>"
-                       id="age_max">
+                <input type="text" name="age_max" value="<?php /*echo set_value('age_max', $it['age_max']); */?>" id="age_max">-->
+                <input type="text" name="age_text" value="<?php echo set_value('age_text', $it['age_text']) ?>" id="age_text">
             </div>
         </div>
 
@@ -168,8 +168,7 @@ if (!empty($minfo)) {
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
                     <div class="control-group uefull">
-                        <textarea id="content"
-                                  name="content"> <?php echo set_value('content', $it['content']); ?></textarea>
+                        <textarea id="content" name="content"><?php echo set_value('content', $it['content']); ?></textarea>
                     </div>
                 </div>
                 <!--<div class="tab-pane" id="tab2">

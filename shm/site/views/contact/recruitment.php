@@ -8,7 +8,7 @@
 
 <!--内容开始-->
 <div class="contactus">
-    <div class="headerPartition" style="background: url(assets/images/contactus_banner1.jpg) center no-repeat;">
+    <div class="headerPartition" style="background: url(<?php echo $banner; ?>) center no-repeat;">
         <div class="opacity_box"></div>
         <div class="Partition-title">
             <h1 class="title-zh">联系我们</h1>
@@ -35,8 +35,9 @@
             <div class="recruitment_content">
                 <div class="recruitment_title">
                     <ul>
-                        <li<?php echo $active_type ? '' : ' class="active"'; ?>><a
-                                href="<?php echo site_url('contact/recruitment'); ?>">全部</a></li>
+                        <li<?php echo $active_type ? '' : ' class="active"'; ?>>
+                            <a href="<?php echo site_url('contact/recruitment'); ?>">全部</a>
+                        </li>
                         <?php if (!empty($types)) { ?>
                             <?php foreach ($types as $type) { ?>
                                 <?php if ($active_type && $active_type['id'] == $type['id']) { ?>
@@ -70,11 +71,11 @@
                                     <li class="recruitment_ultab_item default_show">
                                         <div class="recruitment_ultab_link">
                                             <div class="Jobtitle"><span><?php echo $job['title']; ?></span></div>
-                                            <div><?php echo ($job['amount'] == 0) ? '不限' : $job['amount']; ?></div>
-                                            <div><?php echo ($job['age'] && $job['age_max']) ? $job['age'] . ' 至 ' . $job['age_max'] : '不限'; ?></div>
+                                            <div><?php echo ($job['amount'] == 0) ? '不限' : $job['amount'] . '人'; ?></div>
+                                            <div><?php echo $job['age_text'] ? $job['age_text'] : '不限'; ?></div>
                                             <div><?php echo $job['edu']; ?></div>
-                                            <div class="startTime"><?php echo date('m-d', $job['timeline']); ?></div>
-                                            <div class="endingTime"><?php echo date('m-d', $job['expiretime']); ?></div>
+                                            <div class="startTime"><?php echo date('Y-m-d', $job['timeline']); ?></div>
+                                            <div class="endingTime"><?php echo date('Y-m-d', $job['expiretime']); ?></div>
                                             <div class="Jobtreatment">
                                         <span class="curdowm iconfont icon-arrow-down">
                                     </span></div>
@@ -87,11 +88,11 @@
                                     <li class="recruitment_ultab_item">
                                         <div class="recruitment_ultab_link">
                                             <div class="Jobtitle"><span><?php echo $job['title']; ?></span></div>
-                                            <div><?php echo ($job['amount'] == 0) ? '不限' : $job['amount']; ?></div>
-                                            <div><?php echo ($job['age'] && $job['age_max']) ? $job['age'] . ' 至 ' . $job['age_max'] : '不限'; ?></div>
+                                            <div><?php echo ($job['amount'] == 0) ? '不限' : $job['amount'] . '人'; ?></div>
+                                            <div><?php echo $job['age_text'] ? $job['age_text'] : '不限'; ?></div>
                                             <div><?php echo $job['edu']; ?></div>
-                                            <div class="startTime"><?php echo date('m-d', $job['timeline']); ?></div>
-                                            <div class="endingTime"><?php echo date('m-d', $job['expiretime']); ?></div>
+                                            <div class="startTime"><?php echo date('Y-m-d', $job['timeline']); ?></div>
+                                            <div class="endingTime"><?php echo date('Y-m-d', $job['expiretime']); ?></div>
                                             <div class="Jobtreatment">
                                         <span class="curdowm iconfont icon-arrow-down">
                                     </span></div>

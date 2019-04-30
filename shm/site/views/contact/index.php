@@ -100,7 +100,7 @@ echo static_file('site/js/init.js');
 
 <script>
     $(function () {
-        $('#feed_submit').on('click', function (event) {
+        $('#submit_btn').on('click', function (event) {
             url = $('#frm-feedback').attr('action');
             data = $('#frm-feedback').serializeArray();
             $.ajax({

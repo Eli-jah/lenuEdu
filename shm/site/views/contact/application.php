@@ -8,7 +8,7 @@
 
 <!--内容开始-->
 <div class="contactus">
-    <div class="headerPartition">
+    <div class="headerPartition" style="background: url(<?php echo $banner; ?>) center no-repeat;">
         <div class="opacity_box"></div>
         <div class="Partition-title">
             <h1 class="title-zh">联系我们</h1>
@@ -32,8 +32,7 @@
                 <h1>申请入学</h1>
                 <p>Apply for Admission to Our School</p>
             </div>
-            <div class="entrance_textcontent"
-                 style="background: url(/web/shmweb/assets/images/entrance_img.png) center no-repeat;">
+            <div class="entrance_textcontent" style="background: url(/web/shmweb/assets/images/entrance_img.png) center no-repeat;">
                 <p class="Apply_title">您的个人信息将在学员名单保留，请准确真实的填写，填好申请入学报名表并提交后，我们咨询导师会在24小时内和您联系，请确认您的联系方式无误。</p>
                 <?php echo form_open(site_url('contact/sendpost'), array("class" => "form-horizontal", "id" => "frm-feedback")); ?>
                 <div class="form_item">

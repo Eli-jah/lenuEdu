@@ -12,7 +12,7 @@
         <div class="control-group">
             <label for="from" class="control-label">来源：</label>
             <div class="controls">
-                <?php echo $it['from'] ?>
+                <?php echo ($it['from'] == 'feedback') ? '留言板' : '入学申请'; ?>
                 <span class="help-inline"></span>
             </div>
         </div>

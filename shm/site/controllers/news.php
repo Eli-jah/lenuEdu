@@ -31,7 +31,7 @@ class news extends MY_Controller
         } else {
             $where = array('audit' => 1, 'cid' => $this->seo_id, 'type_id' => $type);
         }
-        $config['total_rows'] = $this->db->where($where)->from('article')->count_all_results();
+        $config['total_rows'] = $this->db->order_by("sort_id", "desc")->where($where)->from('article')->count_all_results();
 
         $config['per_page'] = 6;//每页显示的条数
         $config['use_page_numbers'] = TRUE;//默认分页URL中是显示每页记录数,启用use_page_numbers后显示的是当前页码。

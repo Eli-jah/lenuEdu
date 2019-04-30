@@ -17,16 +17,16 @@
         <div class="Partition-nav">
             <ul class="nav-breadcrumb">
                 <li><a href="<?php echo site_url(''); ?>">首页</a></li>
-                <li class="active"><a
-                        href="<?php echo site_url('news/index/' . $active_type['id']); ?>"><?php echo $active_type['title']; ?></a>
+                <li class="active">
+                    <a href="<?php echo site_url('news/index/' . $active_type['id']); ?>"><?php echo $active_type['title']; ?></a>
                 </li>
             </ul>
             <ul class="Partition-nav-tabs">
                 <?php if (!empty($types)) { ?>
                     <?php foreach ($types as $type) { ?>
                         <?php if ($type['id'] == $active_type['id']) { ?>
-                            <li class="active"><a
-                                    href="<?php echo site_url('news/index/' . $type['id']); ?>"><?php echo $type['title']; ?></a>
+                            <li class="active">
+                                <a href="<?php echo site_url('news/index/' . $type['id']); ?>"><?php echo $type['title']; ?></a>
                             </li>
                         <?php } else { ?>
                             <li>
@@ -51,7 +51,7 @@
                         <ul>
                             <li>
                                 <img src="/web/shmweb/assets/images/icon/news_edit.png"/>
-                                <span>青岛莱牛教育</span>
+                                <span><?php echo $info['author'] ? $info['author'] : '青岛莱牛教育'; ?></span>
                             </li>
                             <li>
                                 <img src="/web/shmweb/assets/images/icon/news_time.png"/>
@@ -77,7 +77,7 @@
                         <img src="/web/shmweb/assets/images/leftQuotation.png">
                     </p>
                     <div class="newsprofile_center">
-                        <p><?php echo $info['intro']; ?></p>
+                        <p><?php echo $info['text']; ?></p>
                     </div>
                     <p class="newsprofile_bottom Quotation">
                         <img src="/web/shmweb/assets/images/rightQuotation.png">
@@ -85,22 +85,19 @@
                 </div>
                 <div class="newscontent">
                     <div class="newscontent_text">
-                        <div class="newscontent_img">
-                            <img src="<?php echo tag_photo($info['photo']); ?>">
-                        </div>
                         <?php echo $info['content']; ?>
                     </div>
                     <div class="border_line"></div>
                     <div class="newscontent_btns">
-                        <?php if (!empty($updown['prev'])) { ?>
-                            <a href="<?php echo site_url('news/show/' . $updown['prev']['id']); ?>">上一篇</a>
-                        <?php } else { ?>
-                            <a href="#">第一篇</a>
-                        <?php } ?>
                         <?php if (!empty($updown['next'])) { ?>
-                            <a href="<?php echo site_url('news/show/' . $updown['next']['id']); ?>">下一篇</a>
+                            <a href="<?php echo site_url('news/show/' . $updown['next']['id']); ?>">上一篇</a>
                         <?php } else { ?>
-                            <a href="#">没有了</a>
+                            <a href="javascript:void(0);">第一篇</a>
+                        <?php } ?>
+                        <?php if (!empty($updown['prev'])) { ?>
+                            <a href="<?php echo site_url('news/show/' . $updown['prev']['id']); ?>">下一篇</a>
+                        <?php } else { ?>
+                            <a href="javascript:void(0);">没有了</a>
                         <?php } ?>
                     </div>
                 </div>

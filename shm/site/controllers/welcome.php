@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('BASEPATH')){
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
@@ -52,6 +52,9 @@ class Welcome extends MY_Controller
         $data['news']['titles'] = $this->getTitlesByColumnId(16);
         $data['news']['bg_image'] = $this->getPhotoByColumnId(17);
         $data['news']['list'] = $this->db->order_by('sort_id', 'desc')->get_where('article', array('cid' => 68), 8)->result_array();
+        foreach ($data['news']['list'] as $key => $news) {
+            $data['news']['list'][$key]['album_cover'] = $this->getPhotoByArticleId($news['id']);
+        }
 
         // achievement
         $data['achievement']['titles'] = $this->getTitlesByColumnId(19);

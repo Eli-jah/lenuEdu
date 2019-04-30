@@ -56,7 +56,9 @@
                     <div class="fp3_content_main_left">
                         <img src="<?php echo $courses['display_image']; ?>">
                     </div>
-                    <?php echo $courses['intro']; ?>
+                    <div class="fp3_content_main_right">
+                        <?php echo $courses['intro']; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,11 +93,11 @@
                                             <div class="opacity_box"></div>
                                             <div class="swiper-slide-content">
                                                 <div class="parts_img">
-                                                    <img src="<?php echo UPLOAD_URL . $news['thumb']; ?>">
+                                                    <img src="<?php echo $news['album_cover']; ?>">
                                                 </div>
                                                 <div class="parts_textcontent">
                                                     <div class="parts_textcontent_title">
-                                                        <h3 title="大数据人工智能行业终于爆发了">
+                                                        <h3 title="<?php echo $news['title']; ?>">
                                                             <?php echo $news['title']; ?>
                                                         </h3>
                                                     </div>
@@ -130,7 +132,9 @@
                         <h3><?php echo $achievement['titles']['title']; ?></h3>
                         <span><?php echo $achievement['titles']['title_en']; ?></span>
                     </div>
-                    <?php echo $achievement['intro']; ?>
+                    <div class="fullpage6_main">
+                        <?php echo $achievement['intro']; ?>
+                    </div>
                 </div>
             </div>
         </div>

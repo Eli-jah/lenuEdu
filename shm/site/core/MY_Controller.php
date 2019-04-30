@@ -284,6 +284,27 @@ class MY_Controller extends CI_Controller
         return $articles;
     }
 
+    // get one article photo by column id
+    protected function getPhotoByArticleId($id = false)
+    {
+        $photo_url = '';
+        if (!$id) {
+            return $photo_url;
+        }
+        $article = $this->db->get_where('article', array('id' => $id), 1)->row();
+        if (!empty($article) && $article->photo) {
+            $photo = $article->photo;
+            $comma_position = strpos($photo, ',');
+            if ($comma_position === false) {
+                $photo_id = $photo;
+            } else {
+                $photo_id = substr($photo, 0, $comma_position + 1);
+            }
+            $photo_url = $this->getPhotoByUploadId($photo_id);
+        }
+        return $photo_url;
+    }
+
     // get article photos by article id
     protected function getPhotosByArticleId($id = false)
     {
@@ -291,7 +312,7 @@ class MY_Controller extends CI_Controller
         if (!$id) {
             return $photos;
         }
-        $article = $this->db->get_where('article', array('id', $id), 1)->row();
+        $article = $this->db->get_where('article', array('id' => $id), 1)->row();
         if (!empty($article)) {
             $photo = $article->photo;
             $photos = $this->getPhotosByUploadIds($photo);

@@ -27,6 +27,13 @@
         </div>
 
         <div class="control-group">
+            <label class="control-label" for="author">作者:</label>
+            <div class="controls">
+                <input type="text" id="author" name="author" class='span3' value="<?php echo set_value("author") ?>">
+            </div>
+        </div>
+
+        <div class="control-group">
             <label for="timeline" class="control-label">时间:</label>
             <div class="controls">
                 <div class="input-append date timepicker">
@@ -91,13 +98,21 @@
             </div>
         </div>
 
+        <div class="control-group">
+            <label for="text" class="control-label">内容简介：</label>
+            <div class="controls">
+                <textarea name="text" id="text" rows='8' class='span4'><?php echo set_value('text'); ?></textarea>
+                <span class="help-inline"></span>
+            </div>
+        </div>
+
         <div class="control-group uefull">
-            <textarea id="content" name="content"><?php echo set_value("content") ?></textarea>
+            <textarea id="content" name="content"><?php echo set_value("content"); ?></textarea>
         </div>
 
         <!-- 图片上传 -->
         <div class="control-group">
-            <label for="img" class="control-label"><?php echo lang('photo') ?>：</label>
+            <label for="img" class="control-label"><?php echo lang('photo'); ?>：</label>
             <div class="controls">
                 <div class="btn-group">
                     <span class="btn btn-success">

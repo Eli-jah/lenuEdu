@@ -120,7 +120,7 @@
 </script>
 <!--客服系统-->
 <script type='text/javascript'>
-    (function (m, ei, q, i, a, j, s) {
+    /*(function (m, ei, q, i, a, j, s) {
         m[i] = m[i] || function () {
                 (m[i].a = m[i].a || []).push(arguments)
             };
@@ -139,7 +139,7 @@
         });
     } else {
         _MEIQIA('withoutBtn');
-    }
+    }*/
 </script>
 <script type="text/javascript">
     //创建和初始化地图函数：

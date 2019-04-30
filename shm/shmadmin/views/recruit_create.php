@@ -142,11 +142,12 @@ if (!empty($minfo)) {
             </div>
         </div> -->
         <div class="control-group">
-            <label class="control-label" for="age"> 年龄要求 </label>
+            <label class="control-label" for="age_text"> 年龄要求 </label>
             <div class="controls">
-                <input type="text" name="age" value="18" id="age">
+                <!--<input type="text" name="age" value="18" id="age">
                 至
-                <input type="text" name="age_max" value="35" id="age_max">
+                <input type="text" name="age_max" value="35" id="age_max">-->
+                <input type="text" name="age_text" value="<?php echo set_value('age_text') ?>" id="age_text">
             </div>
         </div>
 

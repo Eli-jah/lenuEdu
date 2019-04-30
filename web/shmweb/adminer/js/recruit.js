@@ -2,7 +2,7 @@ require(['adminer/js/ui', 'jquery', 'tools', 'bootstrap-datepicker.zh'], functio
 	// 详细说明
 	ui.editor_create('content');
 	// 能力要求
-	ui.editor_create('requirement');
+	// ui.editor_create('requirement');
 
 	$('input.input-datepicker').datepicker({
 		language: 'zh-CN',

@@ -8,7 +8,7 @@
 
 <!--内容开始-->
 <div class="NewsLists">
-    <div class="headerPartition" style="background: url(<?php echo $banner; ?>) center no-repeat;">
+    <div class="headerPartition" style="background-image: url(<?php echo $banner; ?>);">
         <div class="opacity_box"></div>
         <div class="Partition-title">
             <h1 class="title-zh">新闻资讯</h1>
@@ -25,8 +25,8 @@
                 <?php if (!empty($types)) { ?>
                     <?php foreach ($types as $type) { ?>
                         <?php if ($type['id'] == $active_type['id']) { ?>
-                            <li class="active"><a
-                                    href="<?php echo site_url('news/index/' . $type['id']); ?>"><?php echo $type['title']; ?></a>
+                            <li class="active">
+                                <a href="<?php echo site_url('news/index/' . $type['id']); ?>"><?php echo $type['title']; ?></a>
                             </li>
                         <?php } else { ?>
                             <li>
@@ -38,11 +38,11 @@
             </ul>
         </div>
     </div>
-    <div class="TextContent" style="background: url(<?php echo $bg_image; ?>) center no-repeat;">
+    <div class="TextContent" style="background-image: url(<?php echo $bg_image; ?>);">
         <div class="wrapper">
             <div class="pagePart_title">
-                <h1>行业资讯</h1>
-                <p>Industry Information</p>
+                <h1><?php echo $active_type['title']; ?></h1>
+                <p><?php echo $active_type['title_en']; ?></p>
             </div>
             <div class="NewsLists_items">
                 <?php if (!empty($fenye['new_con'])) { ?>
@@ -76,8 +76,10 @@
                     <?php } ?>
                 <?php } ?>
             </div>
-            <!--页码区，需要返回值，当前页码值，总页数，页码采用循环方式渲染-->
+            <!--页码区，需要返回值，当前页码值，总页数，页码采用循环方式渲染-->                        <div class="Pagearea">                <div class="Previouspage page_btn">                    <a href="javascript:void(0)">上一页</a>                </div>                <ul>                    <li class="active"><a href="#">1</a></li>                    <li><a href="#">2</a></li>                    <li><a href="#">3</a></li>                    <li><a href="#">4</a></li>                    <li><a href="#">5</a></li>                    <li><span class='over'>...</span></li>                    <li><a href="#">10</a></li>                </ul>                <div class="Nextpage page_btn">                    <a href="javascript:void(0)">下一页</a>                </div>            </div>
+            <!--                
             <?php echo $fenye['pagelink']; ?>
+            -->
         </div>
     </div>
 </div>

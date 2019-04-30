@@ -24,6 +24,14 @@
             </div>
         </div>
 
+        <div class="control-group">
+            <label for="author" class="control-label">作者:</label>
+            <div class="controls">
+                <input type="text" name="author" id="author" class='span3' value="<?php echo set_value('author', $it['author']); ?>">
+                <span class="help-inline"></span>
+            </div>
+        </div>
+
         <!-- 弹出 -->
         <div id="seo-modal" class="modal hide fade">
             <div class="modal-header">
@@ -86,6 +94,14 @@
                 </div>
             </div>
         <?php } ?>
+
+        <div class="control-group">
+            <label for="text" class="control-label">内容简介：</label>
+            <div class="controls">
+                <textarea name="text" id="text" rows='8' class='span4'><?php echo set_value('text', $it['text']); ?></textarea>
+                <span class="help-inline"></span>
+            </div>
+        </div>
 
         <div class="control-group uefull">
             <textarea id="content" name="content"><?php echo set_value('content', $it['content']); ?></textarea>
