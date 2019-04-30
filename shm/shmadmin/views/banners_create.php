@@ -116,6 +116,7 @@
                     <input type="hidden" name="photo" class="form-upload" data-more="0" value="<?php echo set_value("photo") ?>">
                     <input type="hidden" name="thumb" class="form-upload-thumb" value="<?php echo set_value("thumb") ?>">
                 </div>
+                <span class="help-inline">最佳大小: 1920 * 960 像素</span>
             </div>
         </div>
         <div id="js-photo-show" class="js-img-list-f">

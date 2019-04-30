@@ -75,11 +75,31 @@
                         <input type="hidden" name="photo" class="form-upload" data-more="1" value="<?php echo $it['photo']; ?>">
                         <input type="hidden" name="thumb" class="form-upload-thumb" value="<?php echo $it['thumb']; ?>">
                     </div>
-                    <?php // if (in_array($cid, array(15))) { ?>
+                    <?php if (in_array($cid, array(70))) { ?>
                         <!--<span class="help-inline">最佳大小: 1920 * 900 像素</span>-->
-                    <?php // } else { ?>
+                        <span class="help-inline">最佳大小: 1920 * 1080 像素</span>
+                    <?php } else if (in_array($cid, array(6, 14, 17, 21, 65, 67))) { ?>
                         <!--<span class="help-inline">最佳大小: 1920 * 400 像素</span>-->
-                    <?php // } ?>
+                        <span class="help-inline">最佳大小: 1920 * 960 像素</span>
+                    <?php } else if (in_array($cid, array(57, 61))) { ?>
+                        <!--<span class="help-inline">最佳大小: 1920 * 400 像素</span>-->
+                        <span class="help-inline">最佳大小: 1920 * 560 像素</span>
+                    <?php } else if (in_array($cid, array(36))) { ?>
+                        <!--<span class="help-inline">最佳大小: 1920 * 400 像素</span>-->
+                        <span class="help-inline">最佳大小: 1920 * 360 像素</span>
+                    <?php } else if (in_array($cid, array(10))) { ?>
+                        <span class="help-inline">最佳大小: 840 * 630 像素</span>
+                    <?php } else if (in_array($cid, array(42))) { ?>
+                        <span class="help-inline">最佳大小: 660 * 500 像素</span>
+                    <?php } else if (in_array($cid, array(42))) { ?>
+                        <span class="help-inline">最佳大小: 660 * 500 像素</span>
+                    <?php } else if (in_array($cid, array(43))) { ?>
+                        <span class="help-inline">最佳大小: 250 * 570 像素</span>
+                    <?php } else if (in_array($cid, array(50, 53))) { ?>
+                        <span class="help-inline">最佳大小: 600 * 500 像素</span>
+                    <?php } else { ?>
+                        <!--<span class="help-inline">最佳大小: 840 * 630 像素</span>-->
+                    <?php } ?>
                 </div>
             </div>
             <div id="js-photo-show" class="js-img-list-f">
