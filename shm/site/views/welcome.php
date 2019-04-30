@@ -144,35 +144,47 @@
                     <div class="footer_up_menu">
                         <ul>
                             <li class="footer_menu_title">关于我们</li>
-                            <li><a href="aboutus_introduction.php">公司简介</a></li>
-                            <li><a href="aboutus.php">企业文化</a></li>
-                            <li><a href="aboutus.php">办公环境</a></li>
-                            <li><a href="aboutus.php">住宿环境</a></li>
+                            <li><a href="<?php echo site_url('about/index'); ?>">公司简介</a></li>
+                            <li><a href="<?php echo site_url('about/culture'); ?>">企业文化</a></li>
+                            <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">办公环境</a></li>
+                            <li><a href="<?php echo site_url('about/index') . "#OfficeEnvironment"; ?>">住宿环境</a></li>
                         </ul>
                         <ul>
                             <li class="footer_menu_title">课程分类</li>
-                            <li><a href="Curriculum.php">ETL</a></li>
-                            <li><a href="Curriculum.php">JAVA</a></li>
-                            <li><a href="Curriculum.php">UI</a></li>
-                            <li><a href="Curriculum.php">Python</a></li>
+                            <?php if (!empty($data['subject'])) { ?>
+                                <?php foreach ($data['subject'] as $k => $v) { ?>
+                                    <li>
+                                        <a href="<?php echo site_url('subject/info/' . $v['id']); ?>"><?php echo $v['subtitle']; ?></a>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
                         </ul>
                         <ul>
                             <li class="footer_menu_title">合作伙伴</li>
-                            <li><a href="Transportation.php">院校合作</a></li>
-                            <li><a href="Enterprisepartner.php">企业合作</a></li>
+                            <?php if (!empty($data['partner_type'])) { ?>
+                                <?php foreach ($data['partner_type'] as $k => $v) { ?>
+                                    <li>
+                                        <a href="<?php echo site_url('partner/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
                         </ul>
                         <ul>
                             <li class="footer_menu_title">新闻资讯</li>
-                            <li><a href="NewsLists.php">公司新闻</a></li>
-                            <li><a href="NewsLists.php">行业资讯</a></li>
-                            <li><a href="NewsLists.php">招生动态</a></li>
+                            <?php if (!empty($data['news_type'])) { ?>
+                                <?php foreach ($data['news_type'] as $k => $v) { ?>
+                                    <li>
+                                        <a href="<?php echo site_url('news/index/' . $v['id']); ?>"><?php echo $v['title']; ?></a>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
                         </ul>
                         <ul>
                             <li class="footer_menu_title">联系我们</li>
-                            <li><a href="Contactus.php">联系方式</a></li>
-                            <li><a href="Contactus.php">在线留言</a></li>
-                            <li><a href="Entrance.php">申请入学</a></li>
-                            <li><a href="Recruitment.php">企业招聘</a></li>
+                            <li><a href="<?php echo site_url('contact/us'); ?>">联系方式</a></li>
+                            <li><a href="<?php echo site_url('contact/us'); ?>#OnlineMessage">在线留言</a></li>
+                            <li><a href="<?php echo site_url('contact/application'); ?>">申请入学</a></li>
+                            <li><a href="<?php echo site_url('contact/recruitment'); ?>">企业招聘</a></li>
                         </ul>
                     </div>
                     <div class="footer_up_local">
@@ -201,7 +213,6 @@
         </div>
     </div>
 </div>
-
 
 <?php include_once VIEWS . 'inc/footer.php'; ?>
 
