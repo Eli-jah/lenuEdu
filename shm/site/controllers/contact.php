@@ -20,11 +20,11 @@ class contact extends MY_Controller
                 "label" => "姓名",
                 "rules" => "trim|required"
             ),
-            array(
+            /*array(
                 "field" => "gender",
                 "label" => "性别",
                 "rules" => "trim|required"
-            ),
+            ),*/
             array(
                 "field" => "email",
                 "label" => "邮箱",

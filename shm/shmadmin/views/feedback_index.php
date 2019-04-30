@@ -10,12 +10,12 @@
             <thead>
             <tr>
                 <th class="width-small"><input id='selectbox-all' type="checkbox"></th>
-                <th>用户名</th>
                 <th>来源</th>
+                <th>用户名</th>
                 <th>手机</th>
-                <th>标题</th>
+                <!--<th>标题</th>-->
                 <th>邮箱</th>
-                <th>操作</th>
+                <!--<th>操作</th>-->
                 <th>时间</th>
             </tr>
             </thead>
@@ -23,22 +23,27 @@
             <?php foreach ($list as $v): ?>
                 <tr data-id="<?php echo $v['id'] ?>" data-sort="<?php echo $v['sort_id'] ?>">
                     <td><input class="select-it" type="checkbox" value="<?php echo $v['id']; ?>"></td>
-                    <td> <?php echo $v['username'] ?> </td>
                     <td> <?php echo $v['from'] == 'feedback' ? '留言板' : '入学申请'; ?> </td>
+                    <td> <?php echo $v['username'] ?> </td>
                     <td> <?php echo $v['telphone'] ?> </td>
-                    <td> <?php echo $v['title'] ?> </td>
+                    <!--<td> <?php /*echo $v['title'] */?> </td>-->
                     <td> <?php echo $v['email'] ?> </td>
-                    <td> <?php if (!empty($v['answer'])) {
+                    <!--<td>
+                        <?php /*if (!empty($v['answer'])) {
                             echo "已回复";
                         } else {
                             echo "未回复";
-                        } ?> </td>
+                        } */?>
+                    </td>-->
                     <td> <?php echo date("Y/m/d H:i:s", $v['timeline']); ?> </td>
                     <td style="text-align:right;">
                         <div class="btn-group">
+                            <!--<a class='btn btn-small'
+                               href=" <?php /*echo site_url($this->router->class . '/edit/' . $v['id']) */?> "
+                               title="<?php /*echo lang('edit') */?>"> <i class="fa fa-comments-o"></i></a>-->
                             <a class='btn btn-small'
                                href=" <?php echo site_url($this->router->class . '/edit/' . $v['id']) ?> "
-                               title="<?php echo lang('edit') ?>"> <i class="fa fa-comments-o"></i></a>
+                               title="<?php echo '查看'; ?>"> <i class="fa fa-comments-o"></i></a>
                             <a class='btn btn-danger btn-small btn-del' href="#" data-id="<?php echo $v['id'] ?>"
                                title=" <?php echo lang('del') ?>"> <i class="fa fa-times"></i></a>
                         </div>

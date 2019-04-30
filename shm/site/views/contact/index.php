@@ -48,35 +48,35 @@
                 <div class="localandinfo_right">
                     <p class="localandinfo_right_title">在线留言</p>
                     <p class="right_smalltitle">在线填写您的要求，我们将在24小时内为您答疑解惑</p>
-                    <form id="frm-feedback" method="post" data-url="<?php echo site_url('contact/sendpost'); ?>">
-                        <ul>
-                            <li>
-                                <span>您的姓名</span>
-                                <input type="text" name="username"/>
-                                <input type="hidden" name="from" value="feedback">
-                            </li>
-                            <li>
-                                <span>您的电话</span>
-                                <input type="tel" name="telphone"/>
-                            </li>
-                            <li>
-                                <span>您的邮箱</span>
-                                <input type="email" name="email"/>
-                            </li>
-                            <li>
-                                <span>您的地址</span>
-                                <input type="text" name="address"/>
-                            </li>
-                            <li>
-                                <span class="message_title">您的留言</span>
-                                <textarea name="content"></textarea>
-                            </li>
-                            <li class="submit_li">
-                                <button type="submit" id="submit_btn">提交</button>
-                                <span>您的信息我们会保密处理</span>
-                            </li>
-                        </ul>
-                    </form>
+                    <?php echo form_open(site_url('contact/sendpost'), array("class" => "form-horizontal", "id" => "frm-feedback")); ?>
+                    <ul>
+                        <li>
+                            <span>您的姓名</span>
+                            <input type="text" name="username"/>
+                            <input type="hidden" name="from" value="feedback">
+                        </li>
+                        <li>
+                            <span>您的电话</span>
+                            <input type="tel" name="telphone"/>
+                        </li>
+                        <li>
+                            <span>您的邮箱</span>
+                            <input type="email" name="email"/>
+                        </li>
+                        <li>
+                            <span>您的地址</span>
+                            <input type="text" name="address"/>
+                        </li>
+                        <li>
+                            <span class="message_title">您的留言</span>
+                            <textarea name="content"></textarea>
+                        </li>
+                        <li class="submit_li">
+                            <button type="submit" id="submit_btn">提交</button>
+                            <span>您的信息我们会保密处理</span>
+                        </li>
+                    </ul>
+                    <?php echo form_close(); ?>
                     <div class="for_share">
                         <span>分享到：</span>
                         <div class="bdsharebuttonbox">
@@ -100,8 +100,8 @@ echo static_file('site/js/init.js');
 
 <script>
     $(function () {
-        $('#submit_btn').on('click', function (event) {
-            url = $('#frm-feedback').attr('data-url');
+        $('#feed_submit').on('click', function (event) {
+            url = $('#frm-feedback').attr('action');
             data = $('#frm-feedback').serializeArray();
             $.ajax({
                     url: url,

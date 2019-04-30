@@ -1,9 +1,9 @@
 <meta charset="utf-8">
-<meta name="Keywords" content="<?php echo $header['tags'];?>"/>
-<meta name="Description" content="<?php echo $header['intro'];?>"/>
-<meta name="author" content="青岛尚禾维曼网络科技有限公司-网站建设-http://www.sahereman.com/" />
-<title><?php echo $header['title'];?></title>
-<link href="<?php echo GLOBAL_URL ?>favicon.ico" rel="shortcut icon">
+<meta name="Keywords" content="<?php echo $header['tags']; ?>"/>
+<meta name="Description" content="<?php echo $header['intro']; ?>"/>
+<meta name="author" content="青岛尚禾维曼网络科技有限公司-网站建设-http://www.sahereman.com/"/>
+<title><?php echo $header['title']; ?></title>
+<link href="<?php echo STATIC_URL; ?>favicon.ico" rel="shortcut icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,12 +19,12 @@
 <link rel="stylesheet" href="/web/shmweb/assets/css/style.css">
 
 <script>
-    var STATIC_URL  = "<?php echo STATIC_URL  ?>" ;
-    var UPLOAD_URL  = "<?php echo UPLOAD_URL  ?>" ;
-    var GLOBAL_URL = "<?php echo GLOBAL_URL?>index.php/";
-    var SITE_URL = "<?php echo site_url().'/'; ?>";
-    var UPLOADDO_URL = "<?php echo SITE_URL.'upload/'?>";
-    var STATIC_VER = "<?php echo STATIC_V ?>";
+    var STATIC_URL = "<?php echo STATIC_URL; ?>";
+    var UPLOAD_URL = "<?php echo UPLOAD_URL; ?>";
+    var GLOBAL_URL = "<?php echo GLOBAL_URL; ?>index.php/";
+    var SITE_URL = "<?php echo site_url() . '/'; ?>";
+    var UPLOADDO_URL = "<?php echo SITE_URL . 'upload/'; ?>";
+    var STATIC_VER = "<?php echo STATIC_V; ?>";
 </script>
 
 <?php
