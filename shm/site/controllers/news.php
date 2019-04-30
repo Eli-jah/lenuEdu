@@ -44,8 +44,10 @@ class news extends MY_Controller
         $config['num_links'] = 5;
         $config['cur_tag_open'] = '<a href="#" class="active">';
         $config['cur_tag_close'] = '</a>';
-        $config['prev_link'] = '<';
-        $config['next_link'] = '>';
+        // $config['prev_link'] = '<';
+        $config['prev_link'] = '上一页';
+        // $config['next_link'] = '>';
+        $config['next_link'] = '下一页';
         $config['num_tag_open'] = '';
         $config['num_tag_close'] = '';
         $config['prev_tag_open'] = '';

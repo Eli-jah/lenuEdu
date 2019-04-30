@@ -76,15 +76,37 @@
                     <?php } ?>
                 <?php } ?>
             </div>
-            <!--页码区，需要返回值，当前页码值，总页数，页码采用循环方式渲染-->                        <div class="Pagearea">                <div class="Previouspage page_btn">                    <a href="javascript:void(0)">上一页</a>                </div>                <ul>                    <li class="active"><a href="#">1</a></li>                    <li><a href="#">2</a></li>                    <li><a href="#">3</a></li>                    <li><a href="#">4</a></li>                    <li><a href="#">5</a></li>                    <li><span class='over'>...</span></li>                    <li><a href="#">10</a></li>                </ul>                <div class="Nextpage page_btn">                    <a href="javascript:void(0)">下一页</a>                </div>            </div>
-            <!--                
+            <!--页码区，需要返回值，当前页码值，总页数，页码采用循环方式渲染-->                        <!--<div class="page">
+            	<a class="prev" href="#">上一页</a>
+            	<a class="active" href="#">1</a></li>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a class='omit' href="javascript:void(0)">...</a>
+                <a href="#">10</a>
+            	<a class="next" href="#">下一页</a>
+            </div>-->                                    <!--<div class="Pagearea page">
+                <div class="Previouspage page_btn">
+                    <a href="javascript:void(0)">上一页</a>
+                </div>
+                <ul>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span class='over'>...</span></li>
+                    <li><a href="#">10</a></li>
+                </ul>
+                <div class="Nextpage page_btn">
+                    <a href="javascript:void(0)">下一页</a>
+                </div>
+            </div>-->
             <?php echo $fenye['pagelink']; ?>
-            -->
         </div>
     </div>
 </div>
-
 <?php include_once VIEWS . 'inc/footer.php'; ?>
 </body>
-
 </html>

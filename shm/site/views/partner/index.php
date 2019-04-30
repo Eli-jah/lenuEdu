@@ -41,7 +41,7 @@
 
                         <?php if (!empty($partner_list)): ?>
                             <?php foreach ($partner_list as $k => $v): ?>
-                                <div class="swiper-slide" style="background: url('/web/shmweb/assets/images/partner02.png') left top no-repeat;">
+                                <div class="swiper-slide" style="background-image: url('/web/shmweb/assets/images/partner02.png');">
                                     <div class="slide_textContent">
                                         <h3><?php echo $v['title']; ?></h3>
                                         <?php echo $v['content']; ?>

@@ -25,7 +25,7 @@
                 <div class="swiper-wrapper">
                     <?php foreach ($banners as $key => $banner) { ?>
                         <div class="swiper-slide slide_<?php echo $key + 1; ?>"
-                             style="background: url(<?php echo $banner['photo_url']; ?>) center no-repeat;">
+                             style="background-image: url(<?php echo $banner['photo_url']; ?>);">
                             <?php echo $banner['content']; ?>
                         </div>
                     <?php } ?>
@@ -34,7 +34,7 @@
         </div>
         <!--第二屏内容-->
         <div class="section">
-            <div class="fullpage2" style="background: url(<?php echo $company['bg_image']; ?>) center no-repeat;">
+            <div class="fullpage2" style="background-image: url(<?php echo $company['bg_image']; ?>);">
                 <div class="opacity_box"></div>
                 <div class="fullpage2_content">
                     <div class="fullpage2_content_title">
@@ -64,7 +64,7 @@
         </div>
         <!--第四屏内容-->
         <div class="section">
-            <div class="fullpage4" style="background: url(<?php echo $partners['bg_image'] ?>) center no-repeat;">
+            <div class="fullpage4" style="background-image: url(<?php echo $partners['bg_image'] ?>);">
                 <div class="opacity_box"></div>
                 <div class="fullpage4_content">
                     <div class="fullpage4_title">
@@ -77,7 +77,7 @@
         </div>
         <!--第五屏内容-->
         <div class="section">
-            <div class="fullpage5" style="background: url(<?php echo $news['bg_image']; ?>) center no-repeat;">
+            <div class="fullpage5" style="background-image: url(<?php echo $news['bg_image']; ?>);">
                 <div class="opacity_box"></div>
                 <div class="fullpage5_content">
                     <div class="fullpage5_title">
@@ -125,7 +125,7 @@
         </div>
         <!--第六屏内容-->
         <div class="section">
-            <div class="fullpage6" style="background: url(<?php echo $achievement['bg_image'] ?>) center no-repeat;">
+            <div class="fullpage6" style="background-image: url(<?php echo $achievement['bg_image'] ?>);">
                 <div class="opacity_box"></div>
                 <div class="fullpage6_content">
                     <div class="fullpage6_title">

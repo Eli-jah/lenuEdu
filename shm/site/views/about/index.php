@@ -8,7 +8,7 @@
 
 <!--内容开始-->
 <div class="aboutus">
-    <div class="headerPartition" style="background: url('<?php echo $banner ?>') center no-repeat;">
+    <div class="headerPartition" style="background-image: url('<?php echo $banner ?>');">
         <div class="opacity_box"></div>
         <div class="Partition-title">
             <h1 class="title-zh">关于我们</h1>
@@ -28,7 +28,7 @@
     <div class="container">
         <!--公司简介-->
         <div class="container_partcontent container_part1" name='companyProfile' id="companyProfile"
-             style="background: url('/web/shmweb/assets/images/aboutus_img1.png') center no-repeat;">
+             style="background-image: url('/web/shmweb/assets/images/aboutus_img1.png');">
             <div class="container_part1_left">
                 <div class="part1_leftContent">
 

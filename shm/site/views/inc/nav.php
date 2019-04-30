@@ -145,7 +145,8 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
         <ul class="nav-list1">
             <li><a href="<?php echo site_url(''); ?>">首页</a></li>
             <li class="mobile_more">
-                <a href="<?php echo site_url('about/index'); ?>">关于我们</a>
+                <!--<a href="<?php echo site_url('about/index'); ?>">关于我们</a>-->
+                <a href="javascript:void(0);">关于我们</a>
                 <ul class="nav-list2">
                     <li><a href="<?php echo site_url('about/index'); ?>">公司简介</a></li>
                     <li><a href="<?php echo site_url('about/culture'); ?>">企业文化</a></li>
@@ -167,7 +168,7 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="<?php echo site_url('partner/index/'); ?>">合作伙伴</a>
+                <a href="javascript:void(0);">合作伙伴</a>
                 <ul class="nav-list2">
                     <?php if (!empty($data['partner_type'])) { ?>
                         <?php foreach ($data['partner_type'] as $k => $v) { ?>
@@ -179,7 +180,7 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="<?php echo site_url('news/index/'); ?>">新闻资讯</a>
+                <a href="javascript:void(0);">新闻资讯</a>
                 <ul class="nav-list2">
                     <?php if (!empty($data['news_type'])) { ?>
                         <?php foreach ($data['news_type'] as $k => $v) { ?>
@@ -191,7 +192,7 @@ $data['news_type'] = $this->db->order_by('sort_id', 'asc')->get_where('coltypes'
                 </ul>
             </li>
             <li class="mobile_more">
-                <a href="<?php echo site_url('contact/us'); ?>">联系我们</a>
+                <a href="javascript:void(0);">联系我们</a>
                 <ul class="nav-list2">
                     <li><a href="<?php echo site_url('contact/us'); ?>">联系方式</a></li>
                     <li><a href="<?php echo site_url('contact/us'); ?>#OnlineMessage">在线留言</a></li>

@@ -10,6 +10,8 @@
 var main = {
     data: {},
     dataInit: function(){
+        var factwidth = $(".sorting_menu").find('li').width()+10;
+        $(".content_menu").find("ul").css("width",factwidth);
         //初始化关于我们的轮播图
         var aboutusoffice, aboutusaccommod,viewSwiper,previewSwiper;
         if ($(".introduction_banner_pic").exist()) {
