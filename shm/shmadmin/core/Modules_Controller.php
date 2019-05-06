@@ -245,6 +245,10 @@ class Modules_Controller extends CRUD_Controller
             $ctypes_ids = $this->mctypes->find_ids($this->cid, $ctype);
             $where['in'] = array('ctype', $ctypes_ids);
         }
+        if ($ctype = $this->input->get('type_id', TRUE) AND is_numeric($ctype)) {
+            $ctypes_ids = $this->mctypes->find_ids($this->cid, $ctype);
+            $where['in'] = array('type_id', $ctypes_ids);
+        }
         if ($wh = $this->_search_where()) {
             $where = array_merge($where, $wh);
         }

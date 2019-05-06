@@ -26,39 +26,6 @@
             </div>
         </div>
 
-        <div class="control-group">
-            <label class="control-label" for="author">作者:</label>
-            <div class="controls">
-                <input type="text" id="author" name="author" class='span3' value="<?php echo set_value("author") ?>">
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label for="timeline" class="control-label">时间:</label>
-            <div class="controls">
-                <div class="input-append date timepicker">
-                    <input type="text" value="<?php echo date("Y-m-d H:i:s", set_value('timeline', now())); ?>" id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">
-                    <span class="add-on"><i class="icon-th"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ctype -->
-        <?php if ($ctype = list_coltypes($this->cid)) { ?>
-            <div class="control-group">
-                <label class="control-label" for="type_id"> 所属分类:</label>
-                <div class="controls">
-                    <?php // $ctypeid = isset($_GET['ctype']) ? $_GET['ctype'] : 0; ?>
-                    <?php $ctypeid = isset($_GET['type_id']) ? $_GET['type_id'] : 0; ?>
-                    <?php
-                    // echo ui_btn_select('ctype', set_value("ctype", $ctypeid), $ctype);
-                    echo ui_btn_select('type_id', set_value("type_id", $ctypeid), $ctype);
-                    ?>
-                    <span class="help-inline"></span>
-                </div>
-            </div>
-        <?php } ?>
-
         <!-- 弹出 -->
         <div id="seo-modal" class="modal hide fade">
             <div class="modal-header">
@@ -97,6 +64,46 @@
                 <a href="#" data-dismiss="modal" aria-hidden="true" class="btn"><?php echo lang('close'); ?></a>
             </div>
         </div>
+
+        <div class="control-group">
+            <label class="control-label" for="author">作者:</label>
+            <div class="controls">
+                <input type="text" id="author" name="author" class='span3' value="<?php echo set_value("author"); ?>">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="timeline" class="control-label">时间:</label>
+            <div class="controls">
+                <div class="input-append date timepicker">
+                    <input type="text" value="<?php echo date("Y-m-d H:i:s", set_value('timeline', now())); ?>" id="timeline" name="timeline" data-date-format="yyyy-mm-dd hh:ii:ss">
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="click">点击量:</label>
+            <div class="controls">
+                <input type="text" id="click" name="click" class='span1' value="<?php echo set_value("click"); ?>">
+            </div>
+        </div>
+
+        <!-- ctype -->
+        <?php if ($ctype = list_coltypes($this->cid)) { ?>
+            <div class="control-group">
+                <label class="control-label" for="type_id"> 所属分类:</label>
+                <div class="controls">
+                    <?php // $ctypeid = isset($_GET['ctype']) ? $_GET['ctype'] : 0; ?>
+                    <?php $ctypeid = isset($_GET['type_id']) ? $_GET['type_id'] : 0; ?>
+                    <?php
+                    // echo ui_btn_select('ctype', set_value("ctype", $ctypeid), $ctype);
+                    echo ui_btn_select('type_id', set_value("type_id", $ctypeid), $ctype);
+                    ?>
+                    <span class="help-inline"></span>
+                </div>
+            </div>
+        <?php } ?>
 
         <div class="control-group">
             <label for="text" class="control-label">内容简介：</label>

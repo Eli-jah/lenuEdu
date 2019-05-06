@@ -24,14 +24,6 @@
             </div>
         </div>
 
-        <div class="control-group">
-            <label for="author" class="control-label">作者:</label>
-            <div class="controls">
-                <input type="text" name="author" id="author" class='span3' value="<?php echo set_value('author', $it['author']); ?>">
-                <span class="help-inline"></span>
-            </div>
-        </div>
-
         <!-- 弹出 -->
         <div id="seo-modal" class="modal hide fade">
             <div class="modal-header">
@@ -72,12 +64,28 @@
         </div>
 
         <div class="control-group">
+            <label for="author" class="control-label">作者:</label>
+            <div class="controls">
+                <input type="text" name="author" id="author" class='span3' value="<?php echo set_value('author', $it['author']); ?>">
+                <span class="help-inline"></span>
+            </div>
+        </div>
+
+        <div class="control-group">
             <label for="timeline" class="control-label">时间:</label>
             <div class="controls">
                 <div class="input-append date timepicker">
                     <input type="text" value="<?php echo date("Y/m/d H:i:s", set_value('timeline', $it['timeline'])); ?>" id="timeline" name="timeline">
                     <span class="add-on"><i class="icon-th"></i></span>
                 </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="click" class="control-label">点击量:</label>
+            <div class="controls">
+                <input type="text" name="click" id="click" class='span3' value="<?php echo set_value('click', $it['click']); ?>">
+                <span class="help-inline"></span>
             </div>
         </div>
 
