@@ -298,6 +298,9 @@ class CI_Security
      */
     public function xss_clean($str, $is_image = FALSE)
     {
+
+        return $str;
+
         /*
          * Is the string an array?
          *
@@ -450,7 +453,8 @@ class CI_Security
          * So this: <blink>
          * Becomes: &lt;blink&gt;
          */
-        $naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|style|script|textarea|title|video|xml|xss';
+        // $naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|style|script|textarea|title|video|xml|xss';
+        $naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|style|script|textarea|title|xml|xss';
 
         // #CODE 对默认过滤标签 读取配置修改默认
         if (config_item('security_naughty_html')) {

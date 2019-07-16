@@ -84,7 +84,7 @@
                     </p>
                 </div>
                 <div class="newscontent">
-                    <div class="newscontent_text">
+                    <div class="newscontent_text" style="z-index: 9999;">
                         <?php echo $info['content']; ?>
                     </div>
                     <div class="border_line"></div>
